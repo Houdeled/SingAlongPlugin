@@ -8,6 +8,7 @@ namespace SingAlongPlugin.Windows;
 public class ConfigWindow : Window, IDisposable
 {
     private Configuration Configuration;
+    private Plugin Plugin;
 
     // We give this window a constant ID using ###.
     // This allows for labels to be dynamic, like "{FPS Counter}fps###XYZ counter window",
@@ -20,6 +21,7 @@ public class ConfigWindow : Window, IDisposable
         SizeCondition = ImGuiCond.Always;
 
         Configuration = plugin.Configuration;
+        Plugin = plugin;
     }
 
     public void Dispose() { }

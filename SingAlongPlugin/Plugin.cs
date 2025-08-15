@@ -6,6 +6,7 @@ using Dalamud.Interface.Windowing;
 using Dalamud.Plugin.Services;
 using SingAlongPlugin.Windows;
 using Dalamud.Interface.ManagedFontAtlas;
+using Dalamud.Game;
 using System;
 using System.Threading.Tasks;
 
@@ -21,6 +22,7 @@ public sealed class Plugin : IDalamudPlugin
     [PluginService] internal static IClientState ClientState { get; private set; } = null!;
     [PluginService] internal static IDataManager DataManager { get; private set; } = null!;
     [PluginService] internal static IPluginLog Log { get; private set; } = null!;
+    [PluginService] internal static ISigScanner SigScanner { get; private set; } = null!;
 
     private const string CommandName = "/singalong";
 
@@ -29,11 +31,17 @@ public sealed class Plugin : IDalamudPlugin
     public readonly WindowSystem WindowSystem = new("SingAlongPlugin");
     private ConfigWindow ConfigWindow { get; init; }
     private LyricsWindow LyricsWindow { get; init; }
+#if DEBUG
+    private DebugWindow DebugWindow { get; init; }
+#endif
     
     // Font management for crisp scaling
     public IFontHandle? MainLyricsFont { get; private set; }
     public IFontHandle? UpcomingLyricsFont { get; private set; }
     private float _currentFontScale = 1.0f;
+    
+    // Music observation
+    public MusicObserver? MusicObserver { get; private set; }
 
     public Plugin()
     {
@@ -42,9 +50,15 @@ public sealed class Plugin : IDalamudPlugin
 
         ConfigWindow = new ConfigWindow(this);
         LyricsWindow = new LyricsWindow(this);
+#if DEBUG
+        DebugWindow = new DebugWindow(this);
+#endif
 
         WindowSystem.AddWindow(ConfigWindow);
         WindowSystem.AddWindow(LyricsWindow);
+#if DEBUG
+        WindowSystem.AddWindow(DebugWindow);
+#endif
 
         CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
         {
@@ -55,6 +69,17 @@ public sealed class Plugin : IDalamudPlugin
         
         // Initialize lyrics font for crisp scaling
         UpdateLyricsFont();
+        
+        // Initialize music observer
+        try
+        {
+            MusicObserver = new MusicObserver(SigScanner, Log);
+            Log.Info("MusicObserver initialized successfully");
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Failed to initialize MusicObserver");
+        }
 
         // This adds a button to the plugin installer entry of this plugin which allows
         // toggling the display status of the configuration ui
@@ -75,10 +100,16 @@ public sealed class Plugin : IDalamudPlugin
 
         ConfigWindow.Dispose();
         LyricsWindow.Dispose();
+#if DEBUG
+        DebugWindow.Dispose();
+#endif
         
         // Dispose font handles
         MainLyricsFont?.Dispose();
         UpcomingLyricsFont?.Dispose();
+        
+        // Dispose music observer
+        MusicObserver?.Dispose();
 
         CommandManager.RemoveHandler(CommandName);
         
@@ -87,6 +118,14 @@ public sealed class Plugin : IDalamudPlugin
 
     private void OnCommand(string command, string args)
     {
+#if DEBUG
+        // In debug mode, check for debug argument
+        if (!string.IsNullOrEmpty(args) && args.Trim().ToLowerInvariant() == "debug")
+        {
+            DebugWindow.Toggle();
+            return;
+        }
+#endif
         // In response to the slash command, toggle the display status of our lyrics ui
         ToggleLyricsUI();
     }
