@@ -66,11 +66,32 @@ public class LyricsWindow : Window, IDisposable
 
     public override void Draw()
     {
-        // Sample lyrics for testing UI styling
-        string mainLyric = "Foul child, bastard and beast";
-        string upcomingLyric = "O lost lamb, first to the feast";
+        string mainLyric = "";
+        string upcomingLyric = "";
         
-        DrawLyrics(mainLyric, upcomingLyric);
+        // Get current lyrics from the music observer
+        var lrcParser = Plugin.GetCurrentLyrics();
+        if (lrcParser != null && lrcParser.IsLoaded && Plugin.MusicObserver != null)
+        {
+            // Get current song timestamp
+            var currentTimestampMs = Plugin.MusicObserver.GetCurrentSongTimestamp();
+            var currentTime = TimeSpan.FromMilliseconds(currentTimestampMs);
+            
+            // Get current and next lyrics based on timestamp
+            mainLyric = lrcParser.GetCurrentLyric(currentTime);
+            upcomingLyric = lrcParser.GetNextLyric(currentTime);
+        }
+        
+        // Only show window if there are lyrics to display
+        if (!string.IsNullOrEmpty(mainLyric) || !string.IsNullOrEmpty(upcomingLyric))
+        {
+            DrawLyrics(mainLyric, upcomingLyric);
+        }
+        else
+        {
+            // Show a placeholder when no lyrics are available
+            ImGui.TextDisabled("No lyrics available");
+        }
     }
     
     private void DrawLyrics(string mainLyric, string upcomingLyric)

@@ -42,6 +42,10 @@ public sealed class Plugin : IDalamudPlugin
     
     // Music observation
     public MusicObserver? MusicObserver { get; private set; }
+    
+    // Lyrics management
+    private LrcParser? _currentLrcParser = null;
+    private string _lyricsFolder => Path.Combine(PluginInterface.ConfigDirectory.FullName, "Lyrics");
 
     public Plugin()
     {
@@ -70,10 +74,14 @@ public sealed class Plugin : IDalamudPlugin
         // Initialize lyrics font for crisp scaling
         UpdateLyricsFont();
         
+        // Ensure lyrics folder exists
+        EnsureLyricsFolder();
+        
         // Initialize music observer
         try
         {
             MusicObserver = new MusicObserver(SigScanner, Log);
+            MusicObserver.MusicChanged += OnMusicChanged;
             Log.Info("MusicObserver initialized successfully");
         }
         catch (Exception ex)
@@ -109,7 +117,11 @@ public sealed class Plugin : IDalamudPlugin
         UpcomingLyricsFont?.Dispose();
         
         // Dispose music observer
-        MusicObserver?.Dispose();
+        if (MusicObserver != null)
+        {
+            MusicObserver.MusicChanged -= OnMusicChanged;
+            MusicObserver.Dispose();
+        }
 
         CommandManager.RemoveHandler(CommandName);
         
@@ -174,4 +186,93 @@ public sealed class Plugin : IDalamudPlugin
     }
     
     public float GetCurrentFontScale() => _currentFontScale;
+    
+    private void OnMusicChanged(object? sender, MusicChangedEventArgs e)
+    {
+        try
+        {
+            // When music changes, try to load corresponding lyrics file
+            var songId = e.NewBgmId;
+            
+            if (songId == 0)
+            {
+                // No music playing, clear current lyrics
+                _currentLrcParser = null;
+                Log.Debug("Music stopped, cleared lyrics");
+                return;
+            }
+            
+            LoadLyricsForSong(songId);
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, $"Error handling music change to song {e.NewBgmId}");
+        }
+    }
+    
+    private void LoadLyricsForSong(uint songId)
+    {
+        try
+        {
+            // Construct path to lyrics file
+            var lyricsFile = Path.Combine(_lyricsFolder, $"{songId}.lrc");
+            
+            if (!File.Exists(lyricsFile))
+            {
+                Log.Debug($"No lyrics file found for song {songId} at {lyricsFile}");
+                _currentLrcParser = null;
+                return;
+            }
+            
+            // Create new parser and load lyrics
+            var parser = new LrcParser();
+            if (parser.LoadFromFile(lyricsFile))
+            {
+                _currentLrcParser = parser;
+                Log.Info($"Loaded lyrics for song {songId}: {parser.Metadata.Title} - {parser.Metadata.Artist}");
+            }
+            else
+            {
+                Log.Warning($"Failed to parse lyrics file for song {songId}");
+                _currentLrcParser = null;
+            }
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, $"Error loading lyrics for song {songId}");
+            _currentLrcParser = null;
+        }
+    }
+    
+    public LrcParser? GetCurrentLyrics() => _currentLrcParser;
+    
+    private void EnsureLyricsFolder()
+    {
+        try
+        {
+            // Create lyrics folder in config directory if it doesn't exist
+            if (!Directory.Exists(_lyricsFolder))
+            {
+                Directory.CreateDirectory(_lyricsFolder);
+                Log.Info($"Created lyrics folder at: {_lyricsFolder}");
+                
+                // Copy any existing lyrics from the plugin source directory
+                var sourceLyricsFolder = Path.Combine(PluginInterface.AssemblyLocation.DirectoryName!, "..", "..", "..", "Lyrics");
+                if (Directory.Exists(sourceLyricsFolder))
+                {
+                    foreach (var file in Directory.GetFiles(sourceLyricsFolder, "*.lrc"))
+                    {
+                        var fileName = Path.GetFileName(file);
+                        var destFile = Path.Combine(_lyricsFolder, fileName);
+                        File.Copy(file, destFile, true);
+                        Log.Info($"Copied lyrics file: {fileName}");
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Failed to ensure lyrics folder exists");
+        }
+    }
 }
