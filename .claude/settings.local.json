@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(cmd.exe /c \"dotnet build\")"
     ],
     "deny": [],
     "ask": []

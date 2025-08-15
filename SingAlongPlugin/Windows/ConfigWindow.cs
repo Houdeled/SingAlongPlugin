@@ -36,7 +36,7 @@ public class ConfigWindow : Window, IDisposable
         
         // Scale Factor Setting
         var scaleFactor = Configuration.LyricsScaleFactor;
-        if (ImGui.SliderFloat("Scale Factor", ref scaleFactor, 0.5f, 3.0f, "%.1f"))
+        if (ImGui.SliderFloat("Scale Factor", ref scaleFactor, 0.5f, 5.0f, "%.1f"))
         {
             Configuration.LyricsScaleFactor = scaleFactor;
             Configuration.Save();

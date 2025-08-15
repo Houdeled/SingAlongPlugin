@@ -4,6 +4,7 @@ using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
 using Dalamud.Interface.Windowing;
+using Dalamud.Interface.ManagedFontAtlas;
 using Lumina.Excel.Sheets;
 
 namespace SingAlongPlugin.Windows;
@@ -78,31 +79,53 @@ public class LyricsWindow : Window, IDisposable
         var scaleFactor = Plugin.Configuration.LyricsScaleFactor;
         
         // Main lyric - bright and large
-        DrawCenteredText(mainLyric, 1.5f * scaleFactor, new Vector4(1.0f, 1.0f, 1.0f, 1.0f));
+        DrawCenteredText(mainLyric, 1.5f * scaleFactor, new Vector4(1.0f, 1.0f, 1.0f, 1.0f), Plugin.MainLyricsFont);
         
         // Spacing between lyrics
         ImGuiHelpers.ScaledDummy(15.0f);
         
         // Upcoming lyric - dimmer and normal size
-        DrawCenteredText(upcomingLyric, 1.0f * scaleFactor, new Vector4(0.7f, 0.7f, 0.7f, 0.8f));
+        DrawCenteredText(upcomingLyric, 1.0f * scaleFactor, new Vector4(0.7f, 0.7f, 0.7f, 0.8f), Plugin.UpcomingLyricsFont);
         
         // Reset font scale
         ImGui.SetWindowFontScale(1.0f);
     }
     
-    private void DrawCenteredText(string text, float fontScale, Vector4 color)
+    private void DrawCenteredText(string text, float fontScale, Vector4 color, IFontHandle? fontHandle)
     {
         ImGui.PushStyleColor(ImGuiCol.Text, color);
-        ImGui.SetWindowFontScale(fontScale);
         
-        var textSize = ImGui.CalcTextSize(text);
-        var windowWidth = ImGui.GetWindowSize().X;
-        var cursorX = (windowWidth - textSize.X) * 0.5f;
+        if (fontHandle != null && fontHandle.Available)
+        {
+            // Use crisp font handles when available
+            fontHandle.Push();
+            
+            var textSize = ImGui.CalcTextSize(text);
+            var windowWidth = ImGui.GetWindowSize().X;
+            var cursorX = (windowWidth - textSize.X) * 0.5f;
+            
+            if (cursorX > 0) 
+                ImGui.SetCursorPosX(cursorX);
+            
+            ImGui.TextUnformatted(text);
+            fontHandle.Pop();
+        }
+        else
+        {
+            // Fallback to scaling if font handle is not available
+            ImGui.SetWindowFontScale(fontScale);
+            
+            var textSize = ImGui.CalcTextSize(text);
+            var windowWidth = ImGui.GetWindowSize().X;
+            var cursorX = (windowWidth - textSize.X) * 0.5f;
+            
+            if (cursorX > 0) 
+                ImGui.SetCursorPosX(cursorX);
+            
+            ImGui.TextUnformatted(text);
+            ImGui.SetWindowFontScale(1.0f);
+        }
         
-        if (cursorX > 0) 
-            ImGui.SetCursorPosX(cursorX);
-        
-        ImGui.TextUnformatted(text);
         ImGui.PopStyleColor();
     }
 }

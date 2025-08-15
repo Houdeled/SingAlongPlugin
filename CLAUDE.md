@@ -1,0 +1,1 @@
+- when running windows commands, use cmd.exe /c to avoid WSL issues.

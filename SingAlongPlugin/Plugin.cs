@@ -1,15 +1,20 @@
-﻿using Dalamud.Game.Command;
+using Dalamud.Game.Command;
 using Dalamud.IoC;
 using Dalamud.Plugin;
 using System.IO;
 using Dalamud.Interface.Windowing;
 using Dalamud.Plugin.Services;
 using SingAlongPlugin.Windows;
+using Dalamud.Interface.ManagedFontAtlas;
+using System;
+using System.Threading.Tasks;
 
 namespace SingAlongPlugin;
 
 public sealed class Plugin : IDalamudPlugin
 {
+    public static Plugin? Instance { get; private set; }
+    
     [PluginService] internal static IDalamudPluginInterface PluginInterface { get; private set; } = null!;
     [PluginService] internal static ITextureProvider TextureProvider { get; private set; } = null!;
     [PluginService] internal static ICommandManager CommandManager { get; private set; } = null!;
@@ -24,9 +29,15 @@ public sealed class Plugin : IDalamudPlugin
     public readonly WindowSystem WindowSystem = new("SingAlongPlugin");
     private ConfigWindow ConfigWindow { get; init; }
     private LyricsWindow LyricsWindow { get; init; }
+    
+    // Font management for crisp scaling
+    public IFontHandle? MainLyricsFont { get; private set; }
+    public IFontHandle? UpcomingLyricsFont { get; private set; }
+    private float _currentFontScale = 1.0f;
 
     public Plugin()
     {
+        Instance = this;
         Configuration = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
 
         ConfigWindow = new ConfigWindow(this);
@@ -41,6 +52,9 @@ public sealed class Plugin : IDalamudPlugin
         });
 
         PluginInterface.UiBuilder.Draw += DrawUI;
+        
+        // Initialize lyrics font for crisp scaling
+        UpdateLyricsFont();
 
         // This adds a button to the plugin installer entry of this plugin which allows
         // toggling the display status of the configuration ui
@@ -61,8 +75,14 @@ public sealed class Plugin : IDalamudPlugin
 
         ConfigWindow.Dispose();
         LyricsWindow.Dispose();
+        
+        // Dispose font handles
+        MainLyricsFont?.Dispose();
+        UpcomingLyricsFont?.Dispose();
 
         CommandManager.RemoveHandler(CommandName);
+        
+        Instance = null;
     }
 
     private void OnCommand(string command, string args)
@@ -75,4 +95,44 @@ public sealed class Plugin : IDalamudPlugin
 
     public void ToggleConfigUI() => ConfigWindow.Toggle();
     public void ToggleLyricsUI() => LyricsWindow.Toggle();
+    
+    public void UpdateLyricsFont()
+    {
+        // Only update if plugin is fully initialized
+        if (PluginInterface?.UiBuilder?.FontAtlas == null || Configuration == null)
+            return;
+            
+        var scaleFactor = Configuration.LyricsScaleFactor;
+        
+        // If scale hasn't changed significantly, don't update
+        if (Math.Abs(_currentFontScale - scaleFactor) < 0.01f)
+            return;
+            
+        _currentFontScale = scaleFactor;
+        
+        // Calculate font sizes based on scale factor
+        var baseFontSize = 16.0f;
+        var mainLyricSize = Math.Max(8, baseFontSize * 1.5f * scaleFactor);
+        var upcomingLyricSize = Math.Max(8, baseFontSize * 1.0f * scaleFactor);
+
+        // Dispose of the current Lyrics Font
+        MainLyricsFont?.Dispose();
+        MainLyricsFont = null;
+
+        UpcomingLyricsFont?.Dispose();
+        UpcomingLyricsFont = null;
+
+        // Create new font handles
+        MainLyricsFont = PluginInterface.UiBuilder.FontAtlas.NewDelegateFontHandle(e =>
+        {
+            e.OnPreBuild(tk => tk.AddDalamudDefaultFont(mainLyricSize));
+        });
+        
+        UpcomingLyricsFont = PluginInterface.UiBuilder.FontAtlas.NewDelegateFontHandle(e =>
+        {
+            e.OnPreBuild(tk => tk.AddDalamudDefaultFont(upcomingLyricSize));
+        });
+    }
+    
+    public float GetCurrentFontScale() => _currentFontScale;
 }

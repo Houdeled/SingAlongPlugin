@@ -17,5 +17,7 @@ public class Configuration : IPluginConfiguration
     public void Save()
     {
         Plugin.PluginInterface.SavePluginConfig(this);
+        // Update font when configuration is saved
+        Plugin.Instance?.UpdateLyricsFont();
     }
 }
