@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Numerics;
 using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Windowing;
@@ -14,10 +14,9 @@ public class ConfigWindow : Window, IDisposable
     // and the window ID will always be "###XYZ counter window" for ImGui
     public ConfigWindow(Plugin plugin) : base("SingAlong Configuration###SingAlongConfig")
     {
-        Flags = ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar |
-                ImGuiWindowFlags.NoScrollWithMouse;
+        Flags = ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar;
 
-        Size = new Vector2(232, 90);
+        Size = new Vector2(600, 200);
         SizeCondition = ImGuiCond.Always;
 
         Configuration = plugin.Configuration;
@@ -27,33 +26,48 @@ public class ConfigWindow : Window, IDisposable
 
     public override void PreDraw()
     {
-        // Flags must be added or removed before Draw() is being called, or they won't apply
-        if (Configuration.IsConfigWindowMovable)
-        {
-            Flags &= ~ImGuiWindowFlags.NoMove;
-        }
-        else
-        {
-            Flags |= ImGuiWindowFlags.NoMove;
-        }
+        // Config window is always movable
     }
 
     public override void Draw()
     {
-        // Can't ref a property, so use a local copy
-        var configValue = Configuration.SomePropertyToBeSavedAndWithADefault;
-        if (ImGui.Checkbox("Random Config Bool", ref configValue))
+        ImGui.Text("Lyrics Display Settings");
+        ImGui.Separator();
+        
+        // Scale Factor Setting
+        var scaleFactor = Configuration.LyricsScaleFactor;
+        if (ImGui.SliderFloat("Scale Factor", ref scaleFactor, 0.5f, 3.0f, "%.1f"))
         {
-            Configuration.SomePropertyToBeSavedAndWithADefault = configValue;
-            // Can save immediately on change if you don't want to provide a "Save and Close" button
+            Configuration.LyricsScaleFactor = scaleFactor;
             Configuration.Save();
         }
-
-        var movable = Configuration.IsConfigWindowMovable;
-        if (ImGui.Checkbox("Movable Config Window", ref movable))
+        ImGui.SameLine();
+        ImGui.TextDisabled("(?)");
+        if (ImGui.IsItemHovered())
+            ImGui.SetTooltip("Adjusts the size of lyrics text");
+        
+        // Background Opacity Setting
+        var bgOpacity = Configuration.BackgroundOpacity;
+        if (ImGui.SliderFloat("Background Opacity", ref bgOpacity, 0.0f, 1.0f, "%.2f"))
         {
-            Configuration.IsConfigWindowMovable = movable;
+            Configuration.BackgroundOpacity = bgOpacity;
             Configuration.Save();
         }
+        ImGui.SameLine();
+        ImGui.TextDisabled("(?)");
+        if (ImGui.IsItemHovered())
+            ImGui.SetTooltip("0.0 = Transparent, 1.0 = Solid background");
+        
+        // Lock Window Setting
+        var lockWindow = Configuration.LockWindow;
+        if (ImGui.Checkbox("Lock Window Position", ref lockWindow))
+        {
+            Configuration.LockWindow = lockWindow;
+            Configuration.Save();
+        }
+        ImGui.SameLine();
+        ImGui.TextDisabled("(?)");
+        if (ImGui.IsItemHovered())
+            ImGui.SetTooltip("Prevents accidentally moving the lyrics window");
     }
 }

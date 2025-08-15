@@ -8,8 +8,10 @@ public class Configuration : IPluginConfiguration
 {
     public int Version { get; set; } = 0;
 
-    public bool IsConfigWindowMovable { get; set; } = true;
-    public bool SomePropertyToBeSavedAndWithADefault { get; set; } = true;
+    // Lyrics Window Settings
+    public float LyricsScaleFactor { get; set; } = 1.0f;
+    public float BackgroundOpacity { get; set; } = 0.0f;
+    public bool LockWindow { get; set; } = true;
 
     // The below exist just to make saving less cumbersome
     public void Save()
