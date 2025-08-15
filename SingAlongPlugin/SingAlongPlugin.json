@@ -1,0 +1,13 @@
+{
+  "Author": "doria",
+  "Name": "SingAlong Plugin",
+  "Punchline": "Display synchronized lyrics for FFXIV background music.",
+  "Description": "Automatically detects FFXIV background music and displays synchronized lyrics from LRC files. Use /singalong to toggle the lyrics window.",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "lyrics",
+    "music",
+    "bgm",
+    "karaoke"
+  ]
+}
