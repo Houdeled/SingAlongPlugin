@@ -7,6 +7,7 @@ using Dalamud.Plugin.Services;
 using SingAlongPlugin.Windows;
 using Dalamud.Interface.ManagedFontAtlas;
 using Dalamud.Game;
+using Dalamud.Game.Text;
 using System;
 using System.Threading.Tasks;
 
@@ -23,6 +24,7 @@ public sealed class Plugin : IDalamudPlugin
     [PluginService] internal static IDataManager DataManager { get; private set; } = null!;
     [PluginService] internal static IPluginLog Log { get; private set; } = null!;
     [PluginService] internal static ISigScanner SigScanner { get; private set; } = null!;
+    [PluginService] internal static IChatGui ChatGui { get; private set; } = null!;
 
     private const string CommandName = "/singalong";
 
@@ -221,6 +223,13 @@ public sealed class Plugin : IDalamudPlugin
             {
                 Log.Debug($"No lyrics file found for song {songId} at {lyricsFile}");
                 _currentLrcParser = null;
+                
+                // Show chat warning that no lyrics were found
+                ChatGui.Print(new XivChatEntry
+                {
+                    Message = $"[SingAlong] No lyrics found for song ID {songId}. Place {songId}.lrc in the Lyrics folder.",
+                    Type = XivChatType.Echo
+                });
                 return;
             }
             
@@ -230,17 +239,40 @@ public sealed class Plugin : IDalamudPlugin
             {
                 _currentLrcParser = parser;
                 Log.Info($"Loaded lyrics for song {songId}: {parser.Metadata.Title} - {parser.Metadata.Artist}");
+                
+                // Auto-show lyrics window when lyrics are available
+                LyricsWindow.IsOpen = true;
+                
+                // Optional: Show chat confirmation
+                var title = !string.IsNullOrEmpty(parser.Metadata.Title) ? parser.Metadata.Title : "Unknown";
+                ChatGui.Print(new XivChatEntry
+                {
+                    Message = $"[SingAlong] Loaded lyrics for: {title}",
+                    Type = XivChatType.Echo
+                });
             }
             else
             {
                 Log.Warning($"Failed to parse lyrics file for song {songId}");
                 _currentLrcParser = null;
+                
+                ChatGui.Print(new XivChatEntry
+                {
+                    Message = $"[SingAlong] Failed to parse lyrics file for song ID {songId}.",
+                    Type = XivChatType.ErrorMessage
+                });
             }
         }
         catch (Exception ex)
         {
             Log.Error(ex, $"Error loading lyrics for song {songId}");
             _currentLrcParser = null;
+            
+            ChatGui.Print(new XivChatEntry
+            {
+                Message = $"[SingAlong] Error loading lyrics for song ID {songId}.",
+                Type = XivChatType.ErrorMessage
+            });
         }
     }
     

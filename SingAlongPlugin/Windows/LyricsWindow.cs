@@ -33,11 +33,11 @@ public class LyricsWindow : Window, IDisposable
         // Apply window lock setting
         if (Plugin.Configuration.LockWindow)
         {
-            Flags |= ImGuiWindowFlags.NoMove;
+            Flags |= ImGuiWindowFlags.NoMove | ImGuiWindowFlags.NoInputs;
         }
         else
         {
-            Flags &= ~ImGuiWindowFlags.NoMove;
+            Flags &= ~(ImGuiWindowFlags.NoMove | ImGuiWindowFlags.NoInputs);
         }
         
         // Apply background opacity setting
@@ -82,15 +82,15 @@ public class LyricsWindow : Window, IDisposable
             upcomingLyric = lrcParser.GetNextLyric(currentTime);
         }
         
-        // Only show window if there are lyrics to display
+        // Only show window content if there are lyrics to display
         if (!string.IsNullOrEmpty(mainLyric) || !string.IsNullOrEmpty(upcomingLyric))
         {
             DrawLyrics(mainLyric, upcomingLyric);
         }
         else
         {
-            // Show a placeholder when no lyrics are available
-            ImGui.TextDisabled("No lyrics available");
+            // Auto-hide window when no lyrics are available
+            IsOpen = false;
         }
     }
     
