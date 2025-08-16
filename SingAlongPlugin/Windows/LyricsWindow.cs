@@ -69,17 +69,27 @@ public class LyricsWindow : Window, IDisposable
         string mainLyric = "";
         string upcomingLyric = "";
         
-        // Get current lyrics from the music observer
-        var lrcParser = Plugin.GetCurrentLyrics();
-        if (lrcParser != null && lrcParser.IsLoaded && Plugin.MusicObserver != null)
+#if DEBUG
+        // Check for fake lyrics first in debug mode
+        if (Plugin.IsFakeLyricsActive())
         {
-            // Get current song timestamp
-            var currentTimestampMs = Plugin.MusicObserver.GetCurrentSongTimestamp();
-            var currentTime = TimeSpan.FromMilliseconds(currentTimestampMs);
-            
-            // Get current and next lyrics based on timestamp
-            mainLyric = lrcParser.GetCurrentLyric(currentTime);
-            upcomingLyric = lrcParser.GetNextLyric(currentTime);
+            (mainLyric, upcomingLyric) = Plugin.GetFakeLyrics();
+        }
+        else
+#endif
+        {
+            // Get current lyrics from the music observer
+            var lrcParser = Plugin.GetCurrentLyrics();
+            if (lrcParser != null && lrcParser.IsLoaded && Plugin.MusicObserver != null)
+            {
+                // Get current song timestamp
+                var currentTimestampMs = Plugin.MusicObserver.GetCurrentSongTimestamp();
+                var currentTime = TimeSpan.FromMilliseconds(currentTimestampMs);
+                
+                // Get current and next lyrics based on timestamp
+                mainLyric = lrcParser.GetCurrentLyric(currentTime);
+                upcomingLyric = lrcParser.GetNextLyric(currentTime);
+            }
         }
         
         // Only show window content if there are lyrics to display
@@ -89,8 +99,14 @@ public class LyricsWindow : Window, IDisposable
         }
         else
         {
-            // Auto-hide window when no lyrics are available
-            IsOpen = false;
+#if DEBUG
+            // In debug mode, don't auto-hide if fake lyrics are active
+            if (!Plugin.IsFakeLyricsActive())
+#endif
+            {
+                // Auto-hide window when no lyrics are available
+                IsOpen = false;
+            }
         }
     }
     
