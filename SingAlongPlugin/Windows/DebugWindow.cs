@@ -91,6 +91,8 @@ public class DebugWindow : Window, IDisposable
             if (_fakeLyricsState > 0)
             {
                 Plugin.SetLyricsWindowOpen(true);
+                // Trigger animation by notifying lyrics window of the change
+                Plugin.TriggerFakeLyricsAnimation();
             }
             else
             {

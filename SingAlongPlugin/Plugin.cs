@@ -284,6 +284,8 @@ public sealed class Plugin : IDalamudPlugin
     public (string current, string upcoming) GetFakeLyrics() => DebugWindow?.GetFakeLyrics() ?? (string.Empty, string.Empty);
     
     public void SetLyricsWindowOpen(bool isOpen) => LyricsWindow.IsOpen = isOpen;
+    
+    public void TriggerFakeLyricsAnimation() => LyricsWindow.TriggerFakeLyricsAnimation();
 #endif
     
     private void EnsureLyricsFolder()

@@ -459,4 +459,30 @@ public class LyricsWindow : Window, IDisposable
     {
         return t < 0.5f ? 2f * t * t : 1f - 2f * (1f - t) * (1f - t);
     }
+    
+#if DEBUG
+    public void TriggerFakeLyricsAnimation()
+    {
+        // Force animation by clearing current state so next draw detects change
+        if (Plugin.IsFakeLyricsActive())
+        {
+            var (currentMain, currentUpcoming) = Plugin.GetFakeLyrics();
+            
+            // Store current as previous
+            _previousMainLyric = _currentMainLyric;
+            _previousUpcomingLyric = _currentUpcomingLyric;
+            
+            // Update current to new values
+            _currentMainLyric = currentMain;
+            _currentUpcomingLyric = currentUpcoming;
+            
+            // Start animation if we have meaningful content
+            if (!string.IsNullOrEmpty(_previousMainLyric) && !string.IsNullOrEmpty(currentMain))
+            {
+                _animationState = AnimationState.Transitioning;
+                _animationStartTime = DateTime.UtcNow;
+            }
+        }
+    }
+#endif
 }
