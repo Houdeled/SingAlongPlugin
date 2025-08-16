@@ -293,7 +293,7 @@ public class LyricsWindow : Window, IDisposable
         else
         {
             // Static display
-            DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont);
+            DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.LyricsFont);
         }
     }
     
@@ -304,7 +304,7 @@ public class LyricsWindow : Window, IDisposable
         {
             var oldMainOffset = Plugin.Configuration.OldMainSlideOffset * easedProgress;
             var oldMainAlpha = 1f - easedProgress;
-            DrawCenteredText(_previousMainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont, oldMainOffset, oldMainAlpha);
+            DrawCenteredText(_previousMainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.LyricsFont, oldMainOffset, oldMainAlpha);
         }
         
         // Check if this is a natural progression (upcoming becomes main)
@@ -317,7 +317,7 @@ public class LyricsWindow : Window, IDisposable
         else
         {
             // Fallback: completely new lyric appears
-            DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont, 0f, easedProgress);
+            DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.LyricsFont, 0f, easedProgress);
         }
     }
     
@@ -326,10 +326,11 @@ public class LyricsWindow : Window, IDisposable
         var upcomingPosition = CalculateUpcomingPosition();
         var upcomingToMainOffset = upcomingPosition * (1f - easedProgress);
         var upcomingToMainAlpha = Plugin.Configuration.UpcomingAlphaMultiplier + (1f - Plugin.Configuration.UpcomingAlphaMultiplier) * easedProgress;
-        var upcomingToMainScale = Plugin.Configuration.UpcomingLyricScale + (Plugin.Configuration.UpcomingScaleGrowth * easedProgress);
+        var scaleGrowth = Plugin.Configuration.MainLyricScale - Plugin.Configuration.UpcomingLyricScale;
+        var upcomingToMainScale = Plugin.Configuration.UpcomingLyricScale + (scaleGrowth * easedProgress);
         var upcomingToMainColor = LerpColor(UpcomingLyricColor, MainLyricColor, easedProgress);
         
-        DrawCenteredText(mainLyric, upcomingToMainScale * scaleFactor, upcomingToMainColor, Plugin.MainLyricsFont, upcomingToMainOffset, upcomingToMainAlpha);
+        DrawCenteredText(mainLyric, upcomingToMainScale * scaleFactor, upcomingToMainColor, Plugin.LyricsFont, upcomingToMainOffset, upcomingToMainAlpha);
     }
     
     private void DrawUpcomingLyric(string upcomingLyric, float scaleFactor, float easedProgress)
@@ -344,7 +345,7 @@ public class LyricsWindow : Window, IDisposable
         else
         {
             // Static display
-            DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.UpcomingLyricsFont);
+            DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.LyricsFont);
         }
     }
     
@@ -355,18 +356,21 @@ public class LyricsWindow : Window, IDisposable
         var newUpcomingOffset = upcomingSlideDistance * (1f - easedProgress);
         var newUpcomingAlpha = easedProgress * Plugin.Configuration.UpcomingAlphaMultiplier;
         
-        DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.UpcomingLyricsFont, newUpcomingOffset, newUpcomingAlpha);
+        DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.LyricsFont, newUpcomingOffset, newUpcomingAlpha);
     }
     
-    private void DrawCenteredText(string text, float fontScale, Vector4 color, IFontHandle? fontHandle, float yOffset = 0f, float alphaMultiplier = 1f)
+    private void DrawCenteredText(string text, float scale, Vector4 color, IFontHandle? fontHandle, float yOffset = 0f, float alphaMultiplier = 1f)
     {
         // Apply alpha multiplier to color
         var animatedColor = new Vector4(color.X, color.Y, color.Z, color.W * alphaMultiplier);
         ImGui.PushStyleColor(ImGuiCol.Text, animatedColor);
         
+        // Always use window font scale for consistent scaling behavior
+        ImGui.SetWindowFontScale(scale);
+        
         if (fontHandle != null && fontHandle.Available)
         {
-            // Use crisp font handles when available
+            // Use font handle for crisp rendering
             fontHandle.Push();
             
             var textSize = ImGui.CalcTextSize(text);
@@ -385,9 +389,7 @@ public class LyricsWindow : Window, IDisposable
         }
         else
         {
-            // Fallback to scaling if font handle is not available
-            ImGui.SetWindowFontScale(fontScale);
-            
+            // Fallback without font handle
             var textSize = ImGui.CalcTextSize(text);
             var windowWidth = ImGui.GetWindowSize().X;
             var cursorX = (windowWidth - textSize.X) * 0.5f;
@@ -400,9 +402,10 @@ public class LyricsWindow : Window, IDisposable
             ImGui.SetCursorPosY(currentCursorY + yOffset);
             
             ImGui.TextUnformatted(text);
-            ImGui.SetWindowFontScale(1f);
         }
         
+        // Reset scale and pop color
+        ImGui.SetWindowFontScale(1f);
         ImGui.PopStyleColor();
     }
     
@@ -433,7 +436,7 @@ public class LyricsWindow : Window, IDisposable
         }
         
         if (string.IsNullOrEmpty(mainLyric) && string.IsNullOrEmpty(upcomingLyric))
-            return Vector2.Zero;
+            return new Vector2(100f, 20f); // Default size when no lyrics are present
         
         // Calculate text sizes
         var scaleFactor = Plugin.Configuration.LyricsScaleFactor;
@@ -443,11 +446,14 @@ public class LyricsWindow : Window, IDisposable
         
         if (!string.IsNullOrEmpty(mainLyric))
         {
-            if (Plugin.MainLyricsFont?.Available == true)
+            if (Plugin.LyricsFont?.Available == true)
             {
-                Plugin.MainLyricsFont.Push();
+                Plugin.LyricsFont.Push();
+                var oldScale = ImGui.GetFont().Scale;
+                ImGui.GetFont().Scale = Plugin.Configuration.MainLyricScale * scaleFactor;
                 mainSize = ImGui.CalcTextSize(mainLyric);
-                Plugin.MainLyricsFont.Pop();
+                ImGui.GetFont().Scale = oldScale;
+                Plugin.LyricsFont.Pop();
             }
             else
             {
@@ -460,11 +466,14 @@ public class LyricsWindow : Window, IDisposable
         
         if (!string.IsNullOrEmpty(upcomingLyric))
         {
-            if (Plugin.UpcomingLyricsFont?.Available == true)
+            if (Plugin.LyricsFont?.Available == true)
             {
-                Plugin.UpcomingLyricsFont.Push();
+                Plugin.LyricsFont.Push();
+                var oldScale = ImGui.GetFont().Scale;
+                ImGui.GetFont().Scale = Plugin.Configuration.UpcomingLyricScale * scaleFactor;
                 upcomingSize = ImGui.CalcTextSize(upcomingLyric);
-                Plugin.UpcomingLyricsFont.Pop();
+                ImGui.GetFont().Scale = oldScale;
+                Plugin.LyricsFont.Pop();
             }
             else
             {

@@ -1,4 +1,4 @@
-﻿using Dalamud.Configuration;
+using Dalamud.Configuration;
 using System;
 
 namespace SingAlongPlugin;
@@ -19,13 +19,12 @@ public class Configuration : IPluginConfiguration
     public float OldMainSlideOffset { get; set; } = -50f;
     public float NewLyricSlideOffset { get; set; } = 50f;
     public float UpcomingAlphaMultiplier { get; set; } = 0.8f;
-    public float UpcomingScaleGrowth { get; set; } = 0.5f;
     
     // Layout Settings
     public float LyricSpacing { get; set; } = 15.0f;
     public float SizeChangeThreshold { get; set; } = 0.1f;
-    public float MainLyricScale { get; set; } = 1.5f;
-    public float UpcomingLyricScale { get; set; } = 1.0f;
+    public float MainLyricScale { get; set; } = 1f; // Main lyrics are larger
+    public float UpcomingLyricScale { get; set; } = 0.5f; // Upcoming lyrics are smaller
     public int WindowPaddingMultiplier { get; set; } = 2;
     
     // Easing Settings - Now using fixed smoothstep function (3t² - 2t³)
