@@ -13,7 +13,7 @@ public class DebugWindow : Window, IDisposable
     
     // Predefined fake lyrics
     private readonly string _shortLyric = "Short lyric";
-    private readonly string _longLyric = "This is a much longer lyric that should demonstrate how the window handles different text lengths";
+    private readonly string _longLyric = "Dancing through the midnight sky so bright";
 
     public DebugWindow(Plugin plugin) : base("SingAlong Debug###SingAlongDebug")
     {
