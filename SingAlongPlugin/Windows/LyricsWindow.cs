@@ -19,6 +19,8 @@ public class LyricsWindow : Window, IDisposable
     private DateTime _animationStartTime;
     private string _previousMainLyric = "";
     private string _currentMainLyric = "";
+    private string _previousUpcomingLyric = "";
+    private string _currentUpcomingLyric = "";
     private float _animationDurationMs = 500f; // milliseconds
 
     public LyricsWindow(Plugin plugin)
@@ -94,7 +96,9 @@ public class LyricsWindow : Window, IDisposable
         if (_currentMainLyric != mainLyric)
         {
             _previousMainLyric = _currentMainLyric;
+            _previousUpcomingLyric = _currentUpcomingLyric; // Capture current upcoming before it changes
             _currentMainLyric = mainLyric;
+            _currentUpcomingLyric = upcomingLyric; // Update both at the same time
             
             // Start animation if we have a previous lyric (not first lyric) and new lyric is not empty
             if (!string.IsNullOrEmpty(_previousMainLyric) && !string.IsNullOrEmpty(mainLyric))
@@ -102,6 +106,11 @@ public class LyricsWindow : Window, IDisposable
                 _animationState = AnimationState.Transitioning;
                 _animationStartTime = DateTime.UtcNow;
             }
+        }
+        else if (_currentUpcomingLyric != upcomingLyric)
+        {
+            // Only upcoming changed (shouldn't happen often, but handle it)
+            _currentUpcomingLyric = upcomingLyric;
         }
         
         // Only show window content if there are lyrics to display
@@ -134,20 +143,39 @@ public class LyricsWindow : Window, IDisposable
                 _animationState = AnimationState.Idle;
             }
             
-            // Calculate offsets and alphas for slide-up animation
-            var oldLyricOffset = -50f * easedProgress; // Slide up
-            var newLyricOffset = 50f * (1f - easedProgress); // Slide up from below
-            var oldLyricAlpha = 1f - easedProgress; // Fade out
-            var newLyricAlpha = easedProgress; // Fade in
+            // Calculate positions and properties for the blend effect
+            var upcomingToMainOffset = 65f * (1f - easedProgress); // Upcoming moves up to main position
+            var oldMainOffset = -50f * easedProgress; // Old main slides up and out
             
-            // Draw old lyric sliding up and fading out
+            // Alpha transitions for smooth blending
+            var oldMainAlpha = 1f - easedProgress; // Old main fades out
+            var upcomingToMainAlpha = easedProgress; // Upcoming becomes main (fades in as main)
+            var newUpcomingAlpha = easedProgress * 0.8f; // New upcoming fades in
+            
+            // Calculate scale transitions - upcoming grows to main size
+            var upcomingToMainScale = 1.0f + (0.5f * easedProgress); // Grows from 1.0 to 1.5
+            var mainToUpcomingScale = 1.5f - (0.5f * easedProgress); // Shrinks from 1.5 to 1.0 (if any)
+            
+            // Draw old main lyric sliding up and fading out
             if (!string.IsNullOrEmpty(_previousMainLyric))
             {
-                DrawCenteredText(_previousMainLyric, 1.5f * scaleFactor, new Vector4(1.0f, 1.0f, 1.0f, 1.0f), Plugin.MainLyricsFont, oldLyricOffset, oldLyricAlpha);
+                DrawCenteredText(_previousMainLyric, 1.5f * scaleFactor, new Vector4(1.0f, 1.0f, 1.0f, 1.0f), Plugin.MainLyricsFont, oldMainOffset, oldMainAlpha);
             }
             
-            // Draw new lyric sliding up and fading in
-            DrawCenteredText(mainLyric, 1.5f * scaleFactor, new Vector4(1.0f, 1.0f, 1.0f, 1.0f), Plugin.MainLyricsFont, newLyricOffset, newLyricAlpha);
+            // Check if this is a natural progression (upcoming becomes main)
+            bool isNaturalProgression = !string.IsNullOrEmpty(_previousUpcomingLyric) && _previousUpcomingLyric == mainLyric;
+            
+            if (isNaturalProgression)
+            {
+                // This is the blend effect - previous upcoming becomes new main
+                DrawCenteredText(mainLyric, upcomingToMainScale * scaleFactor, new Vector4(1.0f, 1.0f, 1.0f, 1.0f), Plugin.MainLyricsFont, upcomingToMainOffset, upcomingToMainAlpha);
+            }
+            else
+            {
+                // Fallback: new lyric sliding up from below (for skips or unexpected changes)
+                var newLyricOffset = 50f * (1f - easedProgress);
+                DrawCenteredText(mainLyric, 1.5f * scaleFactor, new Vector4(1.0f, 1.0f, 1.0f, 1.0f), Plugin.MainLyricsFont, newLyricOffset, easedProgress);
+            }
         }
         else
         {
@@ -158,8 +186,22 @@ public class LyricsWindow : Window, IDisposable
         // Spacing between lyrics
         ImGuiHelpers.ScaledDummy(15.0f);
         
-        // Upcoming lyric - always static, no animation
-        DrawCenteredText(upcomingLyric, 1.0f * scaleFactor, new Vector4(0.7f, 0.7f, 0.7f, 0.8f), Plugin.UpcomingLyricsFont);
+        // Upcoming lyric with animation support
+        if (_animationState == AnimationState.Transitioning)
+        {
+            var elapsed = (float)(DateTime.UtcNow - _animationStartTime).TotalMilliseconds;
+            var progress = Math.Min(elapsed / _animationDurationMs, 1.0f);
+            var easedProgress = EaseInOutQuad(progress);
+            
+            // New upcoming lyric fades in
+            var newUpcomingAlpha = easedProgress * 0.8f;
+            DrawCenteredText(upcomingLyric, 1.0f * scaleFactor, new Vector4(0.7f, 0.7f, 0.7f, 0.8f), Plugin.UpcomingLyricsFont, 0f, newUpcomingAlpha);
+        }
+        else
+        {
+            // Static upcoming lyric display
+            DrawCenteredText(upcomingLyric, 1.0f * scaleFactor, new Vector4(0.7f, 0.7f, 0.7f, 0.8f), Plugin.UpcomingLyricsFont);
+        }
         
         // Reset font scale
         ImGui.SetWindowFontScale(1.0f);
