@@ -12,6 +12,7 @@ public class Configuration : IPluginConfiguration
     public float LyricsScaleFactor { get; set; } = 1.0f;
     public float BackgroundOpacity { get; set; } = 0.0f;
     public bool LockWindow { get; set; } = true;
+    public bool EnableAnimations { get; set; } = true;
 
     // The below exist just to make saving less cumbersome
     public void Save()

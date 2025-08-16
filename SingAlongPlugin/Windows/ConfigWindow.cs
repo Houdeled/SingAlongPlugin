@@ -72,5 +72,17 @@ public class ConfigWindow : Window, IDisposable
         if (ImGui.IsItemHovered())
             ImGui.SetTooltip("Prevents accidentally moving the lyrics window");
         
+        // Enable Animations Setting
+        var enableAnimations = Configuration.EnableAnimations;
+        if (ImGui.Checkbox("Enable Animations", ref enableAnimations))
+        {
+            Configuration.EnableAnimations = enableAnimations;
+            Configuration.Save();
+        }
+        ImGui.SameLine();
+        ImGui.TextDisabled("(?)");
+        if (ImGui.IsItemHovered())
+            ImGui.SetTooltip("Enables smooth transitions when lyrics change");
+        
     }
 }
