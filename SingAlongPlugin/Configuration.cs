@@ -16,7 +16,6 @@ public class Configuration : IPluginConfiguration
     
     // Animation Settings
     public float AnimationDurationMs { get; set; } = 500f;
-    public float UpcomingToMainOffset { get; set; } = 65f; // 50f + 15f
     public float OldMainSlideOffset { get; set; } = -50f;
     public float NewLyricSlideOffset { get; set; } = 50f;
     public float UpcomingAlphaMultiplier { get; set; } = 0.8f;

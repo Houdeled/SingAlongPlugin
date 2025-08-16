@@ -13,7 +13,7 @@ public class LyricsWindow : Window, IDisposable
 {
     // Colors (keep as constants since they don't need to be configurable)
     private static readonly Vector4 MainLyricColor = new(1.0f, 1.0f, 1.0f, 1.0f);
-    private static readonly Vector4 UpcomingLyricColor = new(0.7f, 0.7f, 0.7f, 0.9f);
+    private static readonly Vector4 UpcomingLyricColor = new(0.7f, 0.7f, 0.7f, 0.8f);
     private static readonly Vector4 TransparentBackground = new(0.0f, 0.0f, 0.0f, 0.0f);
     private const float BackgroundOpacityThreshold = 0.0f;
 
@@ -248,84 +248,114 @@ public class LyricsWindow : Window, IDisposable
     
     private void DrawLyrics(string mainLyric, string upcomingLyric)
     {
-        var windowWidth = ImGui.GetWindowSize().X;
         var scaleFactor = Plugin.Configuration.LyricsScaleFactor;
         
-        if (_animationState == AnimationState.Transitioning)
-        {
-            // Calculate animation progress
-            var elapsed = (float)(DateTime.UtcNow - _animationStartTime).TotalMilliseconds;
-            var progress = Math.Min(elapsed / Plugin.Configuration.AnimationDurationMs, 1f);
-            var easedProgress = EaseInOutQuad(progress);
-            
-            // Animation complete?
-            if (progress >= 1f)
-            {
-                _animationState = AnimationState.Idle;
-            }
-            
-            // Calculate positions and properties for the blend effect
-            var upcomingToMainOffset = Plugin.Configuration.UpcomingToMainOffset * (1f - easedProgress); // Upcoming moves up to main position
-            var oldMainOffset = Plugin.Configuration.OldMainSlideOffset * easedProgress; // Old main slides up and out
-            
-            // Alpha transitions for smooth blending
-            var oldMainAlpha = 1f - easedProgress; // Old main fades out
-            var upcomingToMainAlpha = easedProgress; // Upcoming becomes main (fades in as main)
-            var newUpcomingAlpha = easedProgress * Plugin.Configuration.UpcomingAlphaMultiplier; // New upcoming fades in
-            
-            // Calculate scale transitions - upcoming grows to main size
-            var upcomingToMainScale = Plugin.Configuration.UpcomingLyricScale + (Plugin.Configuration.UpcomingScaleGrowth * easedProgress); // Grows from 1.0 to 1.5
-            var mainToUpcomingScale = Plugin.Configuration.MainLyricScale - (Plugin.Configuration.UpcomingScaleGrowth * easedProgress); // Shrinks from 1.5 to 1.0 (if any)
-            
-            // Draw old main lyric sliding up and fading out
-            if (!string.IsNullOrEmpty(_previousMainLyric))
-            {
-                DrawCenteredText(_previousMainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont, oldMainOffset, oldMainAlpha);
-            }
-            
-            // Check if this is a natural progression (upcoming becomes main)
-            bool isNaturalProgression = !string.IsNullOrEmpty(_previousUpcomingLyric) && _previousUpcomingLyric == mainLyric;
-            
-            if (isNaturalProgression)
-            {
-                // This is the blend effect - previous upcoming becomes new main
-                DrawCenteredText(mainLyric, upcomingToMainScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont, upcomingToMainOffset, upcomingToMainAlpha);
-            }
-            else
-            {
-                // Fallback: new lyric sliding up from below (for skips or unexpected changes)
-                var newLyricOffset = Plugin.Configuration.NewLyricSlideOffset * (1f - easedProgress);
-                DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont, newLyricOffset, easedProgress);
-            }
-        }
-        else
-        {
-            // Normal static display
-            DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont);
-        }
+        // Calculate animation progress if needed
+        var animationProgress = CalculateAnimationProgress();
+        
+        // Draw main lyric section
+        DrawMainLyric(mainLyric, scaleFactor, animationProgress);
         
         // Spacing between lyrics
         ImGuiHelpers.ScaledDummy(Plugin.Configuration.LyricSpacing);
         
-        // Upcoming lyric with animation support
-        if (_animationState == AnimationState.Transitioning)
-        {
-            var elapsed = (float)(DateTime.UtcNow - _animationStartTime).TotalMilliseconds;
-            var progress = Math.Min(elapsed / Plugin.Configuration.AnimationDurationMs, 1f);
-            var easedProgress = EaseInOutQuad(progress);
-            
-            // New upcoming lyric fades in
-            var newUpcomingAlpha = easedProgress * Plugin.Configuration.UpcomingAlphaMultiplier;
-            DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.UpcomingLyricsFont, 0f, newUpcomingAlpha);
-        }
-        else
-        {
-            // Static upcoming lyric display
-            DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.UpcomingLyricsFont);
-        }
+        // Draw upcoming lyric section
+        DrawUpcomingLyric(upcomingLyric, scaleFactor, animationProgress);
         
         // Reset font scale
         ImGui.SetWindowFontScale(1f);
+    }
+    
+    private float CalculateAnimationProgress()
+    {
+        if (_animationState != AnimationState.Transitioning)
+            return 0f;
+            
+        var elapsed = (float)(DateTime.UtcNow - _animationStartTime).TotalMilliseconds;
+        var progress = Math.Min(elapsed / Plugin.Configuration.AnimationDurationMs, 1f);
+        var easedProgress = EaseInOutQuad(progress);
+        
+        // Animation complete?
+        if (progress >= 1f)
+        {
+            _animationState = AnimationState.Idle;
+        }
+        
+        return easedProgress;
+    }
+    
+    private void DrawMainLyric(string mainLyric, float scaleFactor, float easedProgress)
+    {
+        if (_animationState == AnimationState.Transitioning)
+        {
+            DrawAnimatedMainLyric(mainLyric, scaleFactor, easedProgress);
+        }
+        else
+        {
+            // Static display
+            DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont);
+        }
+    }
+    
+    private void DrawAnimatedMainLyric(string mainLyric, float scaleFactor, float easedProgress)
+    {
+        // Draw old main lyric fading out
+        if (!string.IsNullOrEmpty(_previousMainLyric))
+        {
+            var oldMainOffset = Plugin.Configuration.OldMainSlideOffset * easedProgress;
+            var oldMainAlpha = 1f - easedProgress;
+            DrawCenteredText(_previousMainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont, oldMainOffset, oldMainAlpha);
+        }
+        
+        // Check if this is a natural progression (upcoming becomes main)
+        bool isNaturalProgression = !string.IsNullOrEmpty(_previousUpcomingLyric) && _previousUpcomingLyric == mainLyric;
+        
+        if (isNaturalProgression)
+        {
+            DrawUpcomingToMainTransition(mainLyric, scaleFactor, easedProgress);
+        }
+        else
+        {
+            // Fallback: completely new lyric appears
+            DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.MainLyricsFont, 0f, easedProgress);
+        }
+    }
+    
+    private void DrawUpcomingToMainTransition(string mainLyric, float scaleFactor, float easedProgress)
+    {
+        var upcomingPosition = CalculateUpcomingPosition();
+        var upcomingToMainOffset = upcomingPosition * (1f - easedProgress);
+        var upcomingToMainAlpha = Plugin.Configuration.UpcomingAlphaMultiplier + (1f - Plugin.Configuration.UpcomingAlphaMultiplier) * easedProgress;
+        var upcomingToMainScale = Plugin.Configuration.UpcomingLyricScale + (Plugin.Configuration.UpcomingScaleGrowth * easedProgress);
+        var upcomingToMainColor = LerpColor(UpcomingLyricColor, MainLyricColor, easedProgress);
+        
+        DrawCenteredText(mainLyric, upcomingToMainScale * scaleFactor, upcomingToMainColor, Plugin.MainLyricsFont, upcomingToMainOffset, upcomingToMainAlpha);
+    }
+    
+    private void DrawUpcomingLyric(string upcomingLyric, float scaleFactor, float easedProgress)
+    {
+        if (string.IsNullOrEmpty(upcomingLyric))
+            return;
+            
+        if (_animationState == AnimationState.Transitioning)
+        {
+            DrawAnimatedUpcomingLyric(upcomingLyric, scaleFactor, easedProgress);
+        }
+        else
+        {
+            // Static display
+            DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.UpcomingLyricsFont);
+        }
+    }
+    
+    private void DrawAnimatedUpcomingLyric(string upcomingLyric, float scaleFactor, float easedProgress)
+    {
+        // New upcoming slides up from below its final position
+        var upcomingSlideDistance = Plugin.Configuration.LyricSpacing * ImGuiHelpers.GlobalScale;
+        var newUpcomingOffset = upcomingSlideDistance * (1f - easedProgress);
+        var newUpcomingAlpha = easedProgress * Plugin.Configuration.UpcomingAlphaMultiplier;
+        
+        DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.UpcomingLyricsFont, newUpcomingOffset, newUpcomingAlpha);
     }
     
     private void DrawCenteredText(string text, float fontScale, Vector4 color, IFontHandle? fontHandle, float yOffset = 0f, float alphaMultiplier = 1f)
@@ -465,6 +495,48 @@ public class LyricsWindow : Window, IDisposable
         // Smoothstep function: f(t) = 3t² - 2t³
         // Always continuous, beautiful S-curve, no configuration needed
         return 3f * t * t - 2f * t * t * t;
+    }
+    
+    private float CalculateUpcomingPosition()
+    {
+        // ISSUE: Complex font calculation doesn't match actual layout
+        // For now, use the spacing value directly, which empirically works better
+        // TODO: Investigate why font height calculation gives wrong results
+        
+        return Plugin.Configuration.LyricSpacing * ImGuiHelpers.GlobalScale;
+        
+        // Original complex calculation (currently problematic):
+        /*
+        var scaleFactor = Plugin.Configuration.LyricsScaleFactor;
+        
+        float mainLyricHeight;
+        if (Plugin.MainLyricsFont?.Available == true)
+        {
+            Plugin.MainLyricsFont.Push();
+            mainLyricHeight = ImGui.CalcTextSize("Ay").Y;
+            Plugin.MainLyricsFont.Pop();
+        }
+        else
+        {
+            var oldScale = ImGui.GetFont().Scale;
+            ImGui.GetFont().Scale = Plugin.Configuration.MainLyricScale * scaleFactor;
+            mainLyricHeight = ImGui.CalcTextSize("Ay").Y;
+            ImGui.GetFont().Scale = oldScale;
+        }
+        
+        return mainLyricHeight + (Plugin.Configuration.LyricSpacing * ImGuiHelpers.GlobalScale);
+        */
+    }
+    
+    private Vector4 LerpColor(Vector4 from, Vector4 to, float progress)
+    {
+        // Linear interpolation between two colors
+        return new Vector4(
+            from.X + (to.X - from.X) * progress,
+            from.Y + (to.Y - from.Y) * progress,
+            from.Z + (to.Z - from.Z) * progress,
+            from.W + (to.W - from.W) * progress
+        );
     }
     
 #if DEBUG
