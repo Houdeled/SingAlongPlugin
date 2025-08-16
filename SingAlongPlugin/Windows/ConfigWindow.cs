@@ -71,5 +71,6 @@ public class ConfigWindow : Window, IDisposable
         ImGui.TextDisabled("(?)");
         if (ImGui.IsItemHovered())
             ImGui.SetTooltip("Prevents accidentally moving the lyrics window");
+        
     }
 }

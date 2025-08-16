@@ -278,6 +278,14 @@ public sealed class Plugin : IDalamudPlugin
     
     public LrcParser? GetCurrentLyrics() => _currentLrcParser;
     
+#if DEBUG
+    public bool IsFakeLyricsActive() => DebugWindow?.IsFakeLyricsActive ?? false;
+    
+    public (string current, string upcoming) GetFakeLyrics() => DebugWindow?.GetFakeLyrics() ?? (string.Empty, string.Empty);
+    
+    public void SetLyricsWindowOpen(bool isOpen) => LyricsWindow.IsOpen = isOpen;
+#endif
+    
     private void EnsureLyricsFolder()
     {
         try
