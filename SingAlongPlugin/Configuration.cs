@@ -22,8 +22,8 @@ public class Configuration : IPluginConfiguration
     
     // Layout Settings
     public float LyricSpacing { get; set; } = 15.0f;
-    public float SizeChangeThreshold { get; set; } = 0.1f;
-    public float MainLyricScale { get; set; } = 1f; // Main lyrics are larger
+    public float SizeChangeThreshold { get; set; } = 2.0f;
+    public float MainLyricScale { get; set; } = 1.0f; // Main lyrics are larger
     public float UpcomingLyricScale { get; set; } = 0.5f; // Upcoming lyrics are smaller
     public int WindowPaddingMultiplier { get; set; } = 2;
     

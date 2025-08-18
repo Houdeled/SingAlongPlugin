@@ -449,19 +449,15 @@ public class LyricsWindow : Window, IDisposable
             if (Plugin.LyricsFont?.Available == true)
             {
                 Plugin.LyricsFont.Push();
-                var oldScale = ImGui.GetFont().Scale;
-                ImGui.GetFont().Scale = Plugin.Configuration.MainLyricScale * scaleFactor;
                 mainSize = ImGui.CalcTextSize(mainLyric);
-                ImGui.GetFont().Scale = oldScale;
                 Plugin.LyricsFont.Pop();
             }
             else
             {
-                var oldScale = ImGui.GetFont().Scale;
-                ImGui.GetFont().Scale = Plugin.Configuration.MainLyricScale * scaleFactor;
                 mainSize = ImGui.CalcTextSize(mainLyric);
-                ImGui.GetFont().Scale = oldScale;
             }
+            // Apply scale factor manually to calculated size
+            mainSize *= Plugin.Configuration.MainLyricScale * scaleFactor;
         }
         
         if (!string.IsNullOrEmpty(upcomingLyric))
@@ -469,19 +465,15 @@ public class LyricsWindow : Window, IDisposable
             if (Plugin.LyricsFont?.Available == true)
             {
                 Plugin.LyricsFont.Push();
-                var oldScale = ImGui.GetFont().Scale;
-                ImGui.GetFont().Scale = Plugin.Configuration.UpcomingLyricScale * scaleFactor;
                 upcomingSize = ImGui.CalcTextSize(upcomingLyric);
-                ImGui.GetFont().Scale = oldScale;
                 Plugin.LyricsFont.Pop();
             }
             else
             {
-                var oldScale = ImGui.GetFont().Scale;
-                ImGui.GetFont().Scale = Plugin.Configuration.UpcomingLyricScale * scaleFactor;
                 upcomingSize = ImGui.CalcTextSize(upcomingLyric);
-                ImGui.GetFont().Scale = oldScale;
             }
+            // Apply scale factor manually to calculated size
+            upcomingSize *= Plugin.Configuration.UpcomingLyricScale * scaleFactor;
         }
         
         // Calculate total window size

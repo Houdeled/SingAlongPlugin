@@ -145,6 +145,15 @@ public class LrcParser
             return string.Empty;
             
         var currentIndex = FindLyricIndex(currentTime);
+        
+        // If we're before the first lyric (currentIndex is -1), the next lyric is the first one
+        if (currentIndex == -1)
+        {
+            if (_lyrics.Count > 0)
+                return _lyrics[0].Text;
+            return string.Empty;
+        }
+        
         var nextIndex = currentIndex + 1;
         
         if (nextIndex >= 0 && nextIndex < _lyrics.Count)
