@@ -33,6 +33,10 @@ public class LyricsWindow : Window, IDisposable
     private string _currentMainLyric = "";
     private string _previousUpcomingLyric = "";
     private string _currentUpcomingLyric = "";
+    
+    // Position tracking for smooth animations
+    private float _lastUpcomingLyricPosition = 0f;
+    private float _lastMainLyricPosition = 0f;
 
     public LyricsWindow(Plugin plugin)
         : base("Song Lyrics##SingAlongLyrics", 
@@ -292,8 +296,10 @@ public class LyricsWindow : Window, IDisposable
         }
         else
         {
-            // Static display
+            // Static display - capture the position for future animations
+            var cursorYBeforeMain = ImGui.GetCursorPosY();
             DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.LyricsFont);
+            _lastMainLyricPosition = cursorYBeforeMain;
         }
     }
     
@@ -324,7 +330,13 @@ public class LyricsWindow : Window, IDisposable
     private void DrawUpcomingToMainTransition(string mainLyric, float scaleFactor, float easedProgress)
     {
         var upcomingPosition = CalculateUpcomingPosition();
-        var upcomingToMainOffset = upcomingPosition * (1f - easedProgress);
+        var mainPosition = _lastMainLyricPosition > 0f ? _lastMainLyricPosition : 0f; // Use stored main position or fallback to 0
+        var currentCursorY = ImGui.GetCursorPosY();
+        
+        // Interpolate between upcoming position and main position
+        var targetY = upcomingPosition + (mainPosition - upcomingPosition) * easedProgress;
+        var upcomingToMainOffset = targetY - currentCursorY;
+        
         var upcomingToMainAlpha = Plugin.Configuration.UpcomingAlphaMultiplier + (1f - Plugin.Configuration.UpcomingAlphaMultiplier) * easedProgress;
         var scaleGrowth = Plugin.Configuration.MainLyricScale - Plugin.Configuration.UpcomingLyricScale;
         var upcomingToMainScale = Plugin.Configuration.UpcomingLyricScale + (scaleGrowth * easedProgress);
@@ -344,8 +356,10 @@ public class LyricsWindow : Window, IDisposable
         }
         else
         {
-            // Static display
+            // Static display - capture the position for future animations
+            var cursorYBeforeUpcoming = ImGui.GetCursorPosY();
             DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.LyricsFont);
+            _lastUpcomingLyricPosition = cursorYBeforeUpcoming;
         }
     }
     
@@ -500,10 +514,14 @@ public class LyricsWindow : Window, IDisposable
     
     private float CalculateUpcomingPosition()
     {
-        // ISSUE: Complex font calculation doesn't match actual layout
-        // For now, use the spacing value directly, which empirically works better
-        // TODO: Investigate why font height calculation gives wrong results
+        // Use the actual captured position from the last static render
+        // This ensures the animation starts from the exact position where the upcoming lyric was drawn
+        if (_lastUpcomingLyricPosition > 0f)
+        {
+            return _lastUpcomingLyricPosition;
+        }
         
+        // Fallback to spacing calculation if no position captured yet
         return Plugin.Configuration.LyricSpacing * ImGuiHelpers.GlobalScale;
         
         // Original complex calculation (currently problematic):
