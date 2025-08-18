@@ -213,13 +213,7 @@ public sealed class Plugin : IDalamudPlugin
             {
                 Log.Debug($"No lyrics file found for song {songId} at {lyricsFile}");
                 _currentLrcParser = null;
-                
-                // Show chat warning that no lyrics were found
-                ChatGui.Print(new XivChatEntry
-                {
-                    Message = $"[SingAlong] No lyrics found for song ID {songId}. Place {songId}.lrc in the Lyrics folder.",
-                    Type = XivChatType.Echo
-                });
+
                 return;
             }
             
