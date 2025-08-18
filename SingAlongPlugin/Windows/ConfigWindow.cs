@@ -15,10 +15,7 @@ public class ConfigWindow : Window, IDisposable
     // and the window ID will always be "###XYZ counter window" for ImGui
     public ConfigWindow(Plugin plugin) : base("SingAlong Configuration###SingAlongConfig")
     {
-        Flags = ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar;
-
-        Size = new Vector2(600, 200);
-        SizeCondition = ImGuiCond.Always;
+        Flags = ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.AlwaysAutoResize;
 
         Configuration = plugin.Configuration;
         Plugin = plugin;
@@ -71,6 +68,73 @@ public class ConfigWindow : Window, IDisposable
         ImGui.TextDisabled("(?)");
         if (ImGui.IsItemHovered())
             ImGui.SetTooltip("Prevents accidentally moving the lyrics window");
+        // Enable Animations Setting
+        var enableAnimations = Configuration.EnableAnimations;
+        if (ImGui.Checkbox("Enable Animations", ref enableAnimations))
+        {
+            Configuration.EnableAnimations = enableAnimations;
+            Configuration.Save();
+        }
+        ImGui.SameLine();
+        ImGui.TextDisabled("(?)");
+        if (ImGui.IsItemHovered())
+            ImGui.SetTooltip("Enables smooth transitions when lyrics change");
+        
+        // Animation Speed Setting (only show if animations are enabled)
+        if (Configuration.EnableAnimations)
+        {
+            var animationSpeed = Configuration.AnimationSpeed;
+            if (ImGui.SliderFloat("Animation Speed", ref animationSpeed, 0.5f, 3.0f, "%.1fx"))
+            {
+                Configuration.AnimationSpeed = animationSpeed;
+                Configuration.Save();
+            }
+            ImGui.SameLine();
+            ImGui.TextDisabled("(?)");
+            if (ImGui.IsItemHovered())
+                ImGui.SetTooltip("Adjusts how fast animations play (0.5x = slow, 1.0x = normal, 3.0x = very fast)");
+        }
+        
+        ImGui.Spacing();
+        ImGui.Separator();
+        ImGui.Text("Color Settings");
+        
+        // Lyrics Color Setting
+        var lyricsColor = Configuration.LyricsColor;
+        var colorBytes = new byte[4] 
+        {
+            (byte)((lyricsColor >> 16) & 0xFF), // R
+            (byte)((lyricsColor >> 8) & 0xFF),  // G
+            (byte)(lyricsColor & 0xFF),         // B
+            (byte)((lyricsColor >> 24) & 0xFF)  // A
+        };
+        var colorVector = new Vector4(colorBytes[0] / 255.0f, colorBytes[1] / 255.0f, colorBytes[2] / 255.0f, colorBytes[3] / 255.0f);
+        
+        if (ImGui.ColorEdit4("Lyrics Color", ref colorVector, ImGuiColorEditFlags.AlphaPreviewHalf))
+        {
+            var newColor = ((uint)(colorVector.W * 255) << 24) |
+                          ((uint)(colorVector.X * 255) << 16) |
+                          ((uint)(colorVector.Y * 255) << 8) |
+                          ((uint)(colorVector.Z * 255));
+            Configuration.LyricsColor = newColor;
+            Configuration.Save();
+        }
+        ImGui.SameLine();
+        ImGui.TextDisabled("(?)");
+        if (ImGui.IsItemHovered())
+            ImGui.SetTooltip("Color for lyrics text");
+        
+        // Upcoming Lyrics Opacity Setting
+        var upcomingAlpha = Configuration.UpcomingAlphaMultiplier;
+        if (ImGui.SliderFloat("Upcoming Lyrics Opacity", ref upcomingAlpha, 0.1f, 1.0f, "%.1f"))
+        {
+            Configuration.UpcomingAlphaMultiplier = upcomingAlpha;
+            Configuration.Save();
+        }
+        ImGui.SameLine();
+        ImGui.TextDisabled("(?)");
+        if (ImGui.IsItemHovered())
+            ImGui.SetTooltip("Opacity of upcoming lyrics (0.1 = very transparent, 1.0 = fully opaque)");
         
     }
 }

@@ -37,9 +37,8 @@ public sealed class Plugin : IDalamudPlugin
     private DebugWindow DebugWindow { get; init; }
 #endif
     
-    // Font management for crisp scaling
-    public IFontHandle? MainLyricsFont { get; private set; }
-    public IFontHandle? UpcomingLyricsFont { get; private set; }
+    // Font management for crisp scaling - single font approach
+    public IFontHandle? LyricsFont { get; private set; }
     private float _currentFontScale = 1.0f;
     
     // Music observation
@@ -114,9 +113,8 @@ public sealed class Plugin : IDalamudPlugin
         DebugWindow.Dispose();
 #endif
         
-        // Dispose font handles
-        MainLyricsFont?.Dispose();
-        UpcomingLyricsFont?.Dispose();
+        // Dispose font handle
+        LyricsFont?.Dispose();
         
         // Dispose music observer
         if (MusicObserver != null)
@@ -163,27 +161,19 @@ public sealed class Plugin : IDalamudPlugin
             
         _currentFontScale = scaleFactor;
         
-        // Calculate font sizes based on scale factor
-        var baseFontSize = 16.0f;
-        var mainLyricSize = Math.Max(8, baseFontSize * 1.5f * scaleFactor);
-        var upcomingLyricSize = Math.Max(8, baseFontSize * 1.0f * scaleFactor);
+        // Calculate font size based on scale factor
+        // Use a larger base size since we'll scale down for upcoming lyrics
+        var baseFontSize = 20.0f; // Increased base size for better quality
+        var lyricsFontSize = Math.Max(8, baseFontSize * scaleFactor);
 
         // Dispose of the current Lyrics Font
-        MainLyricsFont?.Dispose();
-        MainLyricsFont = null;
+        LyricsFont?.Dispose();
+        LyricsFont = null;
 
-        UpcomingLyricsFont?.Dispose();
-        UpcomingLyricsFont = null;
-
-        // Create new font handles
-        MainLyricsFont = PluginInterface.UiBuilder.FontAtlas.NewDelegateFontHandle(e =>
+        // Create single font handle
+        LyricsFont = PluginInterface.UiBuilder.FontAtlas.NewDelegateFontHandle(e =>
         {
-            e.OnPreBuild(tk => tk.AddDalamudDefaultFont(mainLyricSize));
-        });
-        
-        UpcomingLyricsFont = PluginInterface.UiBuilder.FontAtlas.NewDelegateFontHandle(e =>
-        {
-            e.OnPreBuild(tk => tk.AddDalamudDefaultFont(upcomingLyricSize));
+            e.OnPreBuild(tk => tk.AddDalamudDefaultFont(lyricsFontSize));
         });
     }
     
@@ -284,8 +274,9 @@ public sealed class Plugin : IDalamudPlugin
     public (string current, string upcoming) GetFakeLyrics() => DebugWindow?.GetFakeLyrics() ?? (string.Empty, string.Empty);
     
     public void SetLyricsWindowOpen(bool isOpen) => LyricsWindow.IsOpen = isOpen;
-#endif
     
+    public void TriggerFakeLyricsAnimation() => LyricsWindow.TriggerFakeLyricsAnimation();
+#endif
     private void EnsureLyricsFolder()
     {
         try

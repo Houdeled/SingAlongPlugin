@@ -9,7 +9,7 @@ namespace SingAlongPlugin.Windows;
 public class DebugWindow : Window, IDisposable
 {
     private Plugin Plugin;
-    private int _fakeLyricsState = 0; // 0=Off, 1=Short+Short, 2=Short+Long, 3=Long+Short, 4=Long+Long
+    private int _fakeLyricsState = 0; // 0=Off, 1=Short+Short, 2=Short+Long, 3=Long+Short, 4=Long+Long, 5=Empty+Short
     
     // Predefined fake lyrics
     private readonly string _shortLyric = "Short lyric";
@@ -37,6 +37,7 @@ public class DebugWindow : Window, IDisposable
             2 => (_shortLyric, _longLyric),
             3 => (_longLyric, _shortLyric),
             4 => (_longLyric, _longLyric),
+            5 => (string.Empty, _shortLyric),
             _ => (string.Empty, string.Empty)
         };
     }
@@ -80,17 +81,20 @@ public class DebugWindow : Window, IDisposable
             2 => "Show Fake Lyrics (Short+Long)",
             3 => "Show Fake Lyrics (Long+Short)",
             4 => "Show Fake Lyrics (Long+Long)",
+            5 => "Show Fake Lyrics (Empty+Short)",
             _ => "Show Fake Lyrics (Off)"
         };
         
         if (ImGui.Button(buttonText))
         {
-            _fakeLyricsState = (_fakeLyricsState + 1) % 5;
+            _fakeLyricsState = (_fakeLyricsState + 1) % 6;
             
             // Open or close lyrics window based on state
             if (_fakeLyricsState > 0)
             {
                 Plugin.SetLyricsWindowOpen(true);
+                // Trigger animation by notifying lyrics window of the change
+                Plugin.TriggerFakeLyricsAnimation();
             }
             else
             {
