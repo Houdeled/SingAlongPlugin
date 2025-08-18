@@ -16,9 +16,10 @@ public class Configuration : IPluginConfiguration
     
     // Animation Settings
     public float AnimationDurationMs { get; set; } = 500f;
+    public float AnimationSpeed { get; set; } = 1.0f; // Multiplier for animation speed (0.5x to 3.0x)
     public float OldMainSlideOffset { get; set; } = -50f;
     public float NewLyricSlideOffset { get; set; } = 50f;
-    public float UpcomingAlphaMultiplier { get; set; } = 0.8f;
+    public float UpcomingAlphaMultiplier { get; set; } = 0.8f; // Opacity multiplier for upcoming lyrics (0.1 to 1.0)
     
     // Layout Settings
     public float LyricSpacing { get; set; } = 15.0f;
@@ -26,6 +27,9 @@ public class Configuration : IPluginConfiguration
     public float MainLyricScale { get; set; } = 1.0f; // Main lyrics are larger
     public float UpcomingLyricScale { get; set; } = 0.5f; // Upcoming lyrics are smaller
     public int WindowPaddingMultiplier { get; set; } = 2;
+    
+    // Color Settings
+    public uint LyricsColor { get; set; } = 0xFFFFFFFF; // ARGB: White by default
     
     // Easing Settings - Now using fixed smoothstep function (3t² - 2t³)
     // No configuration needed - always smooth and continuous

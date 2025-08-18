@@ -11,9 +11,19 @@ namespace SingAlongPlugin.Windows;
 
 public class LyricsWindow : Window, IDisposable
 {
-    // Colors (keep as constants since they don't need to be configurable)
-    private static readonly Vector4 MainLyricColor = new(1.0f, 1.0f, 1.0f, 1.0f);
-    private static readonly Vector4 UpcomingLyricColor = new(0.7f, 0.7f, 0.7f, 0.7f);
+    // Color helper method
+    private static Vector4 UintToVector4(uint argb)
+    {
+        var a = ((argb >> 24) & 0xFF) / 255.0f;
+        var r = ((argb >> 16) & 0xFF) / 255.0f;
+        var g = ((argb >> 8) & 0xFF) / 255.0f;
+        var b = (argb & 0xFF) / 255.0f;
+        return new Vector4(r, g, b, a);
+    }
+    
+    // Dynamic colors built from configuration
+    private Vector4 MainLyricColor => UintToVector4(Plugin.Configuration.LyricsColor);
+    private Vector4 UpcomingLyricColor => MainLyricColor * Plugin.Configuration.UpcomingAlphaMultiplier;
     private static readonly Vector4 TransparentBackground = new(0.0f, 0.0f, 0.0f, 0.0f);
     private const float BackgroundOpacityThreshold = 0.0f;
 
@@ -289,7 +299,9 @@ public class LyricsWindow : Window, IDisposable
             return 0f;
             
         var elapsed = (float)(DateTime.UtcNow - _animationStartTime).TotalMilliseconds;
-        var progress = Math.Min(elapsed / Plugin.Configuration.AnimationDurationMs, 1f);
+        var speed = Math.Clamp(Plugin.Configuration.AnimationSpeed, 0.5f, 3.0f); // Clamp to reasonable values
+        var adjustedDuration = Plugin.Configuration.AnimationDurationMs / speed;
+        var progress = Math.Min(elapsed / adjustedDuration, 1f);
         var easedProgress = EaseInOutQuad(progress);
         
         // Animation complete?
@@ -311,7 +323,7 @@ public class LyricsWindow : Window, IDisposable
         {
             // Static display - capture the position for future animations
             var cursorYBeforeMain = ImGui.GetCursorPosY();
-            DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.LyricsFont);
+            DrawCenteredText(mainLyric, Plugin.Configuration.MainLyricScale * scaleFactor, MainLyricColor, Plugin.LyricsFont, 0f, MainLyricColor.W);
             _lastMainLyricPosition = cursorYBeforeMain;
         }
     }
@@ -371,7 +383,7 @@ public class LyricsWindow : Window, IDisposable
         {
             // Static display - capture the position for future animations
             var cursorYBeforeUpcoming = ImGui.GetCursorPosY();
-            DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.LyricsFont);
+            DrawCenteredText(upcomingLyric, Plugin.Configuration.UpcomingLyricScale * scaleFactor, UpcomingLyricColor, Plugin.LyricsFont, 0f, Plugin.Configuration.UpcomingAlphaMultiplier);
             _lastUpcomingLyricPosition = cursorYBeforeUpcoming;
         }
     }
