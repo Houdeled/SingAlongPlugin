@@ -13,7 +13,7 @@ public class LyricsWindow : Window, IDisposable
 {
     // Colors (keep as constants since they don't need to be configurable)
     private static readonly Vector4 MainLyricColor = new(1.0f, 1.0f, 1.0f, 1.0f);
-    private static readonly Vector4 UpcomingLyricColor = new(0.7f, 0.7f, 0.7f, 0.8f);
+    private static readonly Vector4 UpcomingLyricColor = new(0.7f, 0.7f, 0.7f, 0.7f);
     private static readonly Vector4 TransparentBackground = new(0.0f, 0.0f, 0.0f, 0.0f);
     private const float BackgroundOpacityThreshold = 0.0f;
 
@@ -207,8 +207,10 @@ public class LyricsWindow : Window, IDisposable
             _currentMainLyric = mainLyric;
             _currentUpcomingLyric = upcomingLyric; // Update both at the same time
             
-            // Start animation if enabled and we have a previous lyric (not first lyric) and new lyric is not empty
-            if (Plugin.Configuration.EnableAnimations && !string.IsNullOrEmpty(_previousMainLyric) && !string.IsNullOrEmpty(mainLyric))
+            // Start animation if enabled and we have a previous lyric (main or upcoming) and new lyric is not empty
+            if (Plugin.Configuration.EnableAnimations && 
+                (!string.IsNullOrEmpty(_previousMainLyric) || !string.IsNullOrEmpty(_previousUpcomingLyric)) && 
+                !string.IsNullOrEmpty(mainLyric))
             {
                 _animationState = AnimationState.Transitioning;
                 _animationStartTime = DateTime.UtcNow;
@@ -257,11 +259,22 @@ public class LyricsWindow : Window, IDisposable
         // Calculate animation progress if needed
         var animationProgress = CalculateAnimationProgress();
         
-        // Draw main lyric section
-        DrawMainLyric(mainLyric, scaleFactor, animationProgress);
-        
-        // Spacing between lyrics
-        ImGuiHelpers.ScaledDummy(Plugin.Configuration.LyricSpacing);
+        // Draw main lyric section (if not empty)
+        if (!string.IsNullOrEmpty(mainLyric))
+        {
+            DrawMainLyric(mainLyric, scaleFactor, animationProgress);
+            
+            // Add spacing only if we have both main and upcoming lyrics
+            if (!string.IsNullOrEmpty(upcomingLyric))
+            {
+                ImGuiHelpers.ScaledDummy(Plugin.Configuration.LyricSpacing);
+            }
+        }
+        else
+        {
+            // Capture main lyric position even when empty for future animations
+            _lastMainLyricPosition = ImGui.GetCursorPosY();
+        }
         
         // Draw upcoming lyric section
         DrawUpcomingLyric(upcomingLyric, scaleFactor, animationProgress);
