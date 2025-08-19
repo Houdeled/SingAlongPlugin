@@ -226,25 +226,11 @@ public sealed class Plugin : IDalamudPlugin
                 
                 // Auto-show lyrics window when lyrics are available
                 LyricsWindow.IsOpen = true;
-                
-                // Optional: Show chat confirmation
-                var title = !string.IsNullOrEmpty(parser.Metadata.Title) ? parser.Metadata.Title : "Unknown";
-                ChatGui.Print(new XivChatEntry
-                {
-                    Message = $"[SingAlong] Loaded lyrics for: {title}",
-                    Type = XivChatType.Echo
-                });
             }
             else
             {
                 Log.Warning($"Failed to parse lyrics file for song {songId}");
                 _currentLrcParser = null;
-                
-                ChatGui.Print(new XivChatEntry
-                {
-                    Message = $"[SingAlong] Failed to parse lyrics file for song ID {songId}.",
-                    Type = XivChatType.ErrorMessage
-                });
             }
         }
         catch (Exception ex)

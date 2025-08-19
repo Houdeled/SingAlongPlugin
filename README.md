@@ -1,76 +1,131 @@
-> ⚠️ **Don't click Fork!**
-> 
-> This is a GitHub Template repo. If you want to use this for a plugin, [use this template][new-repo] to make a new repo!
->
-> ![image](https://github.com/goatcorp/SamplePlugin/assets/16760685/d9732094-e1ed-4769-a70b-58ed2b92580c)
+# SingAlongPlugin
 
-# SamplePlugin
+A FFXIV Dalamud plugin that displays synchronized lyrics for background music using LRC files.
 
-[![Use This Template badge](https://img.shields.io/badge/Use%20This%20Template-0?logo=github&labelColor=grey)][new-repo]
+## Features
 
+* **Automatic Music Detection**: Monitors background music changes in FFXIV
+* **Synchronized Lyrics Display**: Shows lyrics with precise timing using LRC format
+* **Customizable UI**: Configurable font scaling, colors, transparency, and positioning
+* **Animation Support**: Smooth transitions between lyrics with fade-in/fade-out effects
+* **Auto-Hide/Show**: Automatically displays lyrics when available, hides when not
+* **Window Management**: Lockable window with transparency options
 
-Simple example plugin for Dalamud.
+## How It Works
 
-This is not designed to be the simplest possible example, but it is also not designed to cover everything you might want to do. For more detailed questions, come ask in [the Discord](https://discord.gg/holdshift).
+SingAlongPlugin monitors FFXIV's background music using memory scanning to detect the current BGM ID. When a song changes, it automatically searches for a corresponding LRC file (`{songId}.lrc`) in the plugin's `Lyrics` folder. If found, it displays synchronized lyrics in an overlay window that can be customized through the settings.
 
-## Main Points
+### LRC File Format
 
-* Simple functional plugin
-  * Slash command
-  * Main UI
-  * Settings UI
-  * Image loading
-  * Plugin json
-* Simple, slightly-improved plugin configuration handling
-* Project organization
-  * Copies all necessary plugin files to the output directory
-    * Does not copy dependencies that are provided by dalamud
-    * Output directory can be zipped directly and have exactly what is required
-  * Hides data files from visual studio to reduce clutter
-    * Also allows having data files in different paths than VS would usually allow if done in the IDE directly
+The plugin supports standard LRC format with timestamps:
+```
+[mm:ss.xx] Lyric text here
+[00:15.50] This is how lyrics appear
+[00:18.20] With precise timing
+```
 
+Optional metadata tags are also supported:
+```
+[ti:Song Title]
+[ar:Artist Name]
+[offset:500]
+```
 
-The intention is less that any of this is used directly in other projects, and more to show how similar things can be done.
-
-## How To Use
-
-### Getting Started
-
-To begin, [clone this template repository][new-repo] to your own GitHub account. This will automatically bring in everything you need to get a jumpstart on development. You do not need to fork this repository unless you intend to contribute modifications to it.
-
-Be sure to also check out the [Dalamud Developer Docs][dalamud-docs] for helpful information about building your own plugin. The Developer Docs includes helpful information about all sorts of things, including [how to submit][submit] your newly-created plugin to the official repository. Assuming you use this template repository, the provided project build configuration and license are already chosen to make everything a breeze.
-
-[new-repo]: https://github.com/new?template_name=SamplePlugin&template_owner=goatcorp
-[dalamud-docs]: https://dalamud.dev
-[submit]: https://dalamud.dev/plugin-publishing/submission
+## Installation & Usage
 
 ### Prerequisites
 
-SamplePlugin assumes all the following prerequisites are met:
-
-* XIVLauncher, FINAL FANTASY XIV, and Dalamud have all been installed and the game has been run with Dalamud at least once.
-* XIVLauncher is installed to its default directories and configurations.
-  * If a custom path is required for Dalamud's dev directory, it must be set with the `DALAMUD_HOME` environment variable.
-* A .NET Core 8 SDK has been installed and configured, or is otherwise available. (In most cases, the IDE will take care of this.)
+* XIVLauncher, FINAL FANTASY XIV, and Dalamud installed and running
+* .NET 8 SDK (for development)
 
 ### Building
 
-1. Open up `SamplePlugin.sln` in your C# editor of choice (likely [Visual Studio 2022](https://visualstudio.microsoft.com) or [JetBrains Rider](https://www.jetbrains.com/rider/)).
-2. Build the solution. By default, this will build a `Debug` build, but you can switch to `Release` in your IDE.
-3. The resulting plugin can be found at `SamplePlugin/bin/x64/Debug/SamplePlugin.dll` (or `Release` if appropriate.)
+1. Clone this repository
+2. Open `SingAlongPlugin.sln` in Visual Studio 2022 or JetBrains Rider
+3. Build the solution (Debug or Release)
+4. The plugin DLL will be located at `SingAlongPlugin/bin/x64/Debug/SingAlongPlugin.dll`
 
-### Activating in-game
+### Installing
 
-1. Launch the game and use `/xlsettings` in chat or `xlsettings` in the Dalamud Console to open up the Dalamud settings.
-    * In here, go to `Experimental`, and add the full path to the `SamplePlugin.dll` to the list of Dev Plugin Locations.
-2. Next, use `/xlplugins` (chat) or `xlplugins` (console) to open up the Plugin Installer.
-    * In here, go to `Dev Tools > Installed Dev Plugins`, and the `SamplePlugin` should be visible. Enable it.
-3. You should now be able to use `/pmycommand` (chat) or `pmycommand` (console)!
+1. Add the plugin DLL path to Dalamud's Dev Plugin Locations (`/xlsettings` → Experimental)
+2. Enable the plugin in the Plugin Installer (`/xlplugins` → Dev Tools → Installed Dev Plugins)
+3. Use `/singalong` to toggle the lyrics window
 
-Note that you only need to add it to the Dev Plugin Locations once (Step 1); it is preserved afterwards. You can disable, enable, or load your plugin on startup through the Plugin Installer.
+### Adding Lyrics
 
-### Reconfiguring for your own uses
+1. Find the BGM ID for your desired song (visible in debug mode or game logs)
+2. Create or obtain an LRC file with synchronized timestamps
+3. Name the file `{bgmId}.lrc` (e.g., `938.lrc`)
+4. Place it in the plugin's `Lyrics` folder in your Dalamud config directory
+5. The plugin will automatically load and display lyrics when that song plays
 
-Replace all references to `SamplePlugin` in all the files and filenames with your desired name, then start building the plugin of your dreams. You'll figure it out 😁
+## Configuration
 
-Dalamud will load the JSON file (by default, `SamplePlugin/SamplePlugin.json`) next to your DLL and use it for metadata, including the description for your plugin in the Plugin Installer. Make sure to update this with information relevant to _your_ plugin!
+Access the configuration window through:
+- `/xlplugins` → SingAlongPlugin → Settings button
+- Right-click the plugin in the Plugin Installer
+
+### Available Settings
+
+- **Font Scale**: Adjust lyrics text size
+- **Window Transparency**: Set background opacity
+- **Window Lock**: Prevent accidental movement
+- **Colors**: Customize lyrics and upcoming text colors
+- **Animation**: Configure transition effects and timing
+
+## Commands
+
+- `/singalong` - Toggle lyrics window
+- `/singalong debug` - Open debug window (debug builds only)
+
+## Planned Song Support
+
+The following FFXIV songs with official lyrics are planned for inclusion:
+
+### A Realm Reborn
+- Answers
+- Oblivion
+- Through the Maelstrom
+- Thunder Rolls
+- Under the Weight
+
+### Heavensward
+- Heavensward
+- Dragonsong
+- Equilibrium
+- Fiend
+- Exponential Entropy
+- Rise
+
+### Stormblood
+- Wayward Daughter
+- eScape
+- Sunrise
+- Amatsu Kaze
+- Beauty's Wicked Wiles
+- Anthem (duo)
+
+### Shadowbringers
+- Shadowbringers
+- Tomorrow and Tomorrow
+- A Long Fall
+- To the Edge
+- Return to Oblivion
+- Ultima
+- Landslide
+- Blinding Indigo
+- Who Brings Shadow
+- What Angel Wakes Me
+
+### Endwalker
+- Footfalls
+- Close in the Distance
+- Scream
+- With Hearts Aligned
+
+### Dawntrail
+- Ride the Rhythm
+- Unleashed
+- Not Afraid
+- Back to the Drawing Board
+- Give It All
