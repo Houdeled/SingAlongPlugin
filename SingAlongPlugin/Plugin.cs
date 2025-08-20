@@ -280,16 +280,28 @@ public sealed class Plugin : IDalamudPlugin
                 Directory.CreateDirectory(_lyricsFolder);
                 Log.Info($"Created lyrics folder at: {_lyricsFolder}");
                 
-                // Copy any existing lyrics from the plugin source directory
-                var sourceLyricsFolder = Path.Combine(PluginInterface.AssemblyLocation.DirectoryName!, "..", "..", "..", "Lyrics");
-                if (Directory.Exists(sourceLyricsFolder))
+                // Copy any existing lyrics from possible source locations
+                var possibleSources = new[]
                 {
-                    foreach (var file in Directory.GetFiles(sourceLyricsFolder, "*.lrc"))
+                    // Release build location (same directory as DLL)
+                    Path.Combine(PluginInterface.AssemblyLocation.DirectoryName!, "Lyrics"),
+                    // Development build location (source directory)
+                    Path.Combine(PluginInterface.AssemblyLocation.DirectoryName!, "..", "..", "..", "Lyrics")
+                };
+                
+                foreach (var sourceLyricsFolder in possibleSources)
+                {
+                    if (Directory.Exists(sourceLyricsFolder))
                     {
-                        var fileName = Path.GetFileName(file);
-                        var destFile = Path.Combine(_lyricsFolder, fileName);
-                        File.Copy(file, destFile, true);
-                        Log.Info($"Copied lyrics file: {fileName}");
+                        foreach (var file in Directory.GetFiles(sourceLyricsFolder, "*.lrc"))
+                        {
+                            var fileName = Path.GetFileName(file);
+                            var destFile = Path.Combine(_lyricsFolder, fileName);
+                            File.Copy(file, destFile, true);
+                            Log.Info($"Copied lyrics file: {fileName}");
+                        }
+                        Log.Info($"Copied lyrics from: {sourceLyricsFolder}");
+                        break; // Stop after first successful source
                     }
                 }
             }
