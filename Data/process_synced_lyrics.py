@@ -55,8 +55,8 @@ def get_song_title_from_filename(lrc_file):
     return lrc_file.stem  # filename without extension
 
 def copy_lrc_to_plugin(lrc_file, bgm_id):
-    """Copy and rename LRC file to SingAlongPlugin Lyrics directory"""
-    plugin_lyrics_dir = Path("../Lyrics")
+    """Copy and rename LRC file to SingAlongPlugin/Lyrics directory"""
+    plugin_lyrics_dir = Path("../SingAlongPlugin/Lyrics")
     
     # Create directory if it doesn't exist
     plugin_lyrics_dir.mkdir(parents=True, exist_ok=True)

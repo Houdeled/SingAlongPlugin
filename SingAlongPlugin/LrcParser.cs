@@ -197,7 +197,7 @@ public class LrcParser
         var nextIndex = currentIndex + 1;
         
         if (nextIndex >= 0 && nextIndex < _lyrics.Count)
-            return _lyrics[nextIndex].Timestamp;
+            return _lyrics[nextIndex].Timestamp.Add(TimeSpan.FromMilliseconds(Plugin.Configuration.TimingOffsetMs));
             
         return TimeSpan.Zero;
     }
