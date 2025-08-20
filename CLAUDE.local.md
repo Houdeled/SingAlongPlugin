@@ -1,2 +1,0 @@
-- Always proceed by granular step, each iteration should contain contain a simple feature so it can be tested before going on.
-- When modifying flags of a window, always update in the Pre-Draw
