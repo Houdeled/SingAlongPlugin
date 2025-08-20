@@ -1,0 +1,25 @@
+[
+  {
+    "Author": "Luna Astar",
+    "Name": "SingAlong Plugin",
+    "Punchline": "Display synchronized lyrics for FFXIV background music.",
+    "Description": "Automatically detects FFXIV background music and displays synchronized lyrics from LRC files. Features customizable UI with animations, scaling, and transparency. Comes with 15 pre-synced songs including popular tracks like Dragonsong, What Angel Wakes Me, Oblivion, and Rise. Commands: /singalong (toggle lyrics), /singalong settings (open settings).",
+    "Changelog": "Initial release with 15 synchronized song lyrics, customizable animations and UI, automatic BGM detection, and settings window.",
+    "InternalName": "SingAlongPlugin",
+    "AssemblyVersion": "0.0.0.1",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 13,
+    "DownloadCount": 0,
+    "LastUpdate": 1755268800,
+    "DownloadLinkInstall": "https://github.com/Houdeled/SingAlongPlugin/releases/download/v0.0.0.1/SingAlongPlugin-v0.0.0.1.zip",
+    "DownloadLinkUpdate": "https://github.com/Houdeled/SingAlongPlugin/releases/download/v0.0.0.1/SingAlongPlugin-v0.0.0.1.zip",
+    "SupportsProfiles": false,
+    "RepoUrl": "https://github.com/Houdeled/SingAlongPlugin",
+    "Tags": [
+      "lyrics",
+      "music",
+      "bgm",
+      "karaoke"
+    ]
+  }
+]
