@@ -96,6 +96,7 @@ The following FFXIV songs with official lyrics are planned for inclusion:
 - Fiend
 - Exponential Entropy
 - Rise
+- Locus
 
 ### Stormblood
 - Wayward Daughter
