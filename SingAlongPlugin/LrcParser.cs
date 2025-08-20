@@ -33,9 +33,13 @@ public class LrcParser
     private readonly LrcMetadata _metadata = new();
     private int _lastSearchIndex = 0;
     
-    private static readonly Regex TimeTagRegex = new(@"\[(\d{2}):(\d{2})\.(\d{2})\](.*)");
+    private static readonly Regex TimeTagRegex = new(@"\[(\d{2}):(\d{2})\.(\d{2,3})\](.*)");
     private static readonly Regex MetadataRegex = new(@"\[([a-zA-Z]+):([^\]]*)\]");
-    
+
+    // Internal timing offset (hidden from user interface)
+    // Positive values delay lyrics, negative values advance lyrics
+    private const int TimingOffsetMs = 650; // Milliseconds offset for lyrics synchronization
+
     public LrcMetadata Metadata => _metadata;
     public IReadOnlyList<LrcLine> Lyrics => _lyrics;
     public bool IsLoaded => _lyrics.Count > 0;
@@ -85,10 +89,23 @@ public class LrcParser
             {
                 var minutes = int.Parse(timeMatch.Groups[1].Value);
                 var seconds = int.Parse(timeMatch.Groups[2].Value);
-                var centiseconds = int.Parse(timeMatch.Groups[3].Value);
+                var subsecondValue = int.Parse(timeMatch.Groups[3].Value);
                 var text = timeMatch.Groups[4].Value.Trim();
                 
-                var timestamp = new TimeSpan(0, 0, minutes, seconds, centiseconds * 10);
+                // Handle both centiseconds (2 digits) and milliseconds (3 digits)
+                int milliseconds;
+                if (timeMatch.Groups[3].Value.Length == 2)
+                {
+                    // Centiseconds format: multiply by 10 to get milliseconds
+                    milliseconds = subsecondValue * 10;
+                }
+                else
+                {
+                    // Milliseconds format: use directly
+                    milliseconds = subsecondValue;
+                }
+                
+                var timestamp = new TimeSpan(0, 0, minutes, seconds, milliseconds);
                 
                 // Apply offset if specified
                 if (_metadata.OffsetMs != 0)
@@ -127,8 +144,11 @@ public class LrcParser
         if (!IsLoaded)
             return string.Empty;
             
+        // Apply timing offset (subtract offset since lyrics come too soon)
+        var adjustedTime = currentTime.Subtract(TimeSpan.FromMilliseconds(TimingOffsetMs));
+        
         // Use cached index as starting point for better performance
-        var index = FindLyricIndex(currentTime);
+        var index = FindLyricIndex(adjustedTime);
         
         if (index >= 0 && index < _lyrics.Count)
         {
@@ -144,7 +164,10 @@ public class LrcParser
         if (!IsLoaded)
             return string.Empty;
             
-        var currentIndex = FindLyricIndex(currentTime);
+        // Apply timing offset (subtract offset since lyrics come too soon)
+        var adjustedTime = currentTime.Subtract(TimeSpan.FromMilliseconds(TimingOffsetMs));
+        
+        var currentIndex = FindLyricIndex(adjustedTime);
         
         // If we're before the first lyric (currentIndex is -1), the next lyric is the first one
         if (currentIndex == -1)
@@ -167,7 +190,10 @@ public class LrcParser
         if (!IsLoaded)
             return TimeSpan.Zero;
             
-        var currentIndex = FindLyricIndex(currentTime);
+        // Apply timing offset (subtract offset since lyrics come too soon)
+        var adjustedTime = currentTime.Subtract(TimeSpan.FromMilliseconds(TimingOffsetMs));
+        
+        var currentIndex = FindLyricIndex(adjustedTime);
         var nextIndex = currentIndex + 1;
         
         if (nextIndex >= 0 && nextIndex < _lyrics.Count)
@@ -180,7 +206,10 @@ public class LrcParser
     {
         if (!IsLoaded)
             return -1;
-            
+
+        // Apply timing offset (subtract offset since lyrics come too soon)
+        var adjustedTime = currentTime.Subtract(TimeSpan.FromMilliseconds(TimingOffsetMs));
+
         // Binary search for efficiency with large lyric files
         int left = 0;
         int right = _lyrics.Count - 1;
@@ -190,7 +219,7 @@ public class LrcParser
         {
             int mid = (left + right) / 2;
             
-            if (_lyrics[mid].Timestamp <= currentTime)
+            if (_lyrics[mid].Timestamp <= adjustedTime)
             {
                 result = mid;
                 left = mid + 1;

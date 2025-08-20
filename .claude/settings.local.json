@@ -6,7 +6,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(cmd.exe /c \"dotnet build\")",
       "WebSearch",
-      "Bash(cmd.exe /c \"dotnet build --configuration Debug\")"
+      "Bash(cmd.exe /c \"dotnet build --configuration Debug\")",
+      "Bash(cmd.exe:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,1189 @@
+ID,NAME,ALT_TITLE,LOCATIONS,FILE_PATH
+0,None,,,
+1,None,,,music/ffxiv/BGM_Null.scd
+2,Prelude - Rebirth,,A Realm Reborn title,music/ffxiv/BGM_System_Title.scd
+3,Dreams Aloft,,Cid cutscenes,music/ffxiv/BGM_System_Launcher.scd
+4,Prelude - Discoveries,,Character Select & Creation,music/ffxiv/BGM_System_Chara.scd
+5,Behind Closed Doors,,Inn theme,music/ffxiv/BGM_Town_Rest_01.scd
+6,Wailers and Waterwheels,,Gridania (day),music/ffxiv/BGM_Town_Gri_Day.scd
+7,Dance of the Fireflies,,Gridania (night),music/ffxiv/BGM_Town_Gri_Night.scd
+8,Serenity,,Central/North Shroud,music/ffxiv/BGM_Field_Gri_01.scd
+9,Serenity,,Black Shroud sanctuaries,music/ffxiv/BGM_Field_Gri_02.scd
+10,Serenity,,The Black Shroud,music/ffxiv/BGM_Field_Gri_03.scd
+11,Serenity,,South Shroud,music/ffxiv/BGM_Field_Gri_04.scd
+12,Serenity,,Sanctum of the Twelve,music/ffxiv/BGM_Field_Gri_05.scd
+13,The Land Bends,,The Black Shroud combat,music/ffxiv/BGM_Battle_Gri_01.scd
+14,Tenacity,,Leves,music/ffxiv/BGM_Leves.scd
+15,Slumber Disturbed,,The Tam-Tara Deepcroft,music/ffxiv/BGM_Dungeon_Gri_01.scd
+16,The Promise of Plunder,,Early ARR Dungeons,music/ffxiv/BGM_Battle_Dungeon_01.scd
+17,The Dark's Embrace,,ARR HM Dungeons,music/ffxiv/BGM_Rade_01.scd
+18,Victory!,,End of most instances,music/ffxiv/BGM_System_WinLoop.scd
+19,,,,music/ffxiv/BGM_Event_OP01.scd
+20,Victory!,,End of most instances,music/ffxiv/BGM_System_WinShot_01.scd
+21,Victory!,,End of most instances,music/ffxiv/BGM_System_WinShot_02.scd
+22,???,,Frontlines,music/ffxiv/BGM_System_WinShot_03.scd
+23,The Hero of Hatchingtide,,,music/ffxiv/BGM_System_WinShot_04.scd
+24,Greenwrath,,East Shroud,music/ffxiv/BGM_Field_Gri_06.scd
+25,I Am the Sea,,Limsa Lominsa (day),music/ffxiv/BGM_Town_Lim_Day.scd
+26,A Sailor Never Sleeps,,Limsa Lominsa,music/ffxiv/BGM_Town_Lim_Night.scd
+27,On Westerly Winds,,Middle/Lower La Noscea,music/ffxiv/BGM_Field_Lim_01.scd
+28,On Westerly Winds,,La Noscea,music/ffxiv/BGM_Field_Lim_02.scd
+29,On Westerly Winds,,Eastern La Noscea,music/ffxiv/BGM_Field_Lim_03.scd
+30,On Westerly Winds,,Eastern La Noscea,music/ffxiv/BGM_Field_Lim_04.scd
+31,On Westerly Winds,,La Noscean sanctuaries,music/ffxiv/BGM_Field_Lim_05.scd
+32,Currents,,La Noscea,music/ffxiv/BGM_Field_Lim_06.scd
+33,The Land Breathes,,La Noscea combat,music/ffxiv/BGM_Battle_Lim_01.scd
+34,,,,music/ffxiv/BGM_Leves_Lim_01.scd
+35,From the Depths,,Sastasha,music/ffxiv/BGM_Dungeon_Lim_01.scd
+36,Torn from the Heavens,,Various,music/ffxiv/BGM_Boss_01.scd
+37,A Fine Death,,ARR Dungeon bosses,music/ffxiv/BGM_Boss_02.scd
+38,Nemesis,,ARR Dungeon final bosses,music/ffxiv/BGM_Boss_03.scd
+39,Pennons Aloft,,Instanced battles,music/ffxiv/BGM_Boss_04.scd
+40,Brothers in Arms,,Guildhests,music/ffxiv/BGM_Behest.scd
+41,The Maiden's Lament,,Haukke Manor,music/ffxiv/BGM_Dungeon_Gri_02.scd
+42,A Thousand Screams,,The Thousand Maws of Toto-Rak,music/ffxiv/BGM_Dungeon_Gri_03.scd
+43,Lipflaps on Longstops,,Brayflox's Longstop,music/ffxiv/BGM_Dungeon_Lim_02.scd
+44,A New Hope,,Ul'dah (day),music/ffxiv/BGM_Town_Uru_Day.scd
+45,Sultana Dreaming,,Ul'dah (night),music/ffxiv/BGM_Town_Uru_Night.scd
+46,To the Sun,,Western/Central Thanalan,music/ffxiv/BGM_Field_Uru_01.scd
+47,To the Sun,,Thanalan,music/ffxiv/BGM_Field_Uru_02.scd
+48,To the Sun,,Southern Thanalan,music/ffxiv/BGM_Field_Uru_03.scd
+49,To the Sun,,Thanalan sanctuaries,music/ffxiv/BGM_Field_Uru_04.scd
+50,To the Sun,,Thanalan,music/ffxiv/BGM_Field_Uru_05.scd
+51,Fleeting Rays,,Eastern Thanalan,music/ffxiv/BGM_Field_Uru_06.scd
+52,The Land Burns,,Thanalan combat,music/ffxiv/BGM_Battle_Uru_01.scd
+53,Below,,Copperbell Mines,music/ffxiv/BGM_Dungeon_Uru_01.scd
+54,The Ludus,,Halatali,music/ffxiv/BGM_Dungeon_Uru_02.scd
+55,The Gift of Life,,ARR Sanctuaries,music/ffxiv/BGM_Field_Safe1.scd
+56,Calling,,,music/ffxiv/BGM_Field_Safe2.scd
+57,Discordance,,Northern Thanalan,music/ffxiv/BGM_Field_Danger1.scd
+58,Beyond the Unknown,,Cutscene (Edda),music/ffxiv/BGM_Field_Danger2.scd
+59,Slither,,Northern Thanalan outskirts,music/ffxiv/BGM_Field_Danger3.scd
+60,Intertwined,,Mor Dhona,music/ffxiv/BGM_Field_Mor_01.scd
+61,Bo-down,,Chocobo porters,music/ffxiv/BGM_Ride_RChocobo.scd
+62,Eorzea de Chocobo,Born to Ride,Chocobo mounts,music/ffxiv/BGM_Ride_Chocobo.scd
+63,Into the Adder's Den,,Twin Adder command,music/ffxiv/BGM_Company_Gri.scd
+64,Maelstrom Command,,Maelstrom command,music/ffxiv/BGM_Company_Lim.scd
+65,The Hall of Flames,,Immortal Flames command,music/ffxiv/BGM_Company_Uru.scd
+66,The Waking Sands,,Western Thanalan,music/ffxiv/BGM_Field_Suna.scd
+67,When a Tree Falls,,Leves,music/ffxiv/BGM_Leves_Easy.scd
+68,The Tug of Fate,,Certain FATEs,music/ffxiv/BGM_Fate_Kyoten.scd
+69,To the Fore,,Certain FATEs/Boss battles,music/ffxiv/BGM_Fate_Bouei.scd
+70,Whisper of the Land,,Cutscenes (1.0),music/ffxiv/BGM_Event_StartGri.scd
+71,On Windy Meadows,,Cutscenes (1.0),music/ffxiv/BGM_Event_StartLim.scd
+72,Twilight Over Thanalan,,Cutscenes (1.0),music/ffxiv/BGM_Event_StartLUru.scd
+73,Dewdrops & Moonbeams,,The Lotus Stand (Kan-E-Senna),music/ffxiv/BGM_Event_Kanue.scd
+74,The Sands' Secrets,,Eorzean Alliance (Raubahn),music/ffxiv/BGM_Event_Rauburn.scd
+75,Ripples in the Sea,,Eorzean Alliance (Merlwyb),music/ffxiv/BGM_Event_Melvib.scd
+76,Imperial Will,,Cutscenes (Empire),music/ffxiv/BGM_Event_Teikoku.scd
+77,Defender of the Realm,,Cutscenes (Heroic),music/ffxiv/BGM_Event_Protector.scd
+78,Fracture,,Cutscenes (Suspense),music/ffxiv/BGM_Event_Huon.scd
+79,One Blood,,Cutscenes (Tension),music/ffxiv/BGM_Event_BanActivity.scd
+80,Conundrum,,Cutscenes (Mysterious/Hildibrand),music/ffxiv/BGM_Event_Mystery.scd
+81,Prelude - Rebirth,,Cutscenes,music/ffxiv/BGM_Event_Crystal.scd
+82,Return of the Hero,,Cutscenes (Resolution),music/ffxiv/BGM_Event_HeroReturn.scd
+83,Kiss of Chaos,,Cutscenes (Tension),music/ffxiv/BGM_Event_BattleOverture.scd
+84,Forever Lost,,Cutscenes (Sad),music/ffxiv/BGM_Event_Sad.scd
+85,Machinations,,Wolves' Den / Northern Thanalan Sanctuaries,music/ffxiv/BGM_Event_Keikaku.scd
+86,The Only Path,,Cutscenes (Positive),music/ffxiv/BGM_Event_Buki.scd
+87,Daring Dalliances,,Cutscenes (Positive),music/ffxiv/BGM_Event_Tanoshii1.scd
+88,Bliss,,Cutscenes (Comedic),music/ffxiv/BGM_Event_Tanoshii2.scd
+89,A World Apart,,Cutscenes (Heroic),music/ffxiv/BGM_Event_Tabidachi.scd
+90,Relics,,Cutscenes (esp. Job quests),music/ffxiv/BGM_Event_JobEvent.scd
+91,Breaking Boundaries,,Job quest battles,music/ffxiv/BGM_Event_JobShiren.scd
+92,The Echo,,Cutscenes,music/ffxiv/BGM_Event_Kako.scd
+93,Tranquility,,Cutscenes (Resolution),music/ffxiv/BGM_Event_Ansoku1.scd
+94,Without Shadow,,Cutscenes (Ascians),music/ffxiv/BGM_Event_Ascian.scd
+95,The Seventh Sun / Dawn of a New Era,,Cutscenes,music/ffxiv/BGM_Event_7thUmbralEra.scd
+96,Sacred Bonds,,Cutscenes (Sad),music/ffxiv/BGM_Event_VerySad.scd
+97,Canticle,,Cutscenes (Exposition),music/ffxiv/BGM_Event_Truth.scd
+98,Where the Heart Is,,Cutscenes (Resolution),music/ffxiv/BGM_Event_Ansoku2.scd
+99,Dreams Aloft,,Cutscenes (Resolution),music/ffxiv/BGM_Event_MemoryOfCid.scd
+100,Supply & Demand,,Cutscenes (Comedic),music/ffxiv/BGM_Event_Bazaar.scd
+101,By Design,,Cutscenes (Comedic),music/ffxiv/BGM_Event_Craft.scd
+102,Decisions,,"Cutscenes (Mysterious), Little Ladies' Day",music/ffxiv/BGM_Event_Nego.scd
+103,Agent of Inquiry,,Hildibrand Theme,music/ffxiv/BGM_Event_Hildy.scd
+104,,,,music/ffxiv/BGM_Event_GrandfatherLvup.scd
+105,Nature's Bounty,,"Cutscenes, Eternal Bonding",music/ffxiv/BGM_Event_Saisyu.scd
+106,Falling Shards,,"Various, Eternal Bonding",music/ffxiv/BGM_Event_CrystalHarpOnly.scd
+107,Pennons Aloft,,"Instanced battles, Fenrir battle",music/ffxiv/BGM_Event_BattleCommon_01.scd
+108,Battle Theme 1.x,,Hildibrand FATEs/Hall of the Novice/B-ranks,music/ffxiv/BGM_Event_FF2BossBattle.scd
+109,,,,music/ffxiv/BGM_Event_Kessen.scd
+110,Salt Swept,,Aleport/Moraby Drydocks,music/ffxiv/BGM_Field_Lim_07.scd
+111,???,,,music/ffxiv/BGM_Field_Lim_08.scd
+112,My Soul to Keep,,Haukke Manor/Tam-Tara HM,music/ffxiv/BGM_Event_DarknessLullaby.scd
+113,From Fear to Fortitude,,Instanced battles,music/ffxiv/BGM_Event_BattleCommon_02.scd
+114,Damnation,,Cutscenes (Suspense),music/ffxiv/BGM_Event_Kincho.scd
+115,Hard to Miss,,Boss FATEs,music/ffxiv/BGM_Fate_Mid.scd
+116,A Fell Air Falleth,,Later ARR Dungeons,music/ffxiv/BGM_Battle_Dungeon_02.scd
+117,Skullduggery,,Instanced battles/Qarn HM,music/ffxiv/BGM_Event_Treacherous.scd
+118,Another Round,,Bars and Taverns,music/ffxiv/BGM_Field_Bar.scd
+119,Ruby Sunrise,,Costa del Sol,music/ffxiv/BGM_Field_Lim_Beach.scd
+120,Primal Judgement,,The Bowl of Embers,music/ffxiv/BGM_Ban_Ifrit.scd
+121,The Rider's Boon,,ARR mounts,music/ffxiv/BGM_Ride_CommonMonster.scd
+122,Cracks in the Wall,,Amdapor Keep,music/ffxiv/BGM_Dungeon_Gri_04.scd
+123,A Tonberry's Tears,,The Wanderer's Palace,music/ffxiv/BGM_Dungeon_Lim_03.scd
+124,Echoes of Ages Past,,The Sunken Temple of Qarn,music/ffxiv/BGM_Dungeon_Uru_03.scd
+125,Abomination,,Cutter's Cry,music/ffxiv/BGM_Dungeon_Uru_04.scd
+126,Cold Salvation,,The Stone Vigil,music/ffxiv/BGM_Dungeon_Ish_01.scd
+127,The Darkhold,,Dzemael Darkhold,music/ffxiv/BGM_Dungeon_Ish_02.scd
+128,Miser's Folly,,The Aurum Vale,music/ffxiv/BGM_Dungeon_Ish_03.scd
+129,Engage,,The Enterprise,music/ffxiv/BGM_Event_Enterprise.scd
+130,Fever Dream,,Cutscenes (Tension),music/ffxiv/BGM_Event_Fuan.scd
+131,Serving the Light,,Warrior of Light,music/ffxiv/BGM_Event_Blow.scd
+132,Answers,,ARR End Credits,music/ffxiv/BGM_System_EndCredit01.scd
+133,Opening Theme,,ARR End Credits Special/1.0 players,music/ffxiv/BGM_System_EndCredit02.scd
+134,A Curious Breed of Botherment,,East Shroud (Sylphs),music/ffxiv/BGM_Field_BanFort_Sylph.scd
+135,Flightless Wings,,North Shroud (Ixals),music/ffxiv/BGM_Field_BanFort_Ixal.scd
+136,"Quick as Silver, Hard as Stone",,Outer La Noscea (Kobolds),music/ffxiv/BGM_Field_BanFort_Kobold.scd
+137,Battle Drums,,Western La Noscea (Sahagin),music/ffxiv/BGM_Field_BanFort_Sahagin.scd
+138,Pitfire,,Southern Thanalan (Amal'jaa),music/ffxiv/BGM_Field_BanFort_Amaruja.scd
+139,,,,music/ffxiv/BGM_Field_PVP.scd
+140,,,,music/ffxiv/BGM_Field_Lim_Housing.scd
+141,Fealty,,Coerthas Central Highlands,music/ffxiv/BGM_Field_Ish_01.scd
+142,The Dragon's Dirge,,Coerthas Central Highlands (Whitebrim),music/ffxiv/BGM_Field_Ish_02.scd
+143,Undying Faith,,Coerthas Central Highlands (Observatorium),music/ffxiv/BGM_Field_Ish_03.scd
+144,The Land Breaks,,Coerthas Central Highlands battle,music/ffxiv/BGM_Battle_Ish_01.scd
+145,The Land Bleeds,,Mor Dhona battle,music/ffxiv/BGM_Battle_Mor_01.scd
+146,Primal Timbre,,The Binding Coil of Bahamut,music/ffxiv/BGM_Con_Bahamut.scd
+147,Calamity Unbound,,The Binding Coil of Bahamut bosses,music/ffxiv/BGM_Con_Bahamut_Boss.scd
+148,The Emperor's Wont,,Imperial Castrums,music/ffxiv/BGM_Con_Teikoku_01.scd
+149,Penitus,,The Praetorium,music/ffxiv/BGM_Con_Teikoku_02.scd
+150,Ultima,,Ultima Weapon Phase 2,music/ffxiv/BGM_Con_Altima.scd
+151,Steel Reason,,Cape Westwind/Garlean boss fights,music/ffxiv/BGM_Con_Teikoku_Boss.scd
+152,Bite of the Black Wolf,,Gaius van Baelsar theme,music/ffxiv/BGM_Con_Teikoku_Gaius.scd
+153,The Corpse Hall,,Odin FATE,music/ffxiv/BGM_Fate_Odin.scd
+154,Thunderer,,Special FATEs,music/ffxiv/BGM_Fate_HMN.scd
+155,Fallen Angel,,The Howling Eye,music/ffxiv/BGM_Ban_Garuda.scd
+156,Under the Weight,,The Navel (Titan) phase 5,music/ffxiv/BGM_Ban_Titan.scd
+157,Weight of a Whisper,,The Navel (Titan) phase 1,music/ffxiv/BGM_Ban_Titan_pre1.scd
+158,Weight of His Will,,The Navel (Titan) phase 2,music/ffxiv/BGM_Ban_Titan_pre2.scd
+159,Weight of the World,,The Navel (Titan) phase 3,music/ffxiv/BGM_Ban_Titan_pre3.scd
+160,Heartless,,The Navel (Titan) phase 4,music/ffxiv/BGM_Ban_Titan_pre4.scd
+161,Flight,,Ultima Escape,music/ffxiv/BGM_Event_Escape.scd
+162,The Maker's Ruin,,Ultima Weapon Phase 1,music/ffxiv/BGM_Event_PerfectAltima.scd
+163,Blinded by Light,,FFXIII crossover FATEs,music/ffxiv/BGM_Fate_FFXIII01.scd
+164,Saber's Edge,,FFXIII crossover FATEs,music/ffxiv/BGM_Fate_FFXIII02.scd
+165,Torn from the Heavens,,ARR Zone special FATEs/ARR Relic duties,music/ffxiv/BGM_Con_Teikoku_01_Sido.scd
+166,Ruby Moonrise,,Costa del Sol events,music/ffxiv/BGM_FATE_Bombard.scd
+167,Serenity,,The Shroud,music/ffxiv/BGM_Field_Gri_01.scd
+168,On Westerly Winds,,La Noscea,music/ffxiv/BGM_Field_Lim_01.scd
+169,To the Sun,,Thanalan,music/ffxiv/BGM_Field_Uru_01.scd
+170,Crystal Rain,,Mor Dhona,music/ffxiv/BGM_Field_Mor_02.scd
+171,To the Fore,,Heavensward dungeon boss theme,music/ffxiv/BGM_Fate_Bouei2.scd
+172,The Rider's Boon,,Generic ARR Mounts,music/ffxiv/BGM_Ride_CoolMount.scd
+173,Thunderer,,"Ascian battles, Twintania",music/ffxiv/BGM_Con_Ascian.scd
+174,All Saints' Wake,,Seasonal event BGM areas,music/ffxiv/BGM_Season_Halloween.scd
+175,Starlight Celebration,,Seasonal event BGM areas,music/ffxiv/BGM_Season_Christmas.scd
+176,Heavensturn,,Seasonal event BGM areas,music/ffxiv/BGM_Season_NewYear.scd
+177,Reign of Pain,,Shantotto theme (FFXI event),music/ffxiv/BGM_Fate_FFXI01.scd
+178,The Seven Jesters,,Thornmarch Phase 1,music/ffxiv/BGM_Ban_Moogle_Nomal.scd
+179,Good King Moggle Mog XII,,Thornmarch Phase 2,music/ffxiv/BGM_Ban_Moogle_King.scd
+180,Hubris,,Labyrinth of the Ancients,music/ffxiv/BGM_Con_CrystalTower_01.scd
+181,Tumbling Down,,Labyrinth of the Ancients boss theme,music/ffxiv/BGM_Con_CrystalTower_Boss_01.scd
+182,Agent of Inquiry,,Hildibrand episode theme,music/ffxiv/BGM_Event_NextHildy.scd
+183,Frontiers Within,,Revenant's Toll (day),music/ffxiv/BGM_Field_Mor_03.scd
+184,Reflections,,Revenant's Toll (night),music/ffxiv/BGM_Field_Mor_04.scd
+185,A Light in the Storm,,Pharos Sirius,music/ffxiv/BGM_Dungeon_Lim_04.scd
+186,Where the Heart Is,,"The Mist, The Lavender Beds, The Goblet (day)",music/ffxiv/BGM_Field_Housing_Day.scd
+187,Where the Hearth Is,,"The Mist, The Lavender Beds, The Goblet (night)",music/ffxiv/BGM_Field_Housing_Night.scd
+188,Flibbertigibbet,,East Shroud (Friendly Sylph area),music/ffxiv/BGM_Field_BanColony_Sylph.scd
+189,Smoulder,,Southern Thanalan (Friendly Amalj'aa area),music/ffxiv/BGM_Field_BanColony_Amaruja.scd
+190,Discordance,,Cutscenes (Mysterious),music/ffxiv/BGM_Event_Marvellous.scd
+191,Starlight and Sellswords,,Aesthetician,music/ffxiv/BGM_Event_Barbar.scd
+192,Battle Theme 1.x,,Hildibrand FATEs/Hall of the Novice/B-ranks,music/ffxiv/BGM_Fate_FF2.scd
+193,Big-Boned,,Fat Chocobo Theme,music/ffxiv/BGM_Ride_DEBUChocobo.scd
+194,Gluppity-Schlopp,,Outer La Noscea (Friendly Kobold area),music/ffxiv/BGM_Field_BanColony_Kobold.scd
+195,Breathless,,Western La Noscea (Friendly Sahagin area),music/ffxiv/BGM_Field_BanColony_Sahagin.scd
+196,Pa-Paya,,Seasonal event BGM areas (Hatching-tide),music/ffxiv/BGM_Season_Easter.scd
+197,The Scars of Battle,,Lost City of Amdapor,music/ffxiv/BGM_Dungeon_Gri_05.scd
+198,Tempest,,The Second Coil of Bahamut (Turn 4) (Nael deus Darnus) phase 1,music/ffxiv/BGM_Con_Neal.scd
+199,Rise of the White Raven,,The Second Coil of Bahamut (Turn 4) (Nael deus Darnus) phase 2,music/ffxiv/BGM_Con_CarteneauBattle.scd
+200,Good King Moggle Mog XII,,Thornmarch (Good King Moggle Mog XII) phase 2,music/ffxiv/BGM_Ban_Moogle_Goku.scd
+201,Battle on the Big Bridge,,Battle on the Big Bridge (Gilgamesh),music/ffxiv/BGM_Event_ClashOnTheBigBridge.scd
+202,Blades,,Second Coil/Final Coil trash music,music/ffxiv/BGM_Con_Bahamut_v2.scd
+203,Wreck to the Seaman,,The Whorleater (Leviathan) phase 1,music/ffxiv/BGM_Ban_Leviathan1.scd
+204,Through The Maelstrom,,The Whorleater (Leviathan) phase 2,music/ffxiv/BGM_Ban_Leviathan2.scd
+205,Meteor,,Cutscenes (Nael),music/ffxiv/BGM_Event_Neal.scd
+206,Persistence,,ARR mid-dungeon boss theme,music/ffxiv/BGM_Boss_05.scd
+207,Wrath of the Eikons,,The Lost City of Amdapor final boss / Dun Scaith final boss (Diabolos / Diabolos Hollow),music/ffxiv/BGM_Dungeon_Gri_06.scd
+208,Fury,,Brayflox's Longstop (Hard) boss,music/ffxiv/BGM_Dungeon_Lim_05.scd
+209,Beneath Bloodied Banners,,Hard mode dungeon final bosses,music/ffxiv/BGM_Dungeon_Uru_06.scd
+210,Birds of a Feather,,Halatali (Hard),music/ffxiv/BGM_Dungeon_Uru_05.scd
+211,Thicker Than a Knife's Blade,,"Various cutscenes, Foundation (The Forgotten Knight)",music/ffxiv/BGM_Event_Sad2.scd
+212,Now I Know the Truth,,Unei and Doga theme,music/ffxiv/BGM_Event_UneDoga.scd
+213,???,,Seasonal event BGM areas,music/ffxiv/BGM_Season_China01.scd
+214,Moonfire Faire,,Moonfire Faire,music/ffxiv/BGM_Season_SummerFes.scd
+215,Far from Home,,Ixal theme,music/ffxiv/BGM_Field_BanColony_Ixal.scd
+216,Horizons Calling,,Hullbreaker Isle,music/ffxiv/BGM_Dungeon_Lim_06.scd
+217,Dark Vows,,Tam-Tara Deepcroft (Hard),music/ffxiv/BGM_Dungeon_Gri_07.scd
+218,Out of the Labyrinth,,The Syrcus Tower,music/ffxiv/BGM_Con_CrystalTower_02.scd
+219,The War Room,,Frontlines,music/ffxiv/BGM_PvP_Intro.scd
+220,Rouse Out!,,Frontlines,music/ffxiv/BGM_PvP_Battle.scd
+221,Thunder Rolls,,The Striking Tree (Ramuh),music/ffxiv/BGM_Ban_Ramuh.scd
+222,Game Theory,,Puzzles/Minigames Theme,music/ffxiv/BGM_Minigame_Puzzle.scd
+223,Loss of Time,,Cutscenes (Crystal tower),music/ffxiv/BGM_Event_Gendaishi.scd
+224,Or the Egg,,Chocobo training montage,music/ffxiv/BGM_Event_ChocoboEducation.scd
+225,His Holiness,The Dragon's Dirge,Cutscenes (Thordan),music/ffxiv/BGM_Event_IshKyoko.scd
+226,Answers - Reprise,,Ul'dah (The Rising),music/ffxiv/BGM_Season_Answers.scd
+227,The Corpse Hall,,Urth's Fount,music/ffxiv/BGM_Ban_Odin.scd
+228,Everbinding Oath,,Eternal Bond ceremony,music/ffxiv/BGM_Season_Wedding.scd
+229,The Edge,,Ninja trainer hideout,music/ffxiv/BGM_Field_Lim_Ninja.scd
+230,Footsteps in the Snow,,"Akh Afah Amphitheatre (Shiva) phase 1, Eden's Verse: Refulgence (Savage) (Shiva) phase 1",music/ffxiv/BGM_Ban_Shiva1.scd
+231,Oblivion,,Akh Afah Amphitheatre (Shiva) phase 2,music/ffxiv/BGM_Ban_Shiva2.scd
+232,The Decisive Battle,,The Dragon's Neck,music/ffxiv/BGM_Event_Orthros.scd
+233,The Warrens,,Snowcloak,music/ffxiv/BGM_Dungeon_Ish_04.scd
+234,Forgotten by the Sun,,The Sunken Temple of Qarn (Hard),music/ffxiv/BGM_Dungeon_Uru_07.scd
+235,Riptide,,Sastasha (Hard),music/ffxiv/BGM_Dungeon_Lim_07.scd
+236,From the Ashes,,The Final Coil of Bahamut (Turn 3) (Phoenix),music/ffxiv/BGM_Con_Bahamut_Bigboss1.scd
+237,Answers,,The Final Coil of Bahamut (Turn 4) (Bahamut Prime),music/ffxiv/BGM_Con_Bahamut_Bigboss2.scd
+238,Answers,,The Final Coil of Bahamut (Turn 4) (Bahamut Prime),music/ffxiv/BGM_Con_Bahamut_Bigboss3.scd
+239,The Coil Tightens,,Cutscenes (The Binding Coil of Bahamut),music/ffxiv/BGM_Event_Bahamut_4thNC.scd
+240,Answers,,The Final Coil of Bahamut (Turn 4) (Bahamut Prime),music/ffxiv/BGM_Con_Bahamut_Bigboss0.scd
+241,Eternal Wind,,Cutscenes (Crystal tower),music/ffxiv/BGM_Event_UQ.scd
+242,Battle on the Big Bridge,,Battle in the Big Keep Phase 1,music/ffxiv/BGM_Event_Enkidu.scd
+243,Silver Tears,,The Keeper of the Lake,music/ffxiv/BGM_Dungeon_Mor_01.scd
+244,Primogenitor,,"The Keeper of the Lake final boss (Midgardsormr), Alphascape v2.0 (Midgardsormr)",music/ffxiv/BGM_Dungeon_Mor_02.scd
+245,Tricksome,,Wanderer's Palace (Hard),music/ffxiv/BGM_Dungeon_Lim_08.scd
+246,Aftermath,,Amdapor Keep (Hard),music/ffxiv/BGM_Dungeon_Gri_08.scd
+247,Blind to the Dark,,The World of Darkness,music/ffxiv/BGM_Con_CrystalTower_03.scd
+248,Tumbling Down,,The World of Darkness (Cerberus Stomach),music/ffxiv/BGM_Con_CrystalTower_Boss_02.scd
+249,Hunger / The Reach of Darkness,,The World of Darkness,music/ffxiv/BGM_Con_CrystalTower_Boss_03.scd
+250,Four-Sided Circle,,Manderville Gold Saucer,music/ffxiv/BGM_GlodSaucer_Lobby.scd
+251,Gateway to Paradise,,Chocobo racing 1,music/ffxiv/BGM_GlodSaucer_GATE.scd
+252,Sport of Kings,,Chocobo racing 2,music/ffxiv/BGM_GlodSaucer_Race.scd
+253,Shuffle or Boogie,,Triple Triad,music/ffxiv/BGM_GlodSaucer_Triple.scd
+254,Faith in Her Fury,,The Steps of Faith,music/ffxiv/BGM_Con_Ish_01.scd
+255,Unworthy,,The Steps of Faith final gate theme,music/ffxiv/BGM_Con_Ish_02.scd
+256,The Tug of Fate,,The Wanderer's Palace (Hard) bosses,music/ffxiv/BGM_Boss_06.scd
+257,To the Fore,,The Wanderer's Palace (Hard) final boss,music/ffxiv/BGM_Boss_07.scd
+258,Chocobo Victory 1,,Chocobo racing,music/ffxiv/BGM_ChocoboRace_Win1st.scd
+259,Chocobo Victory 2,,Chocobo racing,music/ffxiv/BGM_ChocoboRace_Win2nd.scd
+260,Chocobo Victory 3,,Chocobo racing,music/ffxiv/BGM_ChocoboRace_Lose.scd
+261,Drum Roll,,Chocobo racing,music/ffxiv/BGM_ChocoboRace_Fanfare.scd
+262,Magiteknical Difficulties,,Magitek Armor mount,music/ffxiv/BGM_Ride_MagitekArmor.scd
+263,The Corpse Hall,,Sleipnir mount,music/ffxiv/BGM_Ride_Odin.scd
+264,Oblivion,,Akh Afah Amphitheatre (Extreme) (Shiva) mount,music/ffxiv/BGM_Ride_Shiva.scd
+265,Thunder Rolls,,The Striking Tree (Extreme) (Ramuh) mount,music/ffxiv/BGM_Ride_Ramuh.scd
+266,Through The Maelstorm,,The Whorleater (Extreme) (Leviathan) mount,music/ffxiv/BGM_Ride_Leviathan.scd
+267,Under the Weight,,The Navel (Extreme) (Titan) mount,music/ffxiv/BGM_Ride_Titan.scd
+268,Fallen Angel,,The Howling Eye (Extreme) (Garuda) mount,music/ffxiv/BGM_Ride_Gruda.scd
+269,Primal Judgement,,The Bowl of Embers (Extreme) (Ifrit) mount,music/ffxiv/BGM_Ride_Ifrit.scd
+270,Null BGM,,,music/ex1/BGM_EX1_Null.scd
+271,A Cold Wind,,Heavensward title screen,music/ex1/BGM_EX1_System_Title.scd
+272,Dragonsong,,Heavensward credits,music/ex1/BGM_EX1_EndCredit01.scd
+273,Shelter,,Heavensward sanctuary music,music/ex1/BGM_EX1_Field_Safe1.scd
+274,Safety In Numbers,,Heavensward sanctuary music 2,music/ex1/BGM_EX1_Field_Safe2.scd
+275,Nobility Obliges,,The Pillars (day),music/ex1/BGM_EX1_Town_Ish01_Day.scd
+276,Nobility Sleeps,,The Pillars (night),music/ex1/BGM_EX1_Town_Ish01_Night.scd
+277,Solid,,The Foundation (day),music/ex1/BGM_EX1_Town_Ish02_Day.scd
+278,Night in the Brume,,The Foundation (night),music/ex1/BGM_EX1_Town_Ish02_Night.scd
+279,Against the Wind,,Coerthas Western Highlands (day),music/ex1/BGM_EX1_Field_IshSebu02.scd
+280,Black and White,,Coerthas Western Highlands (night),music/ex1/BGM_EX1_Field_IshSebu03.scd
+281,Melt,,Coerthas Western Highlands combat,music/ex1/BGM_EX1_Battle_IshSebu_01.scd
+282,Painted Foothills,,Dravanian Forelands (day),music/ex1/BGM_EX1_Field_DravaniaH02.scd
+283,Painted Skies,,Dravanian Forelands (night),music/ex1/BGM_EX1_Field_DravaniaH03.scd
+284,Melt,,Dravanian Forelands combat,music/ex1/BGM_EX1_Battle_DravaniaH_01.scd
+285,Missing Pages,,Dravanian Hinterlands (day),music/ex1/BGM_EX1_Field_DravaniaL02.scd
+286,The Silent Regard of Stars,,Dravanian Hinterlands (night),music/ex1/BGM_EX1_Field_DravaniaL03.scd
+287,Melt,,Dravanian Hinterlands combat,music/ex1/BGM_EX1_Battle_DravaniaL_01.scd
+288,Landlords,,Churning Mists (day),music/ex1/BGM_EX1_Field_DravaniaC02.scd
+289,Skylords,,Churning Mists (night),music/ex1/BGM_EX1_Field_DravaniaC03.scd
+290,Melt,,Churning Mists combat,music/ex1/BGM_EX1_Battle_DravaniaC_01.scd
+291,Lost in the Clouds,,Sea of Clouds (day),music/ex1/BGM_EX1_Field_Abaracia02.scd
+292,Close to the Heavens,,Sea of Clouds (night),music/ex1/BGM_EX1_Field_Abaracia03.scd
+293,Melt,,Sea of Clouds combat,music/ex1/BGM_EX1_Battle_Abaracia_01.scd
+294,Order Yet Undeciphered,,Azys Lla,music/ex1/BGM_EX1_Field_MagicC02.scd
+295,Melt,,Azys Lla combat,music/ex1/BGM_EX1_Battle_MagicC_01.scd
+296,Paradise Found,,Idyllshire (day),music/ex1/BGM_EX1_Rest_Sharean.scd
+297,Homestead,,Idyllshire (night),music/ex1/BGM_EX1_Rest_Sharean_Night.scd
+298,The Mushroomery,,Matoya's Cave,music/ex1/BGM_EX1_Rest_Matoya.scd
+299,Descent,,Dusk Vigil,music/ex1/BGM_EX1_Dungeon_IshSebu_01.scd
+300,Like a Summer Rain,,Neverreap,music/ex1/BGM_EX1_Dungeon_Abaracia_01.scd
+301,Slumber Eternal,,Sohm Al,music/ex1/BGM_EX1_Dungeon_DravaniaH_01.scd
+302,Roar of the Wyrm,,The Aery,music/ex1/BGM_EX1_Dungeon_DravaniaC_01.scd
+303,Ink Long Dry,,Great Gubal Library,music/ex1/BGM_EX1_Dungeon_DravaniaL_01.scd
+304,Imagination,,Aetherochemical Research Facility,music/ex1/BGM_EX1_Dungeon_MagicC_01.scd
+305,Hallowed Halls,,The Vault,music/ex1/BGM_EX1_Dungeon_Kyoko.scd
+306,Hallowed Halls,,The Vault,music/ex1/BGM_EX1_Dungeon_Kyoko_2.scd
+307,Hallowed Halls,,The Vault,music/ex1/BGM_EX1_Dungeon_Kyoko_3.scd
+308,Unbreakable,,Fractal Continuum,music/ex1/BGM_EX1_Dungeon_MagicC_02.scd
+309,Ominous Prognisticks,,Heavensward boss theme,music/ex1/BGM_EX1_Boss_01.scd
+310,The Hand That Gives The Rose,,Thok ast Thok (Ravana) phase 1,music/ex1/BGM_EX1_Ban_Ravana_01.scd
+311,Limitless Blue,,The Limitless Blue (Bismarck) phase 1,music/ex1/BGM_EX1_Ban_Bismark_01.scd
+312,Heroes,,"The Singularity Reactor, The Minstrel's Ballad: Thordan's Reign phase 2",music/ex1/BGM_EX1_Boss02.scd
+313,Contention,,"Heavensward cutscenes, Churning Mists (Zenith)",music/ex1/BGM_EX1_Event_DragonWar.scd
+314,Misconception,,Heavensward cutscenes,music/ex1/BGM_EX1_Event_Dragon.scd
+315,The Heavens' Ward,,Vault final boss (Ser Charibert),music/ex1/BGM_EX1_Event_Soten.scd
+316,Stone and Steel,,Heavensward cutscenes (Heroic),music/ex1/BGM_EX1_Event_IshWar.scd
+317,For the Sky,,Heavensward cutscenes,music/ex1/BGM_EX1_Event_Strategy.scd
+318,Inception,,Heavensward cutscenes,music/ex1/BGM_EX1_Event_Start.scd
+319,Borderless,,Default flying mount theme,music/ffxiv/BGM_EX1_Ride_FlyingMount.scd
+320,The Dragon's Dirge,,Heavensward cutscenes,music/ex1/BGM_EX1_Event_IshDragonHead.scd
+321,Ultima,,"Proto Ultima FATE, Proto Ultima battle (Dun Scaith)",music/ex1/BGM_EX1_FATE01.scd
+322,What is Love?,,The Churning Mists (Moogles),music/ex1/BGM_EX1_Event_Moogle.scd
+323,"Sins of the Father, Sins of the Son",,Alexander trash theme,music/ex1/BGM_EX1_Alex01.scd
+324,Locus,,Alexander boss theme,music/ex1/BGM_EX1_Alex02.scd
+325,Unbending Steel,,Thok ast Thok phase 2,music/ex1/BGM_EX1_Ban_Ravana_02.scd
+326,Woe That Is Madness,,The Limitless Blue phase 2,music/ex1/BGM_EX1_Ban_Bismark_02.scd
+327,Metal,,Alexander - Fist of the Father,music/ex1/BGM_EX1_Alex03.scd
+328,When a Tree Falls,,FC workshop/leves,music/ffxiv/BGM_Field_Workshop.scd
+329,Toll of the Bells,,The Vault,music/ex1/BGM_EX1_Dungeon_Kyoko_0.scd
+330,All Saint's Wake,,Witch's Broom mount,music/ffxiv/BGM_Ride_Broom.scd
+331,Steel Reason,,Red Baron / White Devil mounts,music/ffxiv/BGM_Ride_MagitekSpecial.scd
+332,Battle Theme,,The Maiden's Rhapsody (FFXI),music/ffxiv/BGM_Event_FFXI01.scd
+333,Battle Theme #2,,The Maiden's Rhapsody (FFXI),music/ffxiv/BGM_Event_FFXI02.scd
+334,Recollection,,The Maiden's Rhapsody (FFXI),music/ffxiv/BGM_Event_FFXI03.scd
+335,The Kingdom of San d'Oria,,The Maiden's Rhapsody (FFXI),music/ffxiv/BGM_Event_FFXI04.scd
+336,The Republic of Bastok,,The Maiden's Rhapsody (FFXI),music/ffxiv/BGM_Event_FFXI05.scd
+337,The Federation of Windurst,,The Maiden's Rhapsody (FFXI),music/ffxiv/BGM_Event_FFXI06.scd
+338,The Merry Wanderer Waltz,,,music/ex1/BGM_EX1_Event_Hildy.scd
+339,Heavy Rain,,Sea of Clouds (Hostile Vanu area),music/ex1/BGM_EX1_BanFort_Banu_Bad.scd
+340,Coming Home,,Sea of Clouds (Friendly Vanu area),music/ex1/BGM_EX1_BanFort_Banu_Good.scd
+341,Heroes Never Die,,The Minstrel's Ballad: Thordan's Reign phase 1,music/ex1/BGM_EX1_Boss03.scd
+342,Engage,,The Diadem,music/ex1/BGM_EX1_Sorashima_Field.scd
+343,Jewel,,The Diadem combat,music/ex1/BGM_EX1_Sorashima_Battle.scd
+344,Torn from The Heavens,,The Diadem Notorious Monster battle,music/ex1/BGM_EX1_Sorashima_Boss.scd
+345,Poison Ivy,,Saint Mocianne's Arboretum,music/ex1/BGM_EX1_Dungeon_botanical_gardens.scd
+346,Upon the Rocks,,Pharos Sirius (Hard),music/ex1/BGM_EX1_Dungeon_Sirius_Lighthouse.scd
+347,Aetherpause,Aetherosphere,Void Ark,music/ex1/BGM_EX1_Makosen_Nomal.scd
+348,Voidal Manifest,Six Fulms Under,"Void Ark (Echidna), The Weeping City of Mhach (Calofisteri) final bosses",music/ex1/BGM_EX1_Makosen_Boss01.scd
+349,???,,Lords of Verminion,music/ffxiv/BGM_LoV_Nomal.scd
+350,Brothers in Arms,,Lords of Verminion,music/ffxiv/BGM_LoV_Boss01.scd
+351,Nemesis,,Lords of Verminion,music/ffxiv/BGM_LoV_Boss02.scd
+352,The Dark's Kiss,,Lords of Verminion,music/ffxiv/BGM_LoV_Boss03.scd
+353,Aftermath,,Lords of Verminion,music/ffxiv/BGM_LoV_Boss04.scd
+354,The Corpse Hall,,Lords of Verminion,music/ffxiv/BGM_LoV_Boss05.scd
+355,Battle on the Big Bridge,,Lords of Verminion,music/ffxiv/BGM_LoV_Boss06.scd
+356,Spiral,,Lords of Verminion,music/ffxiv/BGM_LoV_Boss07.scd
+357,Calamity Unbound,,Lords of Verminion,music/ffxiv/BGM_LoV_Boss08.scd
+358,Prelude - Rebirth (2nd ver),,Kirin mount,music/ffxiv/BGM_Ride_Kirin.scd
+359,The Kiss,,Valentione's Day,music/ffxiv/BGM_Season_VT.scd
+360,test,,,music/ffxiv/BGM_Season_Hina.scd
+361,Down the Up Staircase,,The Antitower,music/ex1/BGM_EX1_Dungeon_DravaniaL_02.scd
+362,Dancing Calcabrina,,The Antitower,music/ex1/BGM_EX1_Dungeon_DravaniaL_03.scd
+363,"No Sound, No Scutter",,"The Dravanian Forelands (Vath, hostile)",music/ex1/BGM_EX1_BanFort_Gunasu_Bad.scd
+364,Piece of Mind,,"The Dravanian Forelands (Vath, friendly)",music/ex1/BGM_EX1_BanFort_Gunasu_Good.scd
+365,Battle to the Death - Heavensward,,Containment Bay S1T7 (Sephirot) / Containment Bay P1T6 (Sophia) / Containment Bay Z1T9 (Zurvan) phase 1,music/ex1/BGM_EX1_Ban_Sephiroth01.scd
+366,Fiend,,Containment Bay S1T7 (Sephirot) phase 2,music/ex1/BGM_EX1_Ban_Sephiroth02.scd
+367,Starved,,The Feast,music/ffxiv/BGM_EX1_PvP01.scd
+368,The Ancient City,,The Lost City of Amdapor (Hard),music/ex1/BGM_EX1_Dungeon_Komuda2.scd
+369,Metal - Brute Justice Mode,,Alexander - The Burden of the Son (Brute Justice) phase 2,music/ex1/BGM_EX1_Alex04.scd
+370,test,,,music/ex1/BGM_EX1_Alex05.scd
+371,Woe That is Madness,,The Limitless Blue (Extreme) (Bismarck) mount / White Lanner,music/ffxiv/BGM_Ride_Bismark.scd
+372,Unbending Steel,,Thok ast Thok (Extreme) (Ravana) mount / Rose Lanner,music/ffxiv/BGM_Ride_Ravana.scd
+373,Heroes,,The Minstrel's Ballad: Thordan's Reign (Thordan) mount / Round Lanner,music/ffxiv/BGM_Ride_KoR.scd
+374,Battle to the Death - Heavensward,,Containment Bay S1T7 (Sephirot) mount / Warring Lanner,music/ffxiv/BGM_Ride_Sephiroth.scd
+375,Tenacity,,Guildhests,music/ffxiv/BGM_Beginner01.scd
+376,From the Ashes,,Bennu mount,music/ffxiv/BGM_Ride_Bennu.scd
+377,Faith in Her Fury,,Heavensward cutscenes,music/ex1/BGM_EX1_Event_Nidhogg_01.scd
+378,Stone and Steel,,Heavensward cutscenes,music/ex1/BGM_EX1_Event_Nidhogg_02.scd
+379,Primogenitor,,Heavensward cutscenes,music/ex1/BGM_EX1_Event_Nidhogg_03.scd
+380,Hyper Rainbow Z,,Go Go Posing Rangers Theme,music/ffxiv/BGM_Season_SummerFes02.scd
+381,Freedom,,The Parrock,music/ex1/BGM_EX1_Field_SkyPirates.scd
+382,Dragonsong,,The Final Steps of Faith (Nidhogg) / The Minstrel's Ballad: Nidhogg's Rage (Nidhogg) phase 1,music/ex1/BGM_EX1_Ban_Nidhogg_01.scd
+383,Freefall,,The Final Steps of Faith (Nidhogg) / The Minstrel's Ballad: Nidhogg's Rage (Nidhogg) phase 2,music/ex1/BGM_EX1_Ban_Nidhogg_02.scd
+384,Revenge of the Horde,,The Final Steps of Faith (Nidhogg) / The Minstrel's Ballad: Nidhogg's Rage (Nidhogg) phase 3,music/ex1/BGM_EX1_Ban_Nidhogg_03.scd
+385,He Who Continues the Attack,,Regula van Hydrus's Theme,music/ex1/BGM_EX1_Boss04.scd
+386,Apologies,,Sohr Khai,music/ex1/BGM_EX1_Dungeon_DravaniaC_02.scd
+387,Holy Consult,,Hullbreaker Isle (Hard),music/ex1/BGM_EX1_Dungeon_Hullbreaker_Hard.scd
+388,Bathed in Woodsin,,,music/ffxiv/BGM_Dungeon_Treasure.scd
+389,Emerald Labyrinth,,PotD,music/ffxiv/BGM_Dungeon_Deep01.scd
+390,Enraptured,,PotD,music/ffxiv/BGM_Dungeon_Deep02.scd
+391,Tears for Mor Dhona,,PotD,music/ffxiv/BGM_Dungeon_Deep03.scd
+392,Blackbosom,,PotD Floor 50 boss/Edda Blackbosom theme,music/ffxiv/BGM_Dungeon_DeepBoss01.scd
+393,Teardrops in the Rain,,Weeping City of Mhach,music/ex1/BGM_EX1_Makosen_Nomal02.scd
+394,A Thousand Faces,,Weeping City of Mhach (Ozma add phase),music/ex1/BGM_EX1_Makosen_Boss02.scd
+395,Freefall,,The Minstrel's Ballad: Nidhogg's Rage (Nidhogg) mount / Dark Lanner,music/ffxiv/BGM_Ride_Nidhogg.scd
+396,Good King Moggle Mog XII,,Fat Moogle Mount,music/ffxiv/BGM_Ride_Mogle.scd
+397,Locus,,Gobwalker Mount,music/ffxiv/BGM_Ride_Alex.scd
+398,Night in the Brume,,Heavensward cutscenes,music/ex1/BGM_EX1_Event_Fortemps.scd
+399,The Merry Wanderer Waltz,,Palace of the Dead inter-floor theme,music/ffxiv/BGM_Dungeon_Deep00.scd
+400,Fragments of Forever,,Alisaie Theme,music/ffxiv/BGM_Event_Odayaka.scd
+401,Notice of Death,,PotD pre-floor 100 cutscenes,music/ex1/BGM_EX1_Event_Nivas.scd
+402,Equilibrium,,Containment Bay P1T6 (Sophia) phase 2,music/ex1/BGM_EX1_Ban_Sophia.scd
+403,The Gauntlet,,Duel / Lost Canals of Uznair / Palace of the Dead,music/ffxiv/BGM_PvP_Duel.scd
+404,Ultima,,Dun Scaith (Proto Ultima),music/ffxiv/BGM_Ban_Altema.scd
+405,Grounded,,Xelphatol,music/ex1/BGM_EX1_Dungeon_Xelphatol.scd
+406,Revenge Twofold,,Heavensward boss theme 2,music/ex1/BGM_EX1_Boss05.scd
+407,Bibliophobia,,The Great Gubal Library (Hard),music/ex1/BGM_EX1_Dungeon_DravaniaL_04.scd
+408,Up at Dawn,,The Haunted Manor (All Saint's Wake),music/ffxiv/BGM_Season_HalloweenD.scd
+409,Fog of Phantom,,PotD 91-100 theme,music/ex1/BGM_EX1_Deep01.scd
+410,Blasphemous Experiment,,PotD floor 100 boss theme,music/ex1/BGM_EX1_Deep02.scd
+411,Exponential Entropy,,Alexander - The Heart of the Creator (Cruise Chaser),music/ex1/BGM_EX1_Alex06.scd
+412,Mobius,,Alexander - The Soul of the Creator (Alexander Prime) phase 1,music/ex1/BGM_EX1_Alex07.scd
+413,Rise,,Alexander - The Soul of the Creator (Alexander Prime) phase 2,music/ex1/BGM_EX1_Alex08.scd
+414,Out of Time,,Alexander - The Soul of the Creator (Alexander Prime) timegate theme,music/ex1/BGM_EX1_Alex09.scd
+415,Equilibrium,,Containment Bay P1T6 (Extreme) (Sophia) mount / Sophic Lanner,music/ffxiv/BGM_Ride_Sophia.scd
+416,Mobius,,Alexander - The Soul of the Creator (Savage) mount / Arrhidaeus,music/ffxiv/BGM_Ride_Alex2.scd
+417,Infinity,,Containment Bay Z1T9 (Zurvan) phase 3,music/ex1/BGM_EX1_Ban_Demon_02.scd
+418,test,,,music/ex1/BGM_EX1_Event_vs.scd
+419,Penultimania,,Containment Bay Z1T9 / Zurvan Phase 2,music/ex1/BGM_EX1_Ban_Demon.scd
+420,Another Brick,,Baelsar's Wall,music/ex1/BGM_EX1_Dungeon_Gri_09.scd
+421,Quicksand,,Sohm Al (Hard),music/ex1/BGM_EX1_Dungeon_DravaniaH_02.scd
+422,Promises,,Dun Scaith / Deathgaze Hollow,music/ex1/BGM_EX1_Makosen_Field01.scd
+423,Shadow of the Body,,Dun Scaith,music/ex1/BGM_EX1_Makosen_Field02.scd
+424,Infinity,,Containment Bay Z1T9 (Extreme) (Zurvan) mount / Demonic Lanner,music/ffxiv/BGM_Ride_Demon.scd
+425,Prelude - Discoveries,,Firebird mount,music/ffxiv/BGM_Ride_Bcomp.scd
+426,Answers - Reprise,,Ul'dah (The Rising),music/ex1/BGM_EX1_Event_Answers.scd
+427,Null BGM,,,music/ex2/BGM_EX2_Null.scd
+428,Prelude - Long March Home,,Stormblood title screen,music/ex2/BGM_EX2_System_Title.scd
+429,Revolutions / A Father's Pride / The Measure of Our Reach,,Stormblood credits,music/ex2/BGM_EX2_EndCredit01.scd
+430,Harmony,,Stormblood sanctuaries,music/ex2/BGM_EX2_Field_Safe_01.scd
+431,With Giants Watching,,Stormblood sanctuaries,music/ex2/BGM_EX2_Field_Safe_02.scd
+432,Cradle,,Stormblood sanctuaries,music/ex2/BGM_EX2_Field_Safe_03.scd
+433,Impact,,Rhalgr's Reach,music/ex2/BGM_EX2_Town_R_Day.scd
+434,Afterglow,,Rhalgr's Reach,music/ex2/BGM_EX2_Town_R_Night.scd
+435,Looping in the Deepest Fringes,,Gyr Abania combat,music/ex2/BGM_EX2_Field_G_Battle.scd
+436,Crimson Sunrise,,Kugane (day),music/ex2/BGM_EX2_Town_K_Day.scd
+437,Crimson Sunset,,Kugane (night),music/ex2/BGM_EX2_Town_K_Night.scd
+438,Looping in the Deepest Fringes,,Othard combat,music/ex2/BGM_EX2_Field_Kohgyoku_Battle.scd
+439,Beyond The Wall,,The Fringes (day),music/ex2/BGM_EX2_Field_G_Day.scd
+440,Hope Forgotten,,The Fringes (night),music/ex2/BGM_EX2_Field_G_Night.scd
+441,Looping in the Deepest Fringes,,The Fringes combat,music/ex2/BGM_EX2_Field_G_Battle.scd
+442,On High,,The Peaks (day),music/ex2/BGM_EX2_Field_G_mountain_Day.scd
+443,The Stone Remembers,,The Peaks (night),music/ex2/BGM_EX2_Field_G_mountain_Night.scd
+444,Looping in the Deepest Fringes,,The Peaks combat,music/ex2/BGM_EX2_Field_G_mountain_Battle.scd
+445,Songs of Salt and Suffering,,The Lochs (day),music/ex2/BGM_EX2_Field_G_Lake_Day.scd
+446,Old Wounds,,The Lochs (night),music/ex2/BGM_EX2_Field_G_Lake_Night.scd
+447,Looping in the Deepest Fringes,,The Lochs combat,music/ex2/BGM_EX2_Field_G_Lake_Battle.scd
+448,Liquid Flame,,The Ruby Sea (day),music/ex2/BGM_EX2_Field_Kohgyoku_Day.scd
+449,Westward Tide,,The Ruby Sea (night),music/ex2/BGM_EX2_Field_Kohgyoku_Night.scd
+450,Looping in the Deepest Fringes,,Othard combat,music/ex2/BGM_EX2_Field_Kohgyoku_Battle.scd
+451,A Father's Pride,,Yanxia (day),music/ex2/BGM_EX2_Field_Yansa_Day.scd
+452,A Mother's Pride,,Yanxia (night),music/ex2/BGM_EX2_Field_Yansa_Night.scd
+453,Looping in the Deepest Fringes,,Yanxia combat,music/ex2/BGM_EX2_Field_Yansa_Battle.scd
+454,Drowning in the Horizon,,The Azim Steppe (day),music/ex2/BGM_EX2_Field_A_Day.scd
+455,He Rises Above,,The Azim Steppe (night),music/ex2/BGM_EX2_Field_A_Night.scd
+456,Looping in the Deepest Fringes,,The Azim Steppe combat,music/ex2/BGM_EX2_Field_A_Battle.scd
+457,Revolutions,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_01.scd
+458,Revolutions,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_02.scd
+459,Heroes of Stormblood,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_03.scd
+460,The Measure of Our Reach,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_04.scd
+461,The Measure of His Reach,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_05.scd
+462,test,,,music/ex2/BGM_EX2_Event_06.scd
+463,Revolutions,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_09.scd
+464,Cyan's Theme,,"Stormblood cutscenes, The Doman Enclave",music/ex2/BGM_EX2_Event_07.scd
+465,Far East of Eorzea,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_08.scd
+466,Revelation,,The Pool of Tribute (Susano) phase 1,music/ex2/BGM_EX2_Ban_01.scd
+467,Beauty's Wicked Wiles,,Emanation (Lakshmi),music/ex2/BGM_EX2_Ban_02.scd
+468,The Worm's Head,Scale and Steel,The Royal Menagerie (Shinryu) phase 1,music/ex2/BGM_EX2_Ban_03_1.scd
+469,The Worm's Tail,,The Royal Menagerie (Shinryu) phase 2,music/ex2/BGM_EX2_Ban_03_2.scd
+470,Triumph,,Stormblood boss theme,music/ex2/BGM_EX2_Boss_Battle_01.scd
+471,Dawnbound,,The Sirensong Sea,music/ex2/BGM_EX2_Dan_D01.scd
+472,The Open Box,,The Shisui of the Violet Tides,music/ex2/BGM_EX2_Dan_D02.scd
+473,Most Unworthy,,Bardam's Mettle,music/ex2/BGM_EX2_Dan_D03.scd
+474,Gates of the Moon,,Doma Castle,music/ex2/BGM_EX2_Dan_D04.scd
+475,Alienus,,Castrum Abania,music/ex2/BGM_EX2_Dan_D05.scd
+476,Liberty or Death,,Ala Mhigo,music/ex2/BGM_EX2_Dan_D06.scd
+477,Their Deadly Mission,,The Temple of the Fist,music/ex2/BGM_EX2_Dan_D07.scd
+478,Deception,,Kugane Castle,music/ex2/BGM_EX2_Dan_D08.scd
+479,Deltascape,,The Interdimensional Rift,music/ex2/BGM_EX2_Omega_01.scd
+480,Omega^2,,Deltascape boss theme,music/ex2/BGM_EX2_Omega_02.scd
+481,Decisions,,Deltascape v4.0 (Exdeath),music/ex2/BGM_EX2_Omega_03.scd
+482,"Final, Not Final",,Deltascape v4.0 (Savage) (Neo-Exdeath),music/ex2/BGM_EX2_Omega_04.scd
+483,Wing and a Prayer,,Falcon porters,music/ex2/BGM_EX2_Mount01.scd
+484,Wing and a Prayer,,"Stormblood cutscenes, Doman Enclave quests",music/ex2/BGM_EX2_Event_10.scd
+485,Revolutions,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_11.scd
+486,Prelude - Long March Home,,Stormblood title screen,music/ex2/BGM_EX2_Event_PRELUDE.scd
+487,Prelude - Long March Home / Measure of His Reach,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_END.scd
+488,Shell-Shocked,,The Ruby Sea (Hostile Kojin area),music/ex2/BGM_EX2_BanFort_Koujin_Bad.scd
+489,Parting Ways,,Stormblood cutscenes,music/ex2/BGM_EX2_Event_12.scd
+490,Meteor,,Stormblood cutscenes (Zenos),music/ex2/BGM_EX2_Boss_Battle_02.scd
+491,Riot,,The Pool of Tribute (Susano) phase 2,music/ex2/BGM_EX2_Ban_01_2.scd
+492,At Both Ends,,The Pool of Tribute (Susano) phase 3,music/ex2/BGM_EX2_Ban_01_3.scd
+493,Riot,,The Pool of Tribue (Extreme) (Susano) mount / Reveling Kamuy,music/ffxiv/BGM_Ride_Susano.scd
+494,Beauty's Wicked Wiles,,Emanation (Extreme) (Lakshmi) mount / Blissful Kamuy,music/ffxiv/BGM_Ride_Lakshmi.scd
+495,Procedamus in Peace,,Rhalgr's Reach,music/ex2/BGM_EX2_Town_R_Sad.scd
+496,Wizardly,,Cheap Dungeon,music/ffxiv/BGM_Season_Anniversary.scd
+497,Victory,,Choco Racing Victory,music/ex2/BGM_EX2_Event_13.scd
+498,Indomitable,,Ruby Sea (Friendly Kojin area),music/ex2/BGM_EX2_BanFort_Kojin_Good.scd
+499,Beyond Redemption,,Unending Coil of Bahamut (Ultimate) phase 4,music/ex2/BGM_EX2_Ban_04.scd
+500,Rival Wings,,Rival Wings,music/ffxiv/BGM_PvP_Mogi_01.scd
+501,Locus,,Rival Wings,music/ffxiv/BGM_PvP_Mogi_02.scd
+502,Exponential Entropy,,Rival Wings,music/ffxiv/BGM_PvP_Mogi_03.scd
+503,Metal - Brute Justice Mode,,Rival Wings,music/ffxiv/BGM_PvP_Mogi_04.scd
+504,Far From Home,,The Drowned City Of Skalla,music/ex2/BGM_EX2_Dan_D09.scd
+505,The Worm's Tail,,The Minstrel's Ballad: Shinryu's Domain mount / Legendary Kamuy,music/ffxiv/BGM_Ride_Shinryu.scd
+506,Trisection,,Royal City of Rabanastre,music/ex2/BGM_EX2_Rti_01.scd
+507,Precipitous Combat,,Royal City of Rabanastre bosses,music/ex2/BGM_EX2_Rti_02.scd
+508,Ultima's Transformation,,Royal City of Rabanastre final boss (Argath Thadulfus),music/ex2/BGM_EX2_Rti_03.scd
+509,Victory,,Royal City of Rabanastre post-final boss,music/ex2/BGM_EX2_Rti_04.scd
+510,Save / Load Screen,,Return to Ivalice cutscenes,music/ex2/BGM_EX2_Rti_05.scd
+511,Character Creation,,Return to Ivalice cutscenes,music/ex2/BGM_EX2_Rti_06.scd
+512,Protagonist's Theme,,Return to Ivalice cutscenes,music/ex2/BGM_EX2_Rti_07.scd
+513,Decisive Battle,,Royal City of Rabanastre,music/ex2/BGM_EX2_Rti_08.scd
+514,Background Story,,Return to Ivalice cutscenes,music/ex2/BGM_EX2_Rti_09.scd
+515,The Enemy Approaches,,Return to Ivalice cutscenes,music/ex2/BGM_EX2_Rti_10.scd
+516,Starlit Gateway,,Seasonal event BGM areas,music/ffxiv/BGM_Season_Xmas2017.scd
+517,Forever in Flames,,,music/ex2/BGM_EX2_Ban_04pre.scd
+518,Keepers of the Lock,,The Fringes (Friendly Ananta area),music/ex2/BGM_EX2_BanFort_Ananta_Good.scd
+519,Iroha,,Reisen Temple,music/ex2/BGM_EX2_Field_Iroha.scd
+520,Siren Song,,Seasonal event BGM areas,music/ffxiv/BGM_Season_Princess.scd
+521,Answer on High,,The Jade Stoa (Byakko) / Hell's Kier (Suzaku) / The Wreath of Snakes (Seiryu) phase 1,music/ex2/BGM_EX2_Ban_11.scd
+522,Todoroki,,The Jade Stoa (Byakko) phase 2,music/ex2/BGM_EX2_Ban_12.scd
+523,Amatsu Kaze,,The Jade Stoa (Byakko) phase 3,music/ex2/BGM_EX2_Ban_13.scd
+524,Wicked Winds Whisper,,"Eureka Anemos, Eureka Pagos, Eureka Pyros",music/ex2/BGM_EX2_EU_Field.scd
+525,No Quarter,,Eureka Notorious Monster theme,music/ex2/BGM_EX2_EU_NM.scd
+526,Down Where Daemons Dwell,,Hells' Lid,music/ex2/BGM_EX2_Dan_D10.scd
+527,Unbreakable - Duality,,The Fractal Continuum (Hard),music/ex2/BGM_EX2_Dan_D11.scd
+528,The Phantom Train to Sigmascape,,Sigmascape v1.0 (Phantom Train) opening cutscene,music/ex2/BGM_EX2_Sigma_01.scd
+529,The Decisive Battle,,"Sigmascape v1.0 (Phantom Train), Sigmascape v2.0 (Demon Chadarnook), Sigmascape v3.0 (Guardian)",music/ex2/BGM_EX2_Sigma_02.scd
+530,Dancing Mad - Movement I,,Sigmascape v4.0 (Kefka) phase 1,music/ex2/BGM_EX2_Sigma_03.scd
+531,Dancing Mad - Movement II,,Sigmascape v4.0 (Kefka) phase 2,music/ex2/BGM_EX2_Sigma_04.scd
+532,Dancing Mad - Movement III,,Sigmascape v4.0 (Kefka) phase 3,music/ex2/BGM_EX2_Sigma_05.scd
+533,Dancing Mad - Movement IV,,Sigmascape v4.0 (Savage) (God Kefka),music/ex2/BGM_EX2_Sigma_06.scd
+534,"Final, Not Final",,Deltascape v4.0 (Savage) (Neo-Exdeath) mount / Alte Roite,music/ffxiv/BGM_Ride_Omega.scd
+535,Dancing Mad IV Hushed,,Sigmascape v4.0 (Savage) (God Kefka) mount / Air Force,music/ffxiv/BGM_Ride_Sigma.scd
+536,Amatsu Kaze,,The Jade Stoa (Extreme) (Byakko) mount / Auspicious Kamuy,music/ffxiv/BGM_Ride_Byakko.scd
+537,Calling,,Eureka,music/ffxiv/BGM_Field_Safe2.scd
+538,Pa-Paya Demastered,,Egg Hunter Riggy minigame,music/ffxiv/BGM_Minigame_Egghunt.scd
+539,Freedom,,Seasonal event BGM areas,music/ffxiv/BGM_Season_VTID.scd
+540,Seven Hundred Seventy-Seven Whiskers,,The Azim Steppe (Namazu),music/ex2/BGM_EX2_BanFort_Namazuo_Good.scd
+541,Nightbloom,,"Castrum Fluminis (Tsukuyomi) phase 1, The Minstrel's Ballad: Tsukuyomi's Pain (Tsukuyomi) phase 1",music/ex2/BGM_EX2_Ban_16.scd
+542,Lunacy,,"Castrum Fluminis (Tsukuyomi) phase 2, The Minstrel's Ballad: Tsukuyomi's Pain (Tsukuyomi) phase 2",music/ex2/BGM_EX2_Ban_17.scd
+543,Wayward Daughter,,"Castrum Fluminis (Tsukuyomi) phase 3, The Minstrel's Ballad: Tsukuyomi's Pain (Tsukuyomi) phase 3",music/ex2/BGM_EX2_Ban_18.scd
+544,Fallen Angel (From Astral to Umbral),,The Weapon's Refrain (Ultimate) phase 1 (Garuda),music/ex2/BGM_EX2_Ban_19.scd
+545,Primal Judgment (From Astral to Umbral),,The Weapon's Refrain (Ultimate) phase 2 (Ifrit),music/ex2/BGM_EX2_Ban_20.scd
+546,Under the Weight (From Astral to Umbral),,"The Weapon's Refrain (Ultimate) phase 3 (Titan), Eden's Gate: Sepulture (Savage) phase 3 (Titan)",music/ex2/BGM_EX2_Ban_21.scd
+547,Ultima (Orchestral Version),,The Weapon's Refrain (Ultimate) phase 5,music/ex2/BGM_EX2_Ban_23.scd
+548,Savage of the Ancient Forest,,The Great Hunt (Rathalos) Phase 1,music/ex2/BGM_EX2_Ban_14.scd
+549,Proof of a Hero - Monster Hunter: World version,,The Great Hunt (Rathalos) Phase 2,music/ex2/BGM_EX2_Ban_15.scd
+550,Quest Complete! - Proof of a Hero version,,The Great Hunt (Rathalos) post-fight,music/ex2/BGM_EX2_Event_14.scd
+551,Earth Wind and Water,,The Swallow's Compass,music/ex2/BGM_EX2_Dan_D12.scd
+552,Wayward Daughter,,The Minstrel's Ballad: Tsukuyomi's Pain mount / Lunar Kamuy mount,music/ffxiv/BGM_Ride_TK.scd
+553,World Map,,Needs location,music/ex2/BGM_EX2_Rti_11.scd
+554,A Chapel,,Needs location,music/ex2/BGM_EX2_Rti_12.scd
+555,Ascent,,The Ridorana Lighthouse pre 2nd-boss (Belias),music/ex2/BGM_EX2_Rti_13.scd
+556,The Mystery of Giruvegan,,The Ridorana Lighthouse post 2nd-boss (Belias),music/ex2/BGM_EX2_Rti_14.scd
+557,Boss Theme,,"The Ridorana Lighthouse boss 1 (Famfrit), The Ridorana Lighthouse boss 2 (Belias)",music/ex2/BGM_EX2_Rti_15.scd
+558,Apoplexy,,The Ridorana Lighthouse boss 3 (Construct 7),music/ex2/BGM_EX2_Rti_16.scd
+559,Flash of Steel,,Ridorana Lighthouse final boss (Yiazmat),music/ex2/BGM_EX2_Rti_17.scd
+560,Victory,,Ridorana Lighthouse final boss (Yiazmat) post-battle,music/ex2/BGM_EX2_Rti_18.scd
+561,Cornerstone of the New World - Astera,,Monster Hunter: World crossover cutscenes,music/ex2/BGM_EX2_Event_15.scd
+562,Cornerstone of the New World - Astera,,Monster Hunter: World crossover cutscenes,music/ex2/BGM_EX2_Event_16.scd
+563,Crown of the Ancient Tree,,Monster Hunter: World crossover Rathalos intro cutscene,music/ex2/BGM_EX2_Event_17.scd
+564,Proof of a Hero - Monster Hunter: World version,,The Great Hunt (Extreme) (Rathalos) Mount,music/ffxiv/BGM_Ride_NIKU.scd
+565,Deception,,HoH mount / Juedi,music/ffxiv/BGM_Ride_Abare.scd
+566,Crimson Sunrise,,Shirogane (day),music/ffxiv/BGM_Town_K_Day.scd
+567,Crimson Sunset,,Shirogane (night),music/ffxiv/BGM_Town_K_Night.scd
+568,Looping in the Deepest Fringes,,Shirogane combat,music/ffxiv/BGM_Field_G_Battle.scd
+569,???,,The Weapon's Refrain (Ultimate) phase 4,music/ex2/BGM_EX2_Ban_22.scd
+570,"Wasshoi, Wasshoi!",,Mikoshi mount,music/ffxiv/BGM_Ride_Mikoshi.scd
+571,Second Council Meeting - Tension,,Monster Hunter: World crossover cutscenes,music/ex2/BGM_EX2_Event_18.scd
+572,Quest Failed,,The Great Hunt (Rathalos) duty failed,music/ex2/BGM_EX2_Event_24.scd
+573,Everywhere and Nowhere,,Stormblood cutscenes (Alphascape),music/ex2/BGM_EX2_Event_31.scd
+574,A Dream in Flight,,Stormblood cutscenes (Alphascape),music/ex2/BGM_EX2_Event_32.scd
+575,A Dream in Flight (2nd movement),,Stormblood cutscenes (Alphascape),music/ex2/BGM_EX2_Event_33.scd
+576,Ending,,Stormblood cutscenes (Alphascape),music/ex2/BGM_EX2_Event_34.scd
+577,Unspoken,,Cutscenes,music/ex2/BGM_EX2_Event_35.scd
+578,Inner Recess,,Stormblood cutscenes (Omega),music/ex2/BGM_EX2_Event_36.scd
+579,Neverborn,,Cutscenes,music/ex2/BGM_EX2_Event_37.scd
+580,"Starlight, Starbright",,Theatrhythm minigame,music/ffxiv/BGM_Season_XmasCho.scd
+581,Sunset,,Hells' Kier (Suzaku) phase 2,music/ex2/BGM_EX2_Ban_24.scd
+582,Sunrise,,Hells' Kier (Suzaku) phase 3,music/ex2/BGM_EX2_Ban_25.scd
+583,A Land Long Dead,,The Burn,music/ex2/BGM_EX2_Dan_D13.scd
+584,From Mud,,Saint Mocianne's Arboretum (Hard),music/ex2/BGM_EX2_Dan_D14.scd
+585,Battle,,Alphascape v1.0 (Chaos),music/ex2/BGM_EX2_alpha_01.scd
+586,eScape,,Alphascape v3.0 (Omega),music/ex2/BGM_EX2_alpha_02.scd
+587,Heartless,,Alphascape v4.0 (Omega M/F),music/ex2/BGM_EX2_alpha_03.scd
+588,Sunrise,,Suzaku mount,music/ffxiv/BGM_Ride_Suzaku.scd
+589,From the Heavens,,Alphascape v4.0 (Savage) (Final Omega) mount / Omega,music/ffxiv/BGM_Ride_Alpha.scd
+590,Bedlam's Brink,,Solus zos Galvus theme,music/ex2/BGM_EX2_Event_38.scd
+591,From the Heavens,,Alphascape v4.0 (Savage) (Final Omega) phase 2,music/ex2/BGM_EX2_alpha_04.scd
+592,The Chase/Crazy Motorcycle,,SDS Fenrir mount,music/ffxiv/BGM_Ride_Bike.scd
+593,Dangertek,,"The Shifting of Altars of Uznair, Feast (Culling time)",music/ex2/BGM_EX2_Uzune2.scd
+604,Broken Down,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC01.scd
+605,Hammerhead,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC02.scd
+606,Valse di Fantastica,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC03.scd
+607,Relax and Reflect,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC04.scd
+608,Daemons,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC05.scd
+609,Prayer de LUNA,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC06.scd
+610,Safe Haven,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC07.scd
+611,Veiled in Black,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC08.scd
+612,Horrors of the Night,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC09.scd
+613,Apocalypsis Noctis,,Final Fantasy XV crossover cutscenes & events,music/ffxiv/BGM_Event_BKC10.scd
+614,A Quick Pit Stop,,FFXV crossover mount / Regalia Type-G,music/ffxiv/BGM_Ride_BKC.scd
+615,Saint Ajora's Theme,,The Orbonne Monastery cutscene before final boss (Ultima),music/ex2/BGM_EX2_Rti_19.scd
+616,Poachers' Den,,Return to Ivalice quest cutscenes,music/ex2/BGM_EX2_Rti_20.scd
+617,Epilogue,,Return to Ivalice quest cutscenes,music/ex2/BGM_EX2_Rti_21.scd
+618,Staff Credits,,Return to Ivalice quest cutscenes,music/ex2/BGM_EX2_Rti_22.scd
+619,Brave Story,,Return to Ivalice quest cutscenes,music/ex2/BGM_EX2_Rti_23.scd
+620,Alma's Theme,,Return to Ivalice quest cutscenes,music/ex2/BGM_EX2_Rti_24.scd
+621,Intrigue,,Return to Ivalice quest cutscenes,music/ex2/BGM_EX2_Rti_25.scd
+622,Under the Stars,,The Orbonne Monastery pre 2nd-boss (Agrias),music/ex2/BGM_EX2_Rti_26.scd
+623,Bloody Excrement,,The Orbonne Monastery post 2nd-boss (Agrias),music/ex2/BGM_EX2_Rti_27.scd
+624,Pressure (No. 1),,The Orbonne Monastery boss 1 (Mustadio),music/ex2/BGM_EX2_Rti_28.scd
+625,Antipyretic,,The Orbonne Monastery boss 2 (Agrias),music/ex2/BGM_EX2_Rti_29.scd
+626,A Man Consumed,,The Orbonne Monastery boss 3 (The Thunder God),music/ex2/BGM_EX2_Rti_30.scd
+627,Descent,,The Orbonne Monastery final boss (Ultima) phase 2,music/ex2/BGM_EX2_Rti_32.scd
+628,Ultima's Perfection,,The Orbonne Monastery final boss (Ultima) phase 3,music/ex2/BGM_EX2_Rti_33.scd
+629,Final Struggle / Hall of Worship,,The Orbonne Monastery final boss (Ultima) victory theme,music/ex2/BGM_EX2_Rti_34.scd
+630,Nail of the Heavens,,The Masked Carnivale,music/ffxiv/BGM_AOZ_Battle01.scd
+631,Imperium,,The Masked Carnivale,music/ffxiv/BGM_AOZ_Battle02.scd
+632,The Garden of Ru'Hmet,,Baldesion Arsenal,music/ex2/BGM_EX2_EU_Dungeon.scd
+633,Onslaught,,Baldesion Arsenal boss theme,music/ex2/BGM_EX2_EU_Boss.scd
+634,Turmoil,,Baldesion Arsenal final boss (Proto Ozma) theme,music/ex2/BGM_EX2_EU_LB.scd
+635,From the Dragon's Wake,,Seiryu mount,music/ffxiv/BGM_Ride_Seiryu.scd
+636,Prelude - Long March Home,,Kyubi mount,music/ffxiv/BGM_Ride_Kyubi.scd
+637,Horizons Calling,,Nezha Chariot / Red Hare / Magicked Carpet / Sunspun Cumulus mounts,music/ffxiv/BGM_Ride_Kgreen.scd
+638,The Merry Wanderer Waltz,,Mystic Panda / Aquamarine+Citrine+Rubellite Carbuncle / Indigo Whale / Fatter Cat / Spriggan Stonecarrier / Kingly Peacock mounts,music/ffxiv/BGM_Ride_Kyellow.scd
+639,A Pall Most Murderous,,The Ghimlyt Dark,music/ex2/BGM_EX2_Dan_D15.scd
+640,From the Dragon's Wake,,The Wreath of Snakes (Seiryu) phase 2,music/ex2/BGM_EX2_Ban_26.scd
+641,Doman Distractions,,Doman Mahjong,music/ffxiv/BGM_EMJ.scd
+642,Air Force One Victory,,Air Force One,music/ffxiv/BGM_RideShooting_Win.scd
+643,Air Force One Fail,,Air Force One,music/ffxiv/BGM_RideShooting_Lose.scd
+644,Battle Theme 1.x,,Air Force One,music/ffxiv/BGM_RideShooting.scd
+645,Revolutions / The Measure of Our Reach,,Stormblood end credits 2,music/ex2/BGM_EX2_EndCredit02.scd
+646,Tomorrow and Tomorrow,,Shadowbringers title cutscene,music/ex3/BGM_EX3_Event_01.scd
+647,Tomorrow and Tomorrow - Reprise,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_02.scd
+648,A Better Tomorrow,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_03.scd
+649,Tears in the Rain,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_04.scd
+650,Dangerous Words,,Shadowbringers cutscenes / Overworld theme,music/ex3/BGM_EX3_Event_05.scd
+651,High Treason,,Shadowbringers cutscenes / Overworld theme / Quest battles,music/ex3/BGM_EX3_Event_06.scd
+652,More than Truth,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_07.scd
+653,Paradisaical Predicaments,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_08.scd
+654,Tomorrow and Tomorrow,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_09.scd
+655,Tomorrow and Tomorrow,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_10.scd
+656,Vamo' alla Flamenco,,Shadowbringers cutscenes (Dancer cutscenes),music/ex3/BGM_EX3_Event_12.scd
+657,???,,"Level 80 Bard quest, ""A Harmony from the Heavens",music/ex3/BGM_EX3_Event_13.scd
+658,The Lute,,,music/ex3/BGM_EX3_Event_14.scd
+659,The Dark Which Illuminates the World,,Crystarium (day),music/ex3/BGM_EX3_Town_C_Day.scd
+660,Knowledge Never Sleeps,,Crystarium (night),music/ex3/BGM_EX3_Town_C_Night.scd
+661,Indulgence,,Eulmore (day),music/ex3/BGM_EX3_Town_Y_Day.scd
+662,Masquerade,,Eulmore (night),music/ex3/BGM_EX3_Town_Y_Night.scd
+663,The Source,,Lakeland (day),music/ex3/BGM_EX3_Field_Lak_Day.scd
+664,"Unchanging, Everchanging",,Lakeland (night),music/ex3/BGM_EX3_Field_Lak_Night.scd
+665,A World Divided,,Kholusia (day),music/ex3/BGM_EX3_Field_Kor_Day.scd
+666,The Quick Way,,Kholusia (night),music/ex3/BGM_EX3_Field_Kor_Night.scd
+667,Sands of Amber,,Amh Araeng (day),music/ex3/BGM_EX3_Field_Ama_Day.scd
+668,Sands of Blood,,Amh Araeng (night),music/ex3/BGM_EX3_Field_Ama_Night.scd
+669,Fierce and Free,,Il Mheg (day),music/ex3/BGM_EX3_Field_Ilm_Day.scd
+670,The Faerie Ring,,Il Mheg (night),music/ex3/BGM_EX3_Field_Ilm_Night.scd
+671,Civilizations,,Rak'tika Greatwood (day),music/ex3/BGM_EX3_Field_Rak_Day.scd
+672,A Hopeless Race,,Rak'tika Greatwood (night),music/ex3/BGM_EX3_Field_Rak_Night.scd
+673,Full Fathom Five,,The Tempest,music/ex3/BGM_EX3_Field_Tem_Day.scd
+674,Neath Dark Waters,,The Tempest (Amaurot),music/ex3/BGM_EX3_Field_Tem_Night.scd
+675,A Reason to Live,,Shadowbringers sanctuaries,music/ex3/BGM_EX3_Field_Safe_01.scd
+676,No Greater Sorrow,,Shadowbringers sanctuaries,music/ex3/BGM_EX3_Field_Safe_02.scd
+677,Rencounter,,Lakeland combat,music/ex3/BGM_EX3_Field_Lak_Battle.scd
+678,Rencounter,,Kholusia combat,music/ex3/BGM_EX3_Field_Kor_Battle.scd
+679,Rencounter,,Amh Araeng combat,music/ex3/BGM_EX3_Field_Ama_Battle.scd
+680,Rencounter,,Il Mheg combat,music/ex3/BGM_EX3_Field_Ilm_Battle.scd
+681,Rencounter,,Rak'tika Greatwood combat,music/ex3/BGM_EX3_Field_Rak_Battle.scd
+682,,,The Tempest combat,music/ex3/BGM_EX3_Field_Tem_Battle.scd
+683,What Angel Wakes Me,,The Dancing Plague (Titania),music/ex3/BGM_EX3_Ban_01.scd
+684,Insanity,,The Crown of the Immaculate (Innocence),music/ex3/BGM_EX3_Ban_02.scd
+685,Who Brings Shadow,,The Dying Gasp (Hades) phase 1,music/ex3/BGM_EX3_Ban_03.scd
+686,Invincible,,The Dying Gasp (Hades) phase 2,music/ex3/BGM_EX3_Ban_04.scd
+687,To Fire And Sword,,The Holminister Switch,music/ex3/BGM_EX3_Dan_D01.scd
+688,Figments,,Dohn Mheg,music/ex3/BGM_EX3_Dan_D02.scd
+689,Unwound,,Qitana Ravel,music/ex3/BGM_EX3_Dan_D03.scd
+690,Deep Down,,Malikah's Well,music/ex3/BGM_EX3_Dan_D04.scd
+691,In The Belly Of The Beast,,Mt. Gulg,music/ex3/BGM_EX3_Dan_D05.scd
+692,Mortal Instants,,Amaurot,music/ex3/BGM_EX3_Dan_D06.scd
+693,Shadows Withal,,Akadaemia Anyder,music/ex3/BGM_EX3_Dan_D07.scd
+694,A Long Fall,,The Twinning,music/ex3/BGM_EX3_Dan_D08.scd
+695,Insatiable,,Shadowbringers boss theme,music/ex3/BGM_EX3_Boss_Battle01.scd
+696,Blue Fields,,The Empty (unfinished),music/ex3/BGM_EX3_Raid_01.scd
+697,Force Your Way,,"Eden's Gate: Resurrection (Eden Prime), Descent (Voidwalker), Eden's Verse: Iconoclasm (Idol of Darkness)",music/ex3/BGM_EX3_Raid_02.scd
+698,Landslide,,Eden's Gate: Sepulture (Titan),music/ex3/BGM_EX3_Raid_03.scd
+699,On Our Fates Alight,,Amaro porter,music/ex3/BGM_EX3_Mount01.scd
+700,What Angel Wakes Me,,The Dancing Plague (Extreme) (Titania) mount / Fae Gwiber,music/ffxiv/BGM_Ride_Titania.scd
+701,Insanity,,The Crown of the Immaculate (Extreme) (Innocence) mount / Innocent Gwiber,music/ffxiv/BGM_Ride_Innocence.scd
+702,Landslide,,Eden's Gate: Sepulture (Savage) (Titan) mount / Skyslipper,music/ffxiv/BGM_Ride_Eden.scd
+703,Four-sided Circle,,Sabotender Emperador mount,music/ffxiv/BGM_Ride_GS01.scd
+704,Four-fold Knowing,,Shadowbringers title screen,music/ex3/BGM_EX3_System_Title.scd
+705,Who Brings Shadow / Tomorrow and Tomorrow / Masquerade / High Treason / Knowledge Never Sleeps / The Dark Which Illuminates the World,,Shadowbringers credits,music/ex3/BGM_EX3_EndCredit01.scd
+706,Locus (The Primals),,"The Twinning, The Epic of Alexander (Ultimate) phase 1",music/ex3/BGM_EX3_Boss_Battle02.scd
+707,Tomorrow and Tomorrow,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_15.scd
+708,Tomorrow and Tomorrow,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_16.scd
+709,Tomorrow and Tomorrow,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_17.scd
+710,Shattered,,,music/ex3/BGM_EX3_Event_18.scd
+711,Pain in Pleasure,,Eulmore,music/ex3/BGM_EX3_Town_Y_Day2.scd
+712,Such as it Is,,Shadowbringers sanctuaries,music/ex3/BGM_EX3_Field_Safe_03.scd
+713,Null BGM,,,music/ex3/BGM_EX3_Null.scd
+714,The Darks' Kiss,,,music/ex3/BGM_EX3_Event_19.scd
+715,On Our Fates Alight,,Amaro mount,music/ffxiv/BGM_Ride_Amaro.scd
+716,Unmatching Pieces,,Kholusia,music/ex3/BGM_EX3_Field_Kor_Day2.scd
+717,Blinding Indigo,,Eden's Gate: Inundation (Leviathan),music/ex3/BGM_EX3_Raid_04.scd
+718,"Starlight, de Chocobo",,Theatrhythm minigame,music/ffxiv/BGM_Season_XmasCho_02.scd
+719,The Garden's Gates,,Lyhe Mheg,music/ex3/BGM_EX3_BanFort_Fairy_Good.scd
+720,The Mendicant's Relish,,The Firmament,music/ex1/BGM_EX1_FATE_Hukko.scd
+721,Siren Song,,Eulmore (The Beehive),music/ex3/BGM_EX3_Town_Y_Bar.scd
+722,A Fine Air Forbiddeth,,Onsal Hakair,music/ffxiv/BGM_PvP_Battle_02.scd
+723,Metal - Brute Justice Mode (The Primals),,The Epic of Alexander (Ultimate) phase 2,music/ex3/BGM_EX3_Ban_05.scd
+724,Stasis Loop,,The Epic of Alexander (Ultimate) phase 2 to 3,music/ex3/BGM_EX3_Ban_06.scd
+725,Rise (The Primals),,The Epic of Alexander (Ultimate) phase 3,music/ex3/BGM_EX3_Ban_07.scd
+726,Moebius (Orchestral Version),,The Epic of Alexander (Ultimate) phase 4,music/ex3/BGM_EX3_Ban_08.scd
+727,The Grand Cosmos,,The Grand Cosmos,music/ex3/BGM_EX3_Dan_D09.scd
+728,Invincible,,The Minstrel's Ballad: Hades' Elegy mount / Shadow Gwiber,music/ffxiv/BGM_Ride_Hades.scd
+729,A Fierce Air Forceth,,Construct VII mount,music/ffxiv/BGM_Ride_Frontline.scd
+730,Starved,,"Epimetheus, Menoetius mounts",music/ffxiv/BGM_Ride_Feast.scd
+731,Imperium,,Morbol mount,music/ffxiv/BGM_Ride_AOZ.scd
+732,Significance (Nothing),,The Copied Factory solo exploration,music/ex3/BGM_EX3_Ytc_01.scd
+733,City Ruins - Rays of Light,,The Copied Factory,music/ex3/BGM_EX3_Ytc_02.scd
+734,Vague Hope,,The Copied Factory - (Quest Area),music/ex3/BGM_EX3_Ytc_03.scd
+736,Voice of no Return (Guitar),,Need location,music/ex3/BGM_EX3_Ytc_05.scd
+737,Alien Manifestation,,The Copied Factory,music/ex3/BGM_EX3_Ytc_06.scd
+738,Song of the Ancients - Atonement,,"The Copied Factory boss 1 (Serial-jointed Command Model), The Copied Factory boss 2 (Hobbes), The Tower at Paradigm's Breach boss 2 (Hansel & Gretel)",music/ex3/BGM_EX3_Ytc_07.scd
+739,Bipolar Nightmare,,"The Copied Factory boss 3 (Engels), The Puppet's Bunker boss 2 (767P-operated Superior Flight Unit(s))",music/ex3/BGM_EX3_Ytc_08.scd
+740,Weight of the World - Prelude Version,,The Copied Factory boss 4 (9S-operated Walking Fortress),music/ex3/BGM_EX3_Ytc_09.scd
+741,Crumbling Lies (Front),,Shadowbringers cutscenes (FFXIV x NieR crossover),music/ex3/BGM_EX3_Ytc_10.scd
+742,Ami,,Eden cutscenes / The Empty (finished),music/ex3/BGM_EX3_Event_20.scd
+743,Hopl's Dropple,,Rak'tika Greatwood (Friendly Qitari area),music/ex3/BGM_EX3_BanFort_kkrn_Good.scd
+744,Gangos,,Gangos,music/ex3/BGM_EX3_Event_21.scd
+745,Pa-Paya Demastered,,Egg Hunter Riggy minigame,music/ffxiv/BGM_Minigame_Egghunt2.scd
+746,Ultima (The Primals),,Cinder Drift (The Ruby Weapon) phase 1,music/ex3/BGM_EX3_Ban_09.scd
+747,Hearthward,,The Firmament,music/ex1/BGM_EX1_Hukko_Finish01.scd
+748,Insatiable (The Primals),,Shadowbringers mid-dungeon bosses,music/ex3/BGM_EX3_Boss_Battle03.scd
+749,Floundering in the Depths,,Anamnesis Anyder,music/ex3/BGM_EX3_Dan_D10.scd
+750,Twice Stricken,,Eden's Verse: Fulmination (Ramuh),music/ex3/BGM_EX3_Raid_05.scd
+751,Primal Angel,,"Eden's Verse: Furor (Garuda & Ifrit, Raktapaksa)",music/ex3/BGM_EX3_Raid_06.scd
+752,Return to Oblivion,,Eden's Verse: Refulgence (Shiva) phase 1,music/ex3/BGM_EX3_Raid_07.scd
+753,Ultima (The Primals),,The Cinder Drift (Extreme) mount / Ruby Gwiber,music/ffxiv/BGM_Ride_Ruby.scd
+754,Twice Stricken,,Eden's Verse: Fulmination (Savage) (Ramuh) mount / Ramuh,music/ffxiv/BGM_Ride_Eden02.scd
+755,Rise of The White Raven (Orchestral Version),,The Cinder Drift (2nd Phase) / The Unending Coil of Bahamut Phase 2 (Nael Deus Darnus),music/ex3/BGM_EX3_Ban_10.scd
+756,Horizons Calling,,Ocean Fishing,music/ffxiv/BGM_IKD01.scd
+757,Holy Consult,,Ocean Fishing,music/ffxiv/BGM_IKD02.scd
+758,When a Tree Falls,,Ocean Fishing,music/ffxiv/BGM_IKD03.scd
+759,A Sundering of Light,,Eden's Verse: Refulgence (Shiva) add phase,music/ex3/BGM_EX3_Raid_08.scd
+760,Eternal Wind - Shadowbringers,,,music/ex3/BGM_EX3_Event_22.scd
+761,Shadowbringers,,"Shadowbringers cutscenes (Hope's Confluence, cutscene 5)",music/ex3/BGM_EX3_Event_23.scd
+762,Tomorrow and Tomorrow,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_24.scd
+763,Dawn of a New Era,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_25.scd
+764,Forever at Your Side,,Shadowbringers cutscenes,music/ex3/BGM_EX3_Event_26.scd
+765,The Isle of Endless Summer,,Eastern La Noscea Moonfire Faire,music/ffxiv/BGM_Event_Hula.scd
+766,Watts's Anvil,,Lakeland (Friendly Dwarf area),music/ex3/BGM_EX3_BanFort_Dwarf_Good.scd
+767,And Love You Shall Find,,Terncliff,music/ex3/BGM_EX3_Field_Welrit.scd
+768,To The Edge,,"The Seat of Sacrifice phase 1, The Seat of Sacrifice (Extreme) (Warrior of Light)",music/ex3/BGM_EX3_Ban_11.scd
+769,Echoes in the Dark,,The Seat of Sacrifice (Warrior of Light),music/ex3/BGM_EX3_Ban_12.scd
+770,,,,music/ex3/BGM_EX3_Ban_13.scd
+771,To The Edge,,The Seat of Sacrifice (Warrior of Light),music/ex3/BGM_EX3_Ban_14.scd
+772,Wind on the Plains,,The Bozjan Southern Front,music/ex3/BGM_EX3_MYC_01.scd
+773,Discord: Imperial (Zodiac Age Version),,The Bozjan Southern Front (certain critical engagements),music/ex3/BGM_EX3_MYC_02.scd
+774,Into the Fortress (Zodiac Age Version),,"The Bozjan Southern Front (Castrum Lacus Litore between 1st boss and 2nd boss, Hostage phase)",music/ex3/BGM_EX3_MYC_03.scd
+775,Battle with an Esper (Zodiac Age Version),,The Bozjan Southern Front (Castrum Lacus Litore boss theme),music/ex3/BGM_EX3_MYC_04.scd
+776,Life and Death (Zodiac Age Version),,The Bozjan Southern Front (Castrum Lacus Litore final boss (Dawon & Lyon)),music/ex3/BGM_EX3_MYC_05.scd
+777,Where All Roads Lead,,The Heroes Gauntlet,music/ex3/BGM_EX3_Dan_D11.scd
+778,To The Edge,,The Seat of Sacrifice (Extreme) mount / Gwiber of Light,music/ffxiv/BGM_Ride_WOL.scd
+779,Discord: Imperial (Zodiac Age Version),,The Bozjan Southern Front lockbox mount / Gabriel α,music/ffxiv/BGM_Ride_MYC01.scd
+780,Broken Heart,,YoRHa: Dark Apocalypse cutscenes,music/ex3/BGM_EX3_Ytc_11.scd
+781,City Ruins (Rays of Light) (Instrumental),,YoRHa: Dark Apocalypse cutscenes,music/ex3/BGM_EX3_Ytc_12.scd
+782,Amusement Park,,"Temporarily plays in Komra during the YoRHa: Dark Apocalypse questline, after unlocking The Puppet's Bunker",music/ex3/BGM_EX3_Ytc_13.scd
+783,Fortress of Lies,,The Puppet's Bunker,music/ex3/BGM_EX3_Ytc_14.scd
+784,Grandma (Destruction),,"The Puppet's Bunker boss 1 (813P-operated Aegis Unit), The Puppet's Bunker final boss (The Compound) phase 1",music/ex3/BGM_EX3_Ytc_15.scd
+785,End of the Unknown,,The Puppet's Bunker boss 3 (905P-operated Heavy Artillery Unit),music/ex3/BGM_EX3_Ytc_16.scd
+786,Torn From the Heavens/The Dark Colossus Destroys All (Medley),,The Puppet's Bunker final boss (Compound 2P) phase 2,music/ex3/BGM_EX3_Ytc_17.scd
+787,Unrest (Zodiac Age Version),,The Bozjan Southern Front,music/ex3/BGM_EX3_MYC_06.scd
+788,Hearthward,,The Firmament mount / Pteradon,music/ffxiv/BGM_Ride_Hukko01.scd
+789,Heavensward,,City of Giants (Solo Instance),music/ex3/BGM_EX3_Event_27.scd
+790,Nightbloom,,City of Giants (Solo Instance),music/ex3/BGM_EX3_Event_28.scd
+791,New Foundations,,The Firmament,music/ex1/BGM_EX1_Hukko_concert.scd
+792,The Black Wolf Stalks Again,,Castrum Marinum (Emerald Weapon) phase 2,music/ex3/BGM_EX3_Con_01.scd
+793,Gogo's Theme,,The Masked Carnivale (31 act 1),music/ex2/BGM_EX2_AOZ_Battle03.scd
+794,The Sochen Cave Palace (Zodiac Age Version),,Delubrum Reginae,music/ex3/BGM_EX3_MYC_07.scd
+795,Giving Chase (Zodiac Age Edition),,Delubrum Reginae combat theme,music/ex3/BGM_EX3_MYC_08.scd
+796,The Queen Awakens,,Delubrum Reginae final boss (The Queen),music/ex3/BGM_EX3_MYC_09.scd
+797,Shuffle or Boogie,,Triple Triad tournaments,music/ffxiv/BGM_GlodSaucer_TripleWaiting.scd
+798,Freshly Glazed Porxie,,Matoya's Relict,music/ex3/BGM_EX3_Dan_D12.scd
+799,Don't Be Afraid,,"Eden's Promise: Umbra (Cloud of Darkness), Eden's Promise: Litany (Shadowkeeper)",music/ex3/BGM_EX3_Raid_09.scd
+800,The Legendary Beast,,Eden's Promise: Anamorphosis (Fatebreaker),music/ex3/BGM_EX3_Raid_10.scd
+801,Promises to Keep,,Eden's Promise: Eternity (Eden's Promise),music/ex3/BGM_EX3_Raid_11.scd
+802,The Extreme,,Eden's Promise: Eternity (Savage) (Oracle of Darkness),music/ex3/BGM_EX3_Raid_12.scd
+803,The Black Wolf Stalks Again,,Castrum Marinum (Extreme) (Emerald Weapon) / Emerald Gwiber,music/ffxiv/BGM_Ride_Emerald.scd
+804,Promises to Keep,,Eden's Promise: Eternity (Savage) mount / Eden,music/ffxiv/BGM_Ride_Eden03.scd
+805,Lunar Whale (Shadowbringers),,Fanfest 2021 mount / Lunar Whale,music/ffxiv/BGM_Ride_Fanfes2021.scd
+806,Treasured Memory,,Eden's Promise: Eternity phase 2,music/ex3/BGM_EX3_Event_29.scd
+807,In the Arms of War,,"The Cloud Deck, The Cloud Deck (Extreme) (Diamond Weapon)",music/ex3/BGM_EX3_Ban_15.scd
+808,Wrath of the Harrier,,Dalriada final boss (The Diablo Armament),music/ex3/BGM_EX3_MYC_10.scd
+809,Skyrise,,Ishgard Fetes,music/ex1/BGM_EX1_Hukko_Fes.scd
+810,Seven Flames,,Paglth'an,music/ex3/BGM_EX3_Dan_D13.scd
+811,In the Arms of War,,The Cloud Deck (Extreme) (Diamond Weapon) mount / Diamond Gwiber,music/ffxiv/BGM_Ride_Dia.scd
+812,Exponential Entropy,,Cruise Chaser mount,music/ffxiv/BGM_Ride_Cruise.scd
+813,Four-fold Knowing,,All Gwiber mount / Landerwaffe,music/ffxiv/BGM_Ride_EX3Comp.scd
+814,Shuffle or Boogie,,Triple Triad card 1-312 collection mount / Magicked Card,music/ffxiv/BGM_Ride_CardComp.scd
+815,Torn from the Heavens,,Golden mount theme / Gilded Mikoshi / Resplendent Vessel of Ronka,music/ffxiv/BGM_Ride_Golden.scd
+816,Mourning,,The Tower at Paradigm's Breach between boss ambient theme,music/ex3/BGM_EX3_Ytc_18.scd
+817,Emil (Despair),,"The Tower at Paradigm's Breach pre boss 1 ambient theme, The Tower at Paradigm's Breach boss 1 (Knave of Hearts)",music/ex3/BGM_EX3_Ytc_19.scd
+819,The Sound of the End,,The Tower at Paradigm's Breach boss 3 (Red Girl),music/ex3/BGM_EX3_Ytc_21.scd
+820,The Sound of the End: 8bit,,The Tower at Paradigm's Breach boss 3 (Red Girl) (phase 2),music/ex3/BGM_EX3_Ytc_22.scd
+821,Kainé (Final Fantasy Main Theme Version),,The Tower at Paradigm's Breach final boss (phase 2),music/ex3/BGM_EX3_Ytc_23.scd
+822,Weight of the World,,Shadowbringers cutscenes (FFXIV x NieR crossover),music/ex3/BGM_EX3_Ytc_24.scd
+823,Voice of no Return,,Shadowbringers cutscenes (FFXIV x NieR crossover),music/ex3/BGM_EX3_Ytc_25.scd
+824,The Color of Depression,,Shadowbringers cutscenes (FFXIV x NieR crossover),music/ex3/BGM_EX3_Ytc_26.scd
+825,Widespread Illness,,Shadowbringers cutscenes (FFXIV x NieR crossover),music/ex3/BGM_EX3_Ytc_27.scd
+826,Possessed by Disease,,The Tower At Paradigm's Breach boss 4 (False Idol),music/ex3/BGM_EX3_Ytc_28.scd
+827,Faltering Prayer (Dawn Breeze),,Shadowbringers cutscenes (FFXIV x NieR crossover),music/ex3/BGM_EX3_Ytc_29.scd
+828,,,,music/ex4/BGM_EX4_Null.scd
+829,Endwalker,,Endwalker (Solo Instance),music/ex4/BGM_EX4_Event_18.scd
+830,Flow,,Endwalker cutscenes,music/ex4/BGM_EX4_Event_01.scd
+831,Flow (instrumental),,,music/ex4/BGM_EX4_Event_02.scd
+832,Each Drop,,,music/ex4/BGM_EX4_Event_03.scd
+833,Answers (Piano Version),,Endwalker cutscenes,music/ex4/BGM_EX4_Event_04.scd
+834,The Last Stand,,,music/ex4/BGM_EX4_Event_05.scd
+835,Heroes Forge Ahead,,,music/ex4/BGM_EX4_Event_06.scd
+836,Dynamis,,Endwalker cutscenes,music/ex4/BGM_EX4_Event_07.scd
+837,Spoken without End,,,music/ex4/BGM_EX4_Event_08.scd
+838,What Comes of Despair,,Endwalker cutscenes,music/ex4/BGM_EX4_Event_09.scd
+839,Shade's Delight,,"Lemure Headquarters, Endwalker cutscenes",music/ffxiv/BGM_Event_ShinAyashii.scd
+840,Home Beyond the Horizon,,Garlemald radio,music/ex4/BGM_EX4_Event_10.scd
+841,The Tale of the Star,,,music/ex4/BGM_EX4_Event_11.scd
+842,Neath Dark Waters (Scions & Sinners),,,music/ex4/BGM_EX4_Event_12.scd
+843,Imagination (Duality),,,music/ex4/BGM_EX4_Event_13.scd
+844,Answers,,"Endwalker MSQ ""Thou Must Live, Die, and Know"" cutscene 2",music/ex4/BGM_EX4_Event_14.scd
+845,The Ewer Brimmeth,,Old Sharlayan (day),music/ex4/BGM_EX4_Town_O_Day.scd
+846,The Nautilus Knoweth,,Old Sharlayan (night),music/ex4/BGM_EX4_Town_O_Night.scd
+847,The Day Will Come (Endwalker),,Sharlayan Main Hall,music/ex4/BGM_EX4_Town_O_Room.scd
+848,Vibrant Voices,,Radz-at-Han (day),music/ex4/BGM_EX4_Town_R_Day.scd
+849,Perfumed Eves,,Radz-at-Han (night),music/ex4/BGM_EX4_Town_R_Night.scd
+850,Twilit Terraces,,Radz-at-Han (day),music/ex4/BGM_EX4_Town_R_Day2.scd
+851,The Labyrinth,,Labyrinthos (day),music/ex4/BGM_EX4_Field_Lab_Day.scd
+852,Dreams of Man,,Labyrinthos (night),music/ex4/BGM_EX4_Field_Lab_Night.scd
+853,Divine Words,,Thavnair (day),music/ex4/BGM_EX4_Field_Thav_Day.scd
+854,Prayers Repeated,,Thavnair (night),music/ex4/BGM_EX4_Field_Thav_Night.scd
+855,"White Snow, Black Steel",,Garlemald (day),music/ex4/BGM_EX4_Field_Gar_Day.scd
+856,"Black Steel, Cold Embers",,Garlemald (night),music/ex4/BGM_EX4_Field_Gar_Night.scd
+857,One Small Step,,Mare Lamentorum (day),music/ex4/BGM_EX4_Field_Mar_Day.scd
+858,Sky Unsundered,,Elpis (day),music/ex4/BGM_EX4_Field_Elp_Day.scd
+859,Stars Long Dead,,Elpis (night),music/ex4/BGM_EX4_Field_Elp_Night.scd
+860,Echoes in the Distance,,Ultima Thule MSQ stage 1,music/ex4/BGM_EX4_Field_Ult_Day01.scd
+861,Close in the Distance (Instrumental),,Ultima Thule MSQ stage 2,music/ex4/BGM_EX4_Field_Ult_Day02.scd
+862,Close in the Distance,,Ultima Thule MSQ stage 3,music/ex4/BGM_EX4_Field_Ult_Day03.scd
+863,Those We Can Yet Save,,Endwalker sanctuaries,music/ex4/BGM_EX4_Field_Safe01.scd
+864,Welcome to Our Town! (Endwalker),,Bestways Burrow,music/ex4/BGM_EX4_Field_Safe02.scd
+865,Unbowed,,Labyrinthos combat,music/ex4/BGM_EX4_Field_Lab_Battle.scd
+866,Unbowed,,Thavnair combat,music/ex4/BGM_EX4_Field_Thav_Battle.scd
+867,Unbowed,,Garlemald combat,music/ex4/BGM_EX4_Field_Gar_Battle.scd
+868,Unbowed,,Elpis combat,music/ex4/BGM_EX4_Field_Elp_Battle.scd
+869,Battle 1 from FINAL FANTASY IV,,"Mare Lamentorum combat (The Carrotorium, Greatest Endsvale)",music/ex4/BGM_EX4_Field_Mar_Lep_battle.scd
+870,Endcaller,,The Dark Inside / The Minstrel's Ballad: Zodiark's Fall (Zodiark),music/ex4/BGM_EX4_Ban_01.scd
+871,Your Answer,,The Mothercrystal / The Minstrel's Ballad: Hydaelyn's Call (Hydaelyn),music/ex4/BGM_EX4_Ban_02.scd
+872,The Final Day,,The Final Day (phase 1) (Endsinger),music/ex4/BGM_EX4_Ban_04.scd
+873,With Hearts Aligned,,The Final Day (phase 2) (Endsinger),music/ex4/BGM_EX4_Ban_05.scd
+874,Tower of Zot (Endwalker),,Tower of Zot,music/ex4/BGM_EX4_Dan_D02.scd
+875,Garlemald Express,,Tower of Babil,music/ex4/BGM_EX4_Dan_D04.scd
+876,As the Sky Burns,,Vanaspati,music/ex4/BGM_EX4_Dan_D03.scd
+877,Miracle Works,,Ktisis Hyperboreia,music/ex4/BGM_EX4_Dan_D05.scd
+878,The Aetherial Sea,,The Aitiascope,music/ex4/BGM_EX4_Dan_D01.scd
+879,Of Countless Stars,,The Dead Ends,music/ex4/BGM_EX4_Dan_D06.scd
+880,Carrots of Happiness,,Smileton,music/ex4/BGM_EX4_Dan_D07.scd
+881,eScape (Journeys Version),,The Stigma Dreamscape,music/ex4/BGM_EX4_Dan_D08.scd
+882,On Blade's Edge,,Endwalker mid-dungeon bosses,music/ex4/BGM_EX4_Boss_Battle01.scd
+883,Finality,,Endwalker dungeon final bosses,music/ex4/BGM_EX4_Boss_Battle02.scd
+884,Where Dæmons Abide,,The Gates of Pandæmonium,music/ex4/BGM_EX4_Raid_01.scd
+885,Ancient Shackles,,"Asphodelos: The First Circle (Erichthonios), Asphodelos: The Second Circle (Hippokampos), Asphodelos: The Third Circle (Phoinix)",music/ex4/BGM_EX4_Raid_02.scd
+886,Hic Svnt Leones,,Asphodelos: The Fourth Circle (Hesperos),music/ex4/BGM_EX4_Raid_03.scd
+887,Prelude - Tales,,Endwalker title screen,music/ex4/BGM_EX4_System_Title.scd
+888,???,,Endwalker credits,music/ex4/BGM_EX4_EndCredit01.scd
+889,Endcaller,,The Minstrel's Ballad: Zodiark's Fall mount / Lynx of Darkness,music/ffxiv/BGM_Ride_Zodiark.scd
+890,Your Answer,,The Minstrel's Ballad: Hydaelyn's Call mount / Lynx of Light,music/ffxiv/BGM_Ride_Hydaelyn.scd
+891,Hic Svnt Leones,,Asphodelos: The Fourth Circle (Hesperos) mount / Phoinix,music/ffxiv/BGM_Ride_Pandemonium01.scd
+892,Roads Less Traveled,,Endwalker mounts,music/ex4/BGM_EX4_Event_17.scd
+893,Tremble,,,music/ex4/BGM_EX4_Event_15.scd
+894,Home Beyond the Horizon,,Garlemald radio,music/ex4/BGM_EX4_Event_16.scd
+895,Roads Less Traveled,,,music/ffxiv/BGM_Ride_EX4Common.scd
+896,Endwalker - Footfalls (Instrumental),,,music/ex4/BGM_EX4_Event_19.scd
+897,From Below,,Labyrinthos (MSQ based),music/ex4/BGM_EX4_Field_Lab_Ten.scd
+898,Answers,,Endwalker cutscenes,music/ex4/BGM_EX4_Event_21.scd
+899,Flow Together,,Worthy of His Back (Solo Instance),music/ex4/BGM_EX4_Event_20.scd
+900,Down the Up Staircase,,Labyrinthos sanctuaries,music/ex4/BGM_EX4_Field_Lab_Sakasa.scd
+901,Defender of the Realm,,"Thaumazein, Labyrinthos",music/ex4/BGM_EX4_Field_Lab_Doc.scd
+902,Endwalker (short),,,music/ex4/BGM_EX4_Event_23.scd
+903,A Gentleman to Walk with Me,,,music/ex4/BGM_EX4_Event_24.scd
+904,Somewhere in the World (Ambitions Writhe),,Endwalker cutscenes (Void/Thirteenth),music/ex4/BGM_EX4_Event_25.scd
+905,Ink Long Dry (Piano Collections),,Restricted Archives,music/ex4/BGM_EX4_Town_O_Event01.scd
+906,Hippo Ridin',,Thavnair (Arkasodara),music/ex4/BGM_EX4_BanFort_Ark_Good.scd
+907,Revenge Twofold (Orchestral Version),,Dragonsong's Reprise (Ultimate) phase 7 (Dragon-king Thordan),music/ex4/BGM_EX4_Ban_06.scd
+908,Warming Up,,Crystalline Conflict,music/ffxiv/BGM_MKS01.scd
+909,Festival of the Hunt (Endwalker),,Crystalline Conflict,music/ffxiv/BGM_MKS02.scd
+910,Run! (Endwalker),,Crystalline Conflict,music/ffxiv/BGM_MKS03.scd
+911,The Map Unfolds,,Alzadaal's Legacy,music/ex4/BGM_EX4_Dan_D09.scd
+912,One Among Wonders,,The Omphalos,music/ex4/BGM_EX4_MoE_01.scd
+913,Pilgrimage,,Aglaia,music/ex4/BGM_EX4_MoE_02.scd
+914,Radiance,,Aglaia Boss 1 (Byregot) / Aglaia Boss 2 (Rhalgr) / Aglaia Boss 3 (Azeyma),music/ex4/BGM_EX4_MoE_03.scd
+915,In the Balance,,Aglaia Final Boss (Nald'thal),music/ex4/BGM_EX4_MoE_04.scd
+916,,,,music/ex4/BGM_EX4_MoE_05.scd
+917,The Final Day,,Bluefeather Lynx / The Minstrel's Ballad: Endsinger's Aria mount,music/ffxiv/BGM_Ride_GDZ.scd
+918,Thus Spoke Master PuPu,,,music/ex4/BGM_EX4_Event_26.scd
+919,Weight of the World (Prelude Version),,Pod mount,music/ffxiv/BGM_Ride_YTC.scd
+920,The Heavens' Ward,,"Dragonsong's Reprise (Ultimate) phase 1 (Ser Charibert, Ser Adelphel, Ser Grinnaux)",music/ex4/BGM_EX4_Event_Soten.scd
+921,Heroes,,Dragonsong's Reprise (Ultimate) phase 2 (King Thordan),music/ex4/BGM_EX4_Boss02.scd
+922,Freefall,,"Dragonsong's Reprise (Ultimate) phase 3 (Niddhogg, Estinien form)",music/ex4/BGM_EX4_Ban_Nidhogg_02.scd
+923,Contention,,Dragonsong's Reprise (Ultimate) phase 4 (Eyes phase),music/ex4/BGM_EX4_Event_DragonWar.scd
+924,Hallowed Halls,,Dragonsong's Reprise (Ultimate) intro phase revisit,music/ex4/BGM_EX4_Dungeon_Kyoko.scd
+925,Heavensward,,"Dragonsong's Reprise (Ultimate) phase 5 (King Thordan, alternate timeline)",music/ex4/BGM_EX4_Event_27.scd
+926,Dragonsong,,Dragonsong's Reprise (Ultimate) phase 6 (Nidhogg and Hraesvelgr),music/ex4/BGM_EX4_Ban_Nidhogg_01.scd
+927,Primogenitor,,Dragonsong's Reprise (Ultimate) phase 4 (Eyes phase) enrage scene,music/ex4/BGM_EX4_Dungeon_Mor_02.scd
+928,Sorrow and Loss (Endwalker),,Zero's Domain,music/ex4/BGM_EX4_Event_28.scd
+929,Cradle of Hope,,Ultima Thule (Omicrons),music/ex4/BGM_EX4_BanFort_Omi_Good.scd
+930,Battle with the Four Fiends (Buried Memory),,Storm's Crown / Storm's Crown (Extreme) (Barbariccia),music/ex4/BGM_EX4_Ban_07.scd
+931,A Quiet Moment,,Island Sanctuary Hideaway,music/ffxiv/BGM_MJI_01.scd
+932,Island Paradise,,Island Sanctuary Non-Hideaway,music/ffxiv/BGM_MJI_02.scd
+933,Troian Beauty (Endwalker),,The Fell Court of Troia,music/ex4/BGM_EX4_Dan_D10.scd
+934,FINAL FANTASY IV Battle 2 (Endwalker),,"The Fell Court of Troia final boss (Scarmiglione), Lapis Manalis final boss (Cagnazzo)",music/ex4/BGM_EX4_Boss_Battle03.scd
+935,To the Sun (Piano Collections),,The Sil'dihn Subterrane,music/ex4/BGM_EX4_VVD_01.scd
+936,Desert Sun,,Another Sil'dihn Subterrane / Another Sil'dihn Subterrane (Savage),music/ex4/BGM_EX4_VVD_02.scd
+937,Silent Scream,,Abyssos: The Fifth Circle (Proto-Carbuncle),music/ex4/BGM_EX4_Raid_04.scd
+938,Scream,,"Abyssos: The Sixth Circle (Hegemone), Abyssos: The Seventh Circle (Agdistis)",music/ex4/BGM_EX4_Raid_05.scd
+939,Embers,,Abyssos: The Eighth Circle (Hephaistos) phase 1,music/ex4/BGM_EX4_Raid_06.scd
+940,White Stone Black,,Abyssos: The Eighth Circle (Hephaistos) phase 2,music/ex4/BGM_EX4_Raid_07.scd
+941,Battle with the Four Fiends (Buried Memory),,Lynx of Imperial Wind / Storm's Crown (Extreme) mount,music/ffxiv/BGM_Ride_Barb.scd
+942,White Stone Black,,Sunforged / Abyssos: The Eighth Circle (Savage) (Hephaistos) mount,music/ffxiv/BGM_Ride_Pandemonium02.scd
+943,Island Paradise,,Island Mandragora mount / Island Onion Prince mount / Island Eggplant Knight mount,music/ffxiv/BGM_Ride_MJI.scd
+944,To the Sun (Piano Collections),,Silkie mount,music/ffxiv/BGM_Ride_VVD01.scd
+945,Desert Sun,,Sil'dihn Throne mount,music/ffxiv/BGM_Ride_VVD02.scd
+946,Inexorable,,,music/ex4/BGM_EX4_Event_29.scd
+947,Polygons of Inquiry,,,music/ex4/BGM_EX4_Event_30.scd
+948,Dreamwalker,,Loporrit Tribal Area,music/ex4/BGM_EX4_BanFort_Lep_Good.scd
+949,Forged in Crimson,,Mount Ordeals (Rubicante) / Mount Ordeals (Extreme) (Rubicante),music/ex4/BGM_EX4_Ban_08.scd
+950,From The Heavens (Orchestral Version),,The Omega Protocol (Ultimate) Phase 3 (Omega),music/ex4/BGM_EX4_Ban_09.scd
+951,Torn from the Heavens (Orchestral Version),,The Omega Protocol (Ultimate) Phase 6 (Alpha Omega),music/ex4/BGM_EX4_Ban_10.scd
+952,Deep Blue,,Lapis Manalis,music/ex4/BGM_EX4_Dan_D11.scd
+953,Forbidden Land (Endwalker),,Eureka Orthos,music/ex4/BGM_EX4_DD_01.scd
+954,Equilibrium (Pulse),,Eureka Orthos,music/ex4/BGM_EX4_DD_02.scd
+955,Oblivion (Pulse),,Eureka Orthos,music/ex4/BGM_EX4_DD_03.scd
+956,A Long Fall (Pulse),,Eureka Orthos,music/ex4/BGM_EX4_DD_04.scd
+957,Neath Dark Waters (Pulse),,Eureka Orthos,music/ex4/BGM_EX4_DD_05.scd
+958,Favor,,Euphrosyne,music/ex4/BGM_EX4_MoE_06.scd
+959,Rhythm of the Realm,,"Euphrosyne Boss 1 (Nophica), Boss 2 (Althyk & Nymeia), Boss 3 (Halone)",music/ex4/BGM_EX4_MoE_07.scd
+960,Dedicated to Moonlight,,Euphrosyne Boss final boss (Menphina),music/ex4/BGM_EX4_MoE_08.scd
+961,Forged in Crimson,,Lynx of Righteous Fire / Mount Ordeals (Extreme) mount,music/ffxiv/BGM_Ride_Rubi.scd
+962,Deltascape,,The Omega Protocol (Ultimate) Phase 1 (Omega),music/ex4/BGM_EX4_Ban_11.scd
+963,Heartless,,The Omega Protocol (Ultimate) Phase 2 (Omega M + Omega F),music/ex4/BGM_EX4_Ban_12.scd
+964,eScape,,The Omega Protocol (Ultimate) Phase 5 (Omega M + Omega F),music/ex4/BGM_EX4_Ban_13.scd
+965,Another Moon,,Endwalker Thirteenth's Moon theme,music/ex4/BGM_EX4_EventMap01.scd
+966,Voidcast Savior,,The Voidcast Dais (Golbez),music/ex4/BGM_EX4_Ban_14.scd
+967,Battle 2 from FINAL FANTASY III,,,music/ex3/BGM_EX3_AOZ_01.scd
+968,Subterranean Sanctuary,,,music/ffxiv/BGM_MJI_03.scd
+969,The Land Reborn,,Kupo Kupo Adventure (the Rising 2023 minigame) level theme,music/ffxiv/BGM_Minigame_10th01.scd
+970,Pom from the Heavens,,Kupo Kupo Adventure (the Rising 2023 minigame) boss theme,music/ffxiv/BGM_Minigame_10th02.scd
+971,Starsbreath,,The Aetherfont,music/ex4/BGM_EX4_Dan_D12.scd
+972,Crimson Sunset,,Mount Rokkon,music/ex4/BGM_EX4_VVD_03.scd
+973,Storm of Blood,,Mount Rokkon final boss (),music/ex4/BGM_EX4_VVD_04.scd
+974,Crimson Rise,,Another Mount Rokkon,music/ex4/BGM_EX4_VVD_05.scd
+975,One Amongst the Weary,,Anabaseios: The Ninth Circle / Anabaseios: The Ninth Circle: Savage (Kokytos) / Anabaseios: The Tenth Circle / Anabaseios: The Tenth Circle: Savage (Pandæmonium),music/ex4/BGM_EX4_Raid_08.scd
+976,Fleeting Moment,,Anabaseios: The Eleventh Circle / Anabaseios: The Eleventh Circle: Savage (Themis),music/ex4/BGM_EX4_Raid_09.scd
+977,"Athena, the Tireless One",,Anabaseios: The Twelfth Circle / Anabaseios: The Twelfth Circle: Savage (Athena),music/ex4/BGM_EX4_Raid_10.scd
+978,Ultima's Perfection (Endwalker),,Anabaseios: The Twelfth Circle / Anabaseios: The Twelfth Circle: Savage Phase 2 (Athena),music/ex4/BGM_EX4_Raid_11.scd
+979,Voidcast Savior,,Lynx of Fallen Shadow mount / The Voidcast Dais (Golbez) mount,music/ffxiv/BGM_Ride_Golbez.scd
+980,"Athena, the Tireless One",,Axolotl mount / Anabaseios: The Twelfth Circle / Anabaseios: The Twelfth Circle: Savage Phase 2 (Athena) mount,music/ffxiv/BGM_Ride_Pandemonium03.scd
+981,Crimson Sunset,,Burabura Chochin / Mount Rokkon mount,music/ffxiv/BGM_Ride_VVD03.scd
+982,Crimson Rise,,Shishioji / Another Mount Rokkon mount,music/ffxiv/BGM_Ride_VVD04.scd
+983,The Land Reborn,,Kupo Kupo Adventure - Title Screen,music/ffxiv/BGM_Minigame_10th03.scd
+984,Pom from the Heavens,,Kupo Kupo Adventure - Gameplay,music/ffxiv/BGM_Minigame_10th04.scd
+985,Dreams Aloft,,Garlond GL-IS mount,music/ffxiv/BGM_Ride_Fanfes2023.scd
+986,A Gentleman to Walk with Me,,Somehow Further Hildibrand Adventures ending,music/ex4/BGM_EX4_Event_31.scd
+987,FINAL FANTASY IV: The Final Battle (Endwalker),,The Abyssal Fracture (Zeromus) phase 1,music/ex4/BGM_EX4_Ban_15.scd
+988,The Red Wings (Endwalker),,The Abyssal Fracture (Zeromus) phase 2,music/ex4/BGM_EX4_Ban_16.scd
+989,Kingdom of Baron (Endwalker),,The Lunar Subterrane,music/ex4/BGM_EX4_Dan_D13.scd
+990,"O Speaker, Slumber",,,music/ex4/BGM_EX4_VVD_06.scd
+991,"O Hunter, Rejoice",,,music/ex4/BGM_EX4_VVD_07.scd
+992,Fair Winds to Guide,,Thaleia between bosses,music/ex4/BGM_EX4_MoE_09.scd
+993,Course Uncharted,,"Thaleia Boss 1 (Thaliak), Boss 2 (Llymlaen), Boss 3 (Oschon)",music/ex4/BGM_EX4_MoE_10.scd
+994,Myths of the Realm,,Thaleia final boss (Eulogia),music/ex4/BGM_EX4_MoE_11.scd
+995,FINAL FANTASY IV: The Final Battle (Endwalker),,Lynx of Abyssal Grief mount / The Abyssal Fracture (Zeromus) mount,music/ffxiv/BGM_Ride_Zerom.scd
+996,"O Speaker, Slumber",,,music/ffxiv/BGM_Ride_VVD05.scd
+997,"O Hunter, Rejoice",,,music/ffxiv/BGM_Ride_VVD06.scd
+998,Prelude - Tales,,Apocryphal Bahamut / all Lynx mount,music/ffxiv/BGM_Ride_FF4Baha.scd
+999,Endwalker - Footfalls/Vibrant Voices/Troian Beauty (Endwalker)/Forged in Crimson/Another Moon/???/The Ewer Brimmeth,,Patch 6.56 credits,music/ex4/BGM_EX4_EndCredit02.scd
+20001,Tonitrua ex Machina,,FFXVI Crossover,music/ffxiv/BGM_Event_SXT01.scd
+20002,Idylls of the Empire,,FFXVI Crossover,music/ffxiv/BGM_Event_SXT02.scd
+20003,Forevermore - The Grand Duchy of Rosaria,,FFXVI Crossover,music/ffxiv/BGM_Event_SXT03.scd
+20004,Before the Storm - Caer Norvent,,FFXVI Crossover,music/ffxiv/BGM_Event_SXT04.scd
+20005,The State of the Realm,,FFXVI Crossover,music/ffxiv/BGM_Event_SXT05.scd
+20006,Who I Really Am,,FFXVI Crossover,music/ffxiv/BGM_Event_SXT06.scd
+20007,Away (Refrain),,FFXVI Crossover,music/ffxiv/BGM_Event_SXT07.scd
+20008,To Sail Forbidden Seas,,FFXVI Crossover,music/ffxiv/BGM_Event_SXT08.scd
+20009,Find the Flame,,FFXVI Crossover,music/ffxiv/BGM_Event_SXT09.scd
+20010,Land of Eikons,,FFXVI Crossover,music/ffxiv/BGM_Event_SXT10.scd
+20011,Find the Flame,,Torgal / FFXVI Crossover Mount,music/ffxiv/BGM_Ride_SXT01.scd
+20012,Everybody Falls (Fall Guys Theme),,,music/ffxiv/BGM_Event_FGS01.scd
+20013,Sir Falls-A-Lot (William Fell),,,music/ffxiv/BGM_Event_FGS02.scd
+20014,Fall 'N' Roll,,,music/ffxiv/BGM_Event_FGS03.scd
+20015,Clumsy Shuffle,,,music/ffxiv/BGM_Event_FGS04.scd
+20016,Fall for the Queen Bean,,,music/ffxiv/BGM_Event_FGS05.scd
+20017,Final Fall,,,music/ffxiv/BGM_Event_FGS06.scd
+20018,???,,Commonly called 'Loading',music/ffxiv/BGM_Event_FGS07.scd
+20019,???,,Commonly called 'Round Introduction',music/ffxiv/BGM_Event_FGS08.scd
+20020,Didn't Fall! (You Win),,,music/ffxiv/BGM_Event_FGS09.scd
+20021,Everybody Falls (Fall Guys Theme),,,music/ffxiv/BGM_Ride_FGS01.scd
+20023,Dawntrail,,,music/ex5/BGM_EX5_Event_01.scd
+20024,Dawntrail,,Instrumental,music/ex5/BGM_EX5_Event_02.scd
+20025,Smile,,,music/ex5/BGM_EX5_Event_03.scd
+20026,???,,,music/ex5/BGM_EX5_Event_04.scd
+20027,In Dawn's Embrace,,,music/ex5/BGM_EX5_Event_05.scd
+20028,Coffee Break,,,music/ex5/BGM_EX5_Event_06.scd
+20029,For Hope and Happiness,,,music/ex5/BGM_EX5_Event_07.scd
+20030,Cast Stones in Shadow,,,music/ex5/BGM_EX5_Event_08.scd
+20031,Hearts Tread and Trampled,,,music/ex5/BGM_EX5_Event_09.scd
+20032,Fond Farewells,,,music/ex5/BGM_EX5_Event_10.scd
+20033,Taco Delight,,,music/ex5/BGM_EX5_Event_11.scd
+20034,Etched in Memory,,,music/ex5/BGM_EX5_Event_12.scd
+20035,Fun and Games,,,music/ex5/BGM_EX5_Event_13.scd
+20036,Fleeting Life,,,music/ex5/BGM_EX5_Event_14.scd
+20037,Unforgettable Sorrow,,,music/ex5/BGM_EX5_Event_15.scd
+20038,"Broken Spell, Healed Hearts",,,music/ex5/BGM_EX5_Event_16.scd
+20039,Prima Vista Orchestra,,,music/ex5/BGM_EX5_Event_17.scd
+20040,The Fateful Hour,,,music/ex5/BGM_EX5_Event_18.scd
+20041,Sword of Fury,,Living Memory cutscenes,music/ex5/BGM_EX5_Event_19.scd
+20042,Thy Warmth,,,music/ex5/BGM_EX5_Event_20.scd
+20043,Something to Protect,,Living Memory cutscenes,music/ex5/BGM_EX5_Event_21.scd
+20044,???,,,music/ex5/BGM_EX5_Event_22.scd
+20045,Morrow's Might,,Tuliyollal Day,music/ex5/BGM_EX5_Town_T_Day.scd
+20046,Morrow's Magic,,Tuliyollal Night,music/ex5/BGM_EX5_Town_T_Night.scd
+20047,Starless Skyline,,Solution Nine Day and Night,music/ex5/BGM_EX5_Town_S_Day.scd
+20048,Windswept Echoes,,Urqopacha Day,music/ex5/BGM_EX5_Field_Urq_Day.scd
+20049,Windswept Whispers,,Urqopacha Night,music/ex5/BGM_EX5_Field_Urq_Night.scd
+20050,Of Glittering Wings,,Kozama'uka Day,music/ex5/BGM_EX5_Field_Koz_Day.scd
+20051,Of Glittering Baubles,,Kozama'uka Night,music/ex5/BGM_EX5_Field_Koz_Night.scd
+20052,Emerald under Sapphire,,Yak T'el Day,music/ex5/BGM_EX5_Field_Yak_Day.scd
+20053,Skybound Emerald,,Yak T'el Night,music/ex5/BGM_EX5_Field_Yak_Night.scd
+20054,Ceruleum Smoke at High Noon,,Shaaloani Day,music/ex5/BGM_EX5_Field_Sha_Day.scd
+20055,Ceruleum Embers by Dusk,,Shaaloani Night,music/ex5/BGM_EX5_Field_Sha_Night.scd
+20056,Flash in the Dark,,Heritage Found Day,music/ex5/BGM_EX5_Field_Her_Day.scd
+20057,Crash in the Dark,,Heritage Found Night,music/ex5/BGM_EX5_Field_Her_Night.scd
+20058,Bygone Serenity,,Living Memory (during MSQ),music/ex5/BGM_EX5_Field_Liv_Day01.scd
+20059,Echoes of Memory,,"Living Memory (post-MSQ, faded/distant version)",music/ex5/BGM_EX5_Field_Liv_Day02.scd
+20060,Tantalus's Theme (Dawntrail),,Earthen Sky Hideout,music/ex5/BGM_EX5_EventMap05.scd
+20061,Tantalus's Theme (Dawntrail),,The Backroom,music/ex5/BGM_EX5_EventMap06.scd
+20062,Pastoral Pleasures,,Kozama'uka & Urqopacha sanctuaries,music/ex5/BGM_EX5_Field_Safe01.scd
+20063,Life Bound by Honor,,Yok Tural sanctuaries,music/ex5/BGM_EX5_Field_Safe02.scd
+20064,Desertwalkers,,Xak Tural sanctuaries (excl Heritage Found 1st aetheryte),music/ex5/BGM_EX5_Field_Safe03.scd
+20065,Blade's Exaltation,,Urqopacha battle,music/ex5/BGM_EX5_Field_Urq_Battle.scd
+20066,Blade's Exaltation,,Kozama'uka battle,music/ex5/BGM_EX5_Field_Koz_Battle.scd
+20067,Blade's Exaltation,,Yak T'el battle,music/ex5/BGM_EX5_Field_Yak_Battle.scd
+20068,Blade's Exaltation,,Shaaloani battle,music/ex5/BGM_EX5_Field_Sha_Battle.scd
+20069,Blade's Exaltation,,Heritage Found battle,music/ex5/BGM_EX5_Field_Her_Battle.scd
+20070,???,,,music/ex5/BGM_EX5_Field_Liv_Battle.scd
+20071,Faerie Battle,,,music/ex5/BGM_EX5_Field_Liv_Fate.scd
+20072,The Skyruin,,Worqor Lar Dor / Worqor Lar Dor Extreme (Valigarmanda),music/ex5/BGM_EX5_Ban_01.scd
+20073,Seeking Purpose,,Everkeep / Everkeep Extreme (Zoraal Ja),music/ex5/BGM_EX5_Ban_02.scd
+20074,Paved in Solitude,,The Interphos (Queen Eternal) phase 1,music/ex5/BGM_EX5_Ban_03.scd
+20075,Paved with Resolve,,The Interphos (Queen Eternal) phase 2,music/ex5/BGM_EX5_Ban_04.scd
+20076,Punutiy Crossing,,Ihuykatumu,music/ex5/BGM_EX5_Dan_D01.scd
+20077,Empyrean Peak,,Worqor Zormor,music/ex5/BGM_EX5_Dan_D02.scd
+20078,Lost in the Deep,,The Skydeep Cenote,music/ex5/BGM_EX5_Dan_D03.scd
+20079,In Fulgur and Fire,,Vanguard,music/ex5/BGM_EX5_Dan_D04.scd
+20080,Anatomy of Existence,,Origenics,music/ex5/BGM_EX5_Dan_D05.scd
+20081,A Trail Unending,,Alexandria,music/ex5/BGM_EX5_Dan_D06.scd
+20082,Blessings on the Bluffs,,Tender Valley,music/ex5/BGM_EX5_Dan_D07.scd
+20083,Court Jesters (Dawntrail),,The Strayborough Deadwalk,music/ex5/BGM_EX5_Dan_D08.scd
+20084,Roads Forsaken,,Dawntrail dungeon bosses,music/ex5/BGM_EX5_Boss_Battle01.scd
+20085,Pathmaker,,Dawntrail final dungeon boss,music/ex5/BGM_EX5_Boss_Battle02.scd
+20086,Prelude - A Westward Journey,,,music/ex5/BGM_EX5_System_Title.scd
+20087,???,,End Credits,music/ex5/BGM_EX5_EndCredit01.scd
+20088,The Ring's Reprieve,,,music/ex5/BGM_EX5_Raid_01.scd
+20089,It's Showtime!,,,music/ex5/BGM_EX5_Raid_03.scd
+20090,Bee My Honey,,,music/ex5/BGM_EX5_Raid_04.scd
+20091,Burning Souls,,,music/ex5/BGM_EX5_Raid_05.scd
+20092,Give It All,,,music/ex5/BGM_EX5_Raid_06.scd
+20093,A Risky Bet,,,music/ex5/BGM_EX5_Raid_07.scd
+20094,Bright Bustle,,,music/ffxiv/BGM_Event_Dotabata.scd
+20095,The Skyruin,,Wings of Ruin mount / Worqor Lar Dor Extreme (Valigarmanda) mount,music/ffxiv/BGM_Ride_Valigarmanda.scd
+20096,Seeking Purpose,,Wings of Resolve mount / Everkeep Extreme (Zoraal Ja) mount,music/ffxiv/BGM_Ride_Zoraalja.scd
+20097,Battle 1 from FINAL FANTASY IX,,Ark Mount,music/ffxiv/BGM_Ride_Ark.scd
+20098,Give It All,,,music/ffxiv/BGM_Ride_Arcadia.scd
+20099,Return to Oblivion (Scions & Sinners: Band),,,music/ex5/BGM_EX5_Ban_11.scd
+20100,???,,,music/ex5/BGM_EX5_Event_23.scd
+20101,Faerie Battle,,"Mascot March, Mascot Mayhem, and Mascot Murder FATEs / Mica the Magical Mu",music/ex5/BGM_EX5_Field_Liv_Fate2.scd
+20102,???,,,music/ex5/BGM_EX5_Event_24.scd
+20103,Cast Stones in Shadow,,,music/ex5/BGM_EX5_Event_25.scd
+20105,The Extreme (Shadowbringers),,,music/ex5/BGM_EX5_Ban_12.scd
+20106,The Travel Agency (Dawntrail),,,music/ex5/BGM_EX5_BanFort_Pel_Good.scd
+20107,Winter's Warm Boughs,,,music/ffxiv/BGM_Season_Christmas2.scd
+20108,Unbroken Vessels,,,music/ex5/BGM_EX5_Dan_D09.scd
+20109,Paved in Solitude,,,music/ffxiv/BGM_Ride_Queen.scd
+20110,Hunger,,,music/ffxiv/BGM_Ride_CT71.scd
+20111,???,,,music/ffxiv/BGM_Ride_CHS71.scd
+20112,???,,,music/ex5/BGM_EX5_Event_26.scd
+20113,???,,,music/ex5/BGM_EX5_Event_27.scd
+20114,Shadow Lord,,,music/ex5/BGM_EX5_EoV_01.scd
+20115,Depths of the Soul,,,music/ex5/BGM_EX5_EoV_02.scd
+20116,Battle in the Dungeon,,,music/ex5/BGM_EX5_EoV_03.scd
+20117,Battle in the Dungeon #3,,,music/ex5/BGM_EX5_EoV_04.scd
+20118,Tu'Lia,,,music/ex5/BGM_EX5_EoV_05.scd
+20119,Battle Theme from FINAL FANTASY XI,,,music/ex5/BGM_EX5_EoV_06.scd
+20120,Fighters of the Crystal,,,music/ex5/BGM_EX5_EoV_07.scd
+20121,Castle Zvahl,,,music/ex5/BGM_EX5_EoV_08.scd
+20122,Awakening,,,music/ex5/BGM_EX5_EoV_09.scd
+20123,Vana'diel March,,,music/ex5/BGM_EX5_EoV_10.scd
+20124,The Grand Duchy of Jeuno,,,music/ex5/BGM_EX5_EoV_11.scd
+20125,Hopelessness,,,music/ex5/BGM_EX5_EoV_12.scd
+20126,"Sometime, Somewhere",,,music/ex5/BGM_EX5_EoV_13.scd
+20127,Voyager,,,music/ex5/BGM_EX5_EoV_14.scd
+20128,Vana'diel March #2,,,music/ex5/BGM_EX5_EoV_15.scd
+20129,The Forgotten City - Tavnazian Safehold,,,music/ex5/BGM_EX5_EoV_16.scd
+20130,The Big One,,,music/ex5/BGM_EX5_EoV_17.scd
+20131,???,,,music/ex5/BGM_EX5_EoV_18.scd
+20132,???,,,music/ex5/BGM_EX5_EoV_19.scd
+20133,Shadow Lord,,,music/ex5/BGM_EX5_EoV_20.scd
+20134,The Legendary Beast (Shadowbringers),,,music/ex5/BGM_EX5_Ban_13.scd
+20135,Footsteps in the Snow,,,music/ex5/BGM_EX5_Ban_14.scd
+20136,A Sundering of Light,,,music/ex5/BGM_EX5_Ban_15.scd
+20137,Promises to Keep,,,music/ex5/BGM_EX5_Ban_16.scd
+20138,Dawntrail,,,music/ex5/BGM_EX5_Event_28.scd
+20139,???,,,music/ex5/BGM_EX5_EoV_21.scd
+20141,Ride the Rhythm,,"AAC Cruiserweight M1, Dancing Green's theme (Note: this track is actually 6 different tracks that are scripted to change during the battle)",music/ex5/timeline/BGM_EX5_Raid_08.scd
+20142,Ride the Rhythm,,"AAC Cruiserweight M1, Dancing Green's theme (Note: this track is actually 6 different tracks that are scripted to change during the battle)",music/ex5/timeline/BGM_EX5_Raid_09.scd
+20143,Ride the Rhythm,,"AAC Cruiserweight M1, Dancing Green's theme (Note: this track is actually 6 different tracks that are scripted to change during the battle)",music/ex5/timeline/BGM_EX5_Raid_10.scd
+20144,Ride the Rhythm,,"AAC Cruiserweight M1, Dancing Green's theme (Note: this track is actually 6 different tracks that are scripted to change during the battle)",music/ex5/timeline/BGM_EX5_Raid_11.scd
+20145,Ride the Rhythm,,"AAC Cruiserweight M1, Dancing Green's theme (Note: this track is actually 6 different tracks that are scripted to change during the battle)",music/ex5/timeline/BGM_EX5_Raid_12.scd
+20146,Ride the Rhythm,,"AAC Cruiserweight M1, Dancing Green's theme (Note: this track is actually 6 different tracks that are scripted to change during the battle)",music/ex5/timeline/BGM_EX5_Raid_13.scd
+20147,Back to the Drawing Board,,,music/ex5/BGM_EX5_Raid_20.scd
+20148,Not Afraid,,,music/ex5/BGM_EX5_Raid_21.scd
+20149,Unleashed,,,music/ex5/BGM_EX5_Raid_22.scd
+20150,Peerless,,,music/ex5/BGM_EX5_Raid_23.scd
+20151,???,,,music/ex5/BGM_EX5_Event_29.scd
+20152,Roses of May (Dawntrail),,,music/ex5/BGM_EX5_Ban_17.scd
+20153,Find the Princess (Dawntrail),,,music/ex5/BGM_EX5_Dan_D10.scd
+20154,I Am the Sea,,,music/ffxiv/BGM_Season_SummerFes03.scd
+20155,Roses of May (Dawntrail),,,music/ffxiv/BGM_Ride_Defender.scd
+20156,Unleashed,,,music/ffxiv/BGM_Ride_Arcadia02.scd
+20157,Home at Heart,,,music/ex5/BGM_EX5_BanFort_Mam_Good.scd
+20158,Garden Relics,,,music/ex5/BGM_EX5_MKD_01.scd
+20159,A Tonberry's Tears,,,music/ex5/BGM_EX5_MKD_03.scd
+20160,???,,,music/ex5/BGM_EX5_MKD_04.scd
+20161,???,,,music/ex5/BGM_EX5_MKD_05.scd
+20162,???,,,music/ex5/BGM_EX5_MKD_06.scd
+20163,Town Theme (Dawntrail),,,music/ex5/BGM_EX5_MKD_07.scd
+20164,FINAL FANTASY V: Battle 1 (Dawntrail),,,music/ex5/BGM_EX5_MKD_08.scd
+20165,A New World (Dawntrail),,,music/ex5/BGM_EX5_MKD_09.scd
+20166,Exdeath's Castle (Dawntrail),,,music/ex5/BGM_EX5_MKD_10.scd
+20167,FINAL FANTASY V: Battle 1 (Dawntrail),,,music/ex5/BGM_EX5_MKD_11.scd
+20168,Garden Relics,,,music/ffxiv/BGM_Ride_MKD01.scd
+20169,Stargazers,,,music/ex4/BGM_EX4_WKS_01.scd
+20170,Carrots of Happiness (Forge Ahead),,,music/ex4/BGM_EX4_WKS_02.scd
+20171,"Hey, Cid!",,,music/ex4/BGM_EX4_WKS_03.scd
+20172,Battle 1 from FINAL FANTASY IV,,,music/ex4/BGM_EX4_WKS_04.scd
+20173,The Airship,,,music/ex4/BGM_EX4_WKS_05.scd
+20174,???,,,music/ex4/BGM_EX4_WKS_06.scd
+20175,Stargazers,,,music/ffxiv/BGM_Ride_WKS01.scd
+20176,???,,,music/ex5/timeline/BGM_EX5_Raid_14.scd
+20190,The Promise of Tomorrow,,,music/ex5/BGM_EX5_Event_30.scd
+20191,???,,,music/ffxiv/BGM_Event_Huon2.scd
+20192,???,,,music/ffxiv/BGM_Event_Keikaku2.scd
+20193,???,,,music/ffxiv/BGM_Event_Truth2.scd
+20194,???,,,music/ffxiv/BGM_Event_Odayaka2.scd
+20195,???,,,music/ex5/BGM_EX5_Event_31.scd
+20196,???,,,music/ex5/BGM_EX5_Event_32.scd
+20197,???,,,music/ex5/BGM_EX5_Event_33.scd
+20198,???,,,music/ex5/BGM_EX5_Event_34.scd
+20199,FINAL FANTASY IX: The Final Battle (Dawntrail),,,music/ex5/BGM_EX5_Ban_18.scd
+20200,???,,,music/ex5/BGM_EX5_Ban_19.scd
+20201,Remembrance,,,music/ex5/BGM_EX5_Dan_D11.scd
+20202,FINAL FANTASY IX: The Final Battle (Dawntrail),,,music/ffxiv/BGM_Ride_Necron.scd
+20219,Ronfaure,,,music/ex5/BGM_EX5_EoV_22.scd
+20220,Tough Battle,,,music/ex5/BGM_EX5_EoV_23.scd
+20221,Tough Battle #2,,,music/ex5/BGM_EX5_EoV_24.scd
+20222,Eald'narche,,,music/ex5/BGM_EX5_EoV_25.scd
+20223,Belief,,,music/ex5/BGM_EX5_EoV_26.scd
+20224,Despair (Memoro de la S^tono),,,music/ex5/BGM_EX5_EoV_27.scd
+20225,Jeweled Boughs,,,music/ex5/BGM_EX5_EoV_28.scd
+20226,???,,,music/ffxiv/BGM_Event_Insyu.scd
+20227,???,,,music/ex5/BGM_EX5_EoV_29.scd
+20228,Hidden Truths,,,music/ex5/BGM_EX5_EoV_30.scd
+20229,???,,,music/ex5/BGM_EX5_Event_35.scd
+20230,Turmoil,,,music/ex5/BGM_EX5_EoV_31.scd
+20231,???,,,music/ex5/BGM_EX5_Event_36.scd
+20232,???,,,music/ex5/BGM_EX5_Event_37.scd

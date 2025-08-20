@@ -103,7 +103,6 @@ The following FFXIV songs with official lyrics are planned for inclusion:
 - Sunrise
 - Amatsu Kaze
 - Beauty's Wicked Wiles
-- Anthem (duo)
 
 ### Shadowbringers
 - Shadowbringers
@@ -124,7 +123,6 @@ The following FFXIV songs with official lyrics are planned for inclusion:
 - With Hearts Aligned
 
 ### Dawntrail
-- Ride the Rhythm
 - Unleashed
 - Not Afraid
 - Back to the Drawing Board
