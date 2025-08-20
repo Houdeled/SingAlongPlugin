@@ -94,53 +94,57 @@ Access the configuration window through:
 - `/singalong settings` - Open settings window
 - `/singalong debug` - Open debug window (debug builds only)
 
-## Planned Song Support
+## Song Support Status
 
-The following FFXIV songs with official lyrics are planned for inclusion:
+The following FFXIV songs with official lyrics are available or planned:
 
 ### A Realm Reborn
-- Answers
-- Oblivion
-- Through the Maelstrom
-- Thunder Rolls
-- Under the Weight
+- ⭕ Answers
+- ✅ Oblivion
+- ⭕ Through the Maelstrom
+- ⭕ Thunder Rolls
+- ⭕ Under the Weight
 
 ### Heavensward
-- Heavensward
-- Dragonsong
-- Equilibrium
-- Fiend
-- Exponential Entropy
-- Rise
-- Locus
+- ⭕ Heavensward
+- ✅ Dragonsong
+- ✅ Equilibrium
+- ✅ Fiend
+- ⭕ Exponential Entropy
+- ✅ Rise
+- ✅ Locus
 
 ### Stormblood
-- Wayward Daughter
-- eScape
-- Sunrise
-- Amatsu Kaze
-- Beauty's Wicked Wiles
+- ⭕ Wayward Daughter
+- ✅ eScape
+- ⭕ Sunrise
+- ⭕ Amatsu Kaze
+- ⭕ Beauty's Wicked Wiles
 
 ### Shadowbringers
-- Shadowbringers
-- Tomorrow and Tomorrow
-- A Long Fall
-- To the Edge
-- Return to Oblivion
-- Ultima
-- Landslide
-- Blinding Indigo
-- Who Brings Shadow
-- What Angel Wakes Me
+- ⭕ Shadowbringers
+- ⭕ Tomorrow and Tomorrow
+- ⭕ A Long Fall
+- ✅ To the Edge
+- ✅ Return to Oblivion
+- ⭕ Ultima
+- ⭕ Landslide
+- ⭕ Blinding Indigo
+- ✅ Who Brings Shadow
+- ✅ What Angel Wakes Me
 
 ### Endwalker
-- Footfalls
-- Close in the Distance
-- Scream
-- With Hearts Aligned
+- ⭕ Footfalls
+- ⭕ Close in the Distance
+- ✅ Scream
+- ⭕ With Hearts Aligned
 
 ### Dawntrail
-- Unleashed
-- Not Afraid
-- Back to the Drawing Board
-- Give It All
+- ✅ Unleashed
+- ✅ Not Afraid
+- ✅ Back to the Drawing Board
+- ⭕ Give It All
+
+**Legend:**
+- ✅ = Lyrics available and synchronized
+- ⭕ = Planned for future release
