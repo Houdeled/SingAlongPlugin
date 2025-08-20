@@ -44,7 +44,7 @@ Optional metadata tags are also supported:
 2. Go to the **Experimental** tab
 3. Copy and paste this URL in **Custom Plugin Repositories**:
    ```
-   https://raw.githubusercontent.com/Houdeled/SingAlongPlugin/main/pluginmaster.json
+   https://raw.githubusercontent.com/Houdeled/SingAlongPlugin/refs/heads/master/pluginmaster.json
    ```
 4. Click **Save**
 5. Go to `/xlplugins` and find **SingAlong Plugin** in the available plugins list
