@@ -11,7 +11,7 @@ public class Configuration : IPluginConfiguration
     // Lyrics Window Settings
     public float LyricsScaleFactor { get; set; } = 1.0f;
     public float BackgroundOpacity { get; set; } = 0.0f;
-    public bool LockWindow { get; set; } = true;
+    public bool LockWindow { get; set; } = false;
     public bool EnableAnimations { get; set; } = true;
     
     // Animation Settings

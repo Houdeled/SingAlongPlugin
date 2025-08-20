@@ -76,6 +76,7 @@ Access the configuration window through:
 ## Commands
 
 - `/singalong` - Toggle lyrics window
+- `/singalong settings` - Open settings window
 - `/singalong debug` - Open debug window (debug builds only)
 
 ## Planned Song Support

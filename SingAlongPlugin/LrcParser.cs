@@ -47,7 +47,12 @@ public class LrcParser
     public bool LoadFromFile(string filePath)
     {
         if (!File.Exists(filePath))
+        {
+#if DEBUG
+            Plugin.Log.Debug($"LRC file does not exist: {filePath}");
+#endif
             return false;
+        }
             
         _lyrics.Clear();
         _lastSearchIndex = 0;
@@ -55,15 +60,24 @@ public class LrcParser
         try
         {
             var lines = File.ReadAllLines(filePath);
+#if DEBUG
+            Plugin.Log.Debug($"Loading LRC file: {filePath} with {lines.Length} lines");
+#endif
             ParseLrcContent(lines);
             
             // Sort lyrics by timestamp for efficient searching
             _lyrics.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
             
+#if DEBUG
+            Plugin.Log.Debug($"Parsed {_lyrics.Count} lyrics from {filePath}");
+#endif
             return _lyrics.Count > 0;
         }
-        catch
+        catch (Exception ex)
         {
+#if DEBUG
+            Plugin.Log.Error($"Error loading LRC file {filePath}: {ex.Message}");
+#endif
             return false;
         }
     }
@@ -91,6 +105,13 @@ public class LrcParser
                 var seconds = int.Parse(timeMatch.Groups[2].Value);
                 var subsecondValue = int.Parse(timeMatch.Groups[3].Value);
                 var text = timeMatch.Groups[4].Value.Trim();
+                
+#if DEBUG
+                if (_lyrics.Count < 5) // Only log first few lines to avoid spam
+                {
+                    Plugin.Log.Debug($"Parsing line: '{line}' -> {minutes}:{seconds}.{subsecondValue} '{text}'");
+                }
+#endif
                 
                 // Handle both centiseconds (2 digits) and milliseconds (3 digits)
                 int milliseconds;
@@ -202,15 +223,13 @@ public class LrcParser
         return TimeSpan.Zero;
     }
     
-    private int FindLyricIndex(TimeSpan currentTime)
+    private int FindLyricIndex(TimeSpan time)
     {
         if (!IsLoaded)
             return -1;
 
-        // Apply timing offset (subtract offset since lyrics come too soon)
-        var adjustedTime = currentTime.Subtract(TimeSpan.FromMilliseconds(TimingOffsetMs));
-
         // Binary search for efficiency with large lyric files
+        // Note: time should already have timing offset applied by caller
         int left = 0;
         int right = _lyrics.Count - 1;
         int result = -1;
@@ -219,7 +238,7 @@ public class LrcParser
         {
             int mid = (left + right) / 2;
             
-            if (_lyrics[mid].Timestamp <= adjustedTime)
+            if (_lyrics[mid].Timestamp <= time)
             {
                 result = mid;
                 left = mid + 1;

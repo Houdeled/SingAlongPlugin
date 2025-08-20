@@ -1,9 +1,10 @@
 {
-  "Author": "doria",
+  "Author": "Luna Astar",
   "Name": "SingAlong Plugin",
   "Punchline": "Display synchronized lyrics for FFXIV background music.",
-  "Description": "Automatically detects FFXIV background music and displays synchronized lyrics from LRC files. Use /singalong to toggle the lyrics window.",
+  "Description": "Automatically detects FFXIV background music and displays synchronized lyrics. Commands: /singalong (toggle lyrics), /singalong settings (open settings).",
   "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/Houdeled/SingAlongPlugin",
   "Tags": [
     "lyrics",
     "music",

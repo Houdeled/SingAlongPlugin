@@ -130,14 +130,27 @@ public sealed class Plugin : IDalamudPlugin
 
     private void OnCommand(string command, string args)
     {
-#if DEBUG
-        // In debug mode, check for debug argument
-        if (!string.IsNullOrEmpty(args) && args.Trim().ToLowerInvariant() == "debug")
+        if (!string.IsNullOrEmpty(args))
         {
-            DebugWindow.Toggle();
-            return;
-        }
+            var arg = args.Trim().ToLowerInvariant();
+            
+#if DEBUG
+            // In debug mode, check for debug argument
+            if (arg == "debug")
+            {
+                DebugWindow.Toggle();
+                return;
+            }
 #endif
+            
+            // Check for settings argument
+            if (arg == "settings")
+            {
+                ToggleConfigUI();
+                return;
+            }
+        }
+        
         // In response to the slash command, toggle the display status of our lyrics ui
         ToggleLyricsUI();
     }
